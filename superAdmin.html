@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./css/superAdmin.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+
+    <title>Super Admin</title>
+</head>
+
+<body style="background: #F8FAFD;">
+    <nav class="navbar bg-white position-fixed"
+        style="top: 0; left: 0; right: 0; z-index: 1; padding-left: 4.466% !important; padding-right: 4.466% !important; box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);">
+        <div class="text-right" style="width: 12%;">
+            <img src="./img/Super Admin/image 1.png" class="img-fluid" />
+        </div>
+        <div class="d-flex" style="width: 50.878%;">
+            <div style="min-width: 150px; width: 75.683%; height: 32px; position: relative;">
+                <input id="myInput" type="text" class="form-input general-form"
+                    style="padding-left: 2rem; min-width: 170px;" placeholder="Quick Search" autocomplete="off">
+                <img src="./img/Super Admin/searchIcon.png" class="img-fluid" style="position: absolute; left: 8px; margin-top: 9px;" />
+            </div>
+            <div class="my-auto text-center" style="font-size: 14px; color: #B6B6B6; width: 15%; min-width: 75px;">
+                Dashboard
+            </div>
+            <div class="my-auto text-right manage-clients-link"
+                style="font-size: 14px; color: #B6B6B6; width: 5%; min-width: 45px; cursor: pointer;">
+                Clients
+            </div>
+        </div>
+        <div class="navbar p-0" style="width: 16.325%; min-width: 177px;">
+            <img src="./img/Super Admin/notification.png" class="img-fluid" />
+            <img src="./img/Super Admin/english.png" class="img-fluid" />
+            <div class="my-profile-link">
+                <div class="my-auto">
+                    <img src="./img/Super Admin/profile.png" class="img-fluid" />
+                </div>
+                <div style="display: grid; margin-left: 4%; min-width: 97px;">
+                    <div style="font-size: 13px; font-weight: 600; color: #6B6B6B;">Karim EL AGRIBI</div>
+                    <div style="font-size: 11px; font-weight: 500; color: #9F9F9F;">Super Admin</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="w-100" style="height: 100vh;">
+        <div class="w-100" style="height: 70px;"></div>
+        <div class="manage-clients">
+            <div class="header-style">
+                Manage Clients
+            </div>
+            <div class="navbar p-0 w-100">
+                <select class="bg-white select-css mc-tbl-sel classic">
+                    <option>Status</option>
+                </select>
+                <button class="add-client-btn" data-toggle="modal" data-target="#myModal1">
+                    Add New Client
+                </button>
+            </div>
+            <div class="w-100" style="margin-top: 16px; overflow: auto; max-height: 485px;" id="style-2">
+                <table class="table tbl-client" style="min-width: max-content;">
+                    <thead>
+                        <tr>
+                            <td><input class="checkbox checkbox-primary" id="selectall" type="checkbox"></td>
+                            <td>ID</td>
+                            <td>CLIENT</td>
+                            <td>CONTACT PERSON</td>
+                            <td>PHONE</td>
+                            <td>EMAIL</td>
+                            <td>DATE CREATION</td>
+                            <td>STATUS</td>
+                            <td>ACTION</td>
+                            <td><img src="./img/Super Admin/Vector.png" class="img-fluid" /></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                            <td>21001</td>
+                            <td><img src="./img/Super Admin/image 1 (1).png" class="img-fluid" /></td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Ellipse 37.png" class="img-fluid"
+                                        style="border-radius: 50%; width: 22px !important;" />
+                                    <div class="my-auto"
+                                        style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                        Blaise Defloo
+                                    </div>
+                                </div>
+                            </td>
+                            <td>+32 4 227 18 08</td>
+                            <td>info@newelec.be</td>
+                            <td>10/05/2021 - 18:30</td>
+                            <td>
+                                <label class="switch my-auto ml-auto">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Vector (1).png" class="img-fluid"
+                                        style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/edit.png" class="img-fluid"
+                                        style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/Vector (2).png" class="img-fluid"
+                                        style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/view.png" class="img-fluid" />
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                            <td>21001</td>
+                            <td><img src="./img/Super Admin/image 1 (1).png" class="img-fluid" /></td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Ellipse 37.png" class="img-fluid"
+                                        style="border-radius: 50%; width: 22px !important;" />
+                                    <div class="my-auto"
+                                        style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                        Blaise Defloo
+                                    </div>
+                                </div>
+                            </td>
+                            <td>+32 4 227 18 08</td>
+                            <td>info@newelec.be</td>
+                            <td>10/05/2021 - 18:30</td>
+                            <td>
+                                <label class="switch my-auto ml-auto">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Vector (1).png" class="img-fluid"
+                                        style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/edit.png" class="img-fluid"
+                                        style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/Vector (2).png" class="img-fluid"
+                                        style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/view.png" class="img-fluid" />
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                            <td>21001</td>
+                            <td><img src="./img/Super Admin/image 1 (1).png" class="img-fluid" /></td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Ellipse 37.png" class="img-fluid"
+                                        style="border-radius: 50%; width: 22px !important;" />
+                                    <div class="my-auto"
+                                        style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                        Blaise Defloo
+                                    </div>
+                                </div>
+                            </td>
+                            <td>+32 4 227 18 08</td>
+                            <td>info@newelec.be</td>
+                            <td>10/05/2021 - 18:30</td>
+                            <td>
+                                <label class="switch my-auto ml-auto">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Vector (1).png" class="img-fluid"
+                                        style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/edit.png" class="img-fluid"
+                                        style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/Vector (2).png" class="img-fluid"
+                                        style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/view.png" class="img-fluid" />
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                            <td>21001</td>
+                            <td><img src="./img/Super Admin/image 1 (1).png" class="img-fluid" /></td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Ellipse 37.png" class="img-fluid"
+                                        style="border-radius: 50%; width: 22px !important;" />
+                                    <div class="my-auto"
+                                        style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                        Blaise Defloo
+                                    </div>
+                                </div>
+                            </td>
+                            <td>+32 4 227 18 08</td>
+                            <td>info@newelec.be</td>
+                            <td>10/05/2021 - 18:30</td>
+                            <td>
+                                <label class="switch my-auto ml-auto">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Vector (1).png" class="img-fluid"
+                                        style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/edit.png" class="img-fluid"
+                                        style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/Vector (2).png" class="img-fluid"
+                                        style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/view.png" class="img-fluid" />
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Vector (4).png" class="img-fluid loader-img"
+                                        style="margin-right: 8px;" />
+                                    <div
+                                        style="font-weight: 600; font-style: normal; font-size: 14px; line-height: 17px; color: #A0A0A0;">
+                                        Loading more ...
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="my-profile">
+            <div class="header-style">
+                My Profile
+            </div>
+            <div class="row m-0 w-100">
+                <div class="bg-white" style="width: 68.273%; height: auto; margin-right: 2.182%; padding: 1.864% 3.329%; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05);
+                    border-radius: 5px;">
+                    <div class="w-100">
+                        <div class="navbar p-0 w-100">
+                            <div style="padding-right: 8px; width: 410px;">
+                                <div class="w-100 fs-12 fw-500" style="color: #616161; margin-bottom: 5px;">Photo</div>
+                                <div class="fs-11 tc-grey fw-500" style="margin-bottom: 15px; width: 88%;">Only JPG, PNG
+                                    files are
+                                    allowed. Image must be less than 2 MB</div>
+                                <div style="max-width: 360px; display: flex; align-items: center;">
+                                    <img src="./img/Super Admin/Ellipse 49.png" class="mx-auto"
+                                        style="width: 100px; height: 100px; margin-bottom: 8px;" />
+                                    <div class="mx-auto" style="min-width: 235px; display: flex; height: fit-content;">
+                                        <div class="fs-11 text-center mx-auto position-relative"
+                                            style="font-weight: 700; padding: 8px 20px; margin-right: 12px; color: white; background: #42A4DF; border-radius: 5px;">
+                                            UPLOAD IMAGE
+                                            <input type="file"
+                                                style="cursor: pointer; position: absolute; opacity: 0; top: 0; left: 0; bottom: 0; right: 0;" />
+                                        </div>
+                                        <div class="fs-11 text-center fw-500 mx-auto"
+                                            style="color: #EF3C3C; padding: 8px 20px;">
+                                            Remove image</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr
+                            style="border-top: 1px solid #EBEBEB; margin-top: 0.5rem !important; margin-bottom: 0.5rem !important;" />
+                        <div class="w-100 navbar p-0">
+                            <div class="d-flex col-adj" style="padding: 0px !important; width: 38.494%;">
+                                <div style="width: 46.863%; margin-right: 2.583%;">
+                                    <label style="color: #616161;" class="fw-500 fs-11">First Name</label>
+                                    <input type="text" class="form-control fs-12 fw-500"
+                                        style="border: 1px solid #DCDCDC; color: #313131; height: 29px;"
+                                        value="Blaise" />
+                                </div>
+                                <div style="width: 50.554%;">
+                                    <label style="color: #616161;" class="fw-500 fs-11">Last Name</label>
+                                    <input type="text" class="form-control fs-12 fw-500"
+                                        style="border: 1px solid #DCDCDC; color: #313131; height: 29px;"
+                                        value="Defloo" />
+                                </div>
+                            </div>
+                            <div style="width: 1.563%;"></div>
+                            <div class="d-flex col-adj" style="padding: 0px !important; width: 59.943%;">
+                                <div style="width: 56.161%; margin-right: 2.37%;">
+                                    <label style="color: #616161;" class="fw-500 fs-11">Email</label>
+                                    <input type="email" class="form-control fs-12 fw-500"
+                                        style="border: 1px solid #DCDCDC; color: #313131; height: 29px;"
+                                        value="blaise.defloo@newelec.be" />
+                                </div>
+                                <div style="width: 41.469%;">
+                                    <label style="color: #616161;" class="fw-500 fs-11">Mobile Phone</label>
+                                    <div class="w-100 d-flex">
+                                        <select class="form-control fs-12 fw-500"
+                                            style="border: 1px solid #DCDCDC; color: #313131; height: 29px; width: 34.857%; margin-right: 5.143%; padding-left: 5px !important; padding-right: 0px !important; padding-top: unset !important; padding-bottom: unset;">
+                                            <option>+32</option>
+                                        </select>
+                                        <input type="text" class="form-control fs-12 fw-500"
+                                            style="border: 1px solid #DCDCDC; color: #313131; height: 29px; width: 60%;"
+                                            value="4 227 18 08" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <hr style="border-top: 1px solid #EBEBEB;" />
+
+                    <div class="navbar p-0 w-100">
+                        <button class="fs-12 ml-auto"
+                            style="width: 70px; height: 30px; background: #42A4DF; border-radius: 2px; color: white; font-weight: 700; border: none; outline: none;">
+                            Save
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="bg-white d-flex"
+                    style="width: 29.545%; height: auto; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05); border-radius: 5px;">
+                    <div class="w-100 my-auto" style="padding: 0px 8.615%;">
+                        <div class="w-100">
+                            <label class="fw-500 fs-11" style="color: #616161;">Old Password</label>
+                            <div class="w-100">
+                                <input id="password-field" type="password" class="form-control fs-17 set-pass"
+                                    style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 2px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
+                                    name="password">
+                                <img src="./img/Super Admin/hide.png" toggle="#password-field"
+                                    class="field-icon toggle-password oldpass" style="display: none;" />
+                            </div>
+                            <label class="fw-500 fs-11" style="color: #616161; margin-top: 13px;">New Password</label>
+                            <div class="w-100">
+                                <input id="password-field1" type="password" class="form-control fs-17 set-pass"
+                                    style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 2px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
+                                    name="password">
+                                <img src="./img/Super Admin/hide.png" toggle="#password-field1"
+                                    class="field-icon toggle-password newpass" style="display: none;" />
+                            </div>
+                            <label class="fw-500 fs-11" style="color: #616161; margin-top: 13px;">Confirm
+                                Password</label>
+                            <div class="w-100">
+                                <input id="password-field2" type="password" class="form-control fs-17"
+                                    style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 2px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
+                                    name="password">
+                                <img src="./img/Super Admin/hide.png" toggle="#password-field2"
+                                    class="field-icon toggle-password conpass" style="display: none;" />
+                            </div>
+                        </div>
+
+                        <div class="w-100" style="margin-top: 29px;">
+                            <button class="form-control fs-12"
+                                style="color: #FFFFFF; font-weight: bold; background: #FF8D3E; border-radius: 2px; box-shadow: none; border: none;">
+                                Change Password
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal1">
+        <div class="modal-dialog" style="max-width: 570px;">
+            <div class="modal-content br-10" style="background: #F8FAFD; height: 510px; border-radius: 5px;">
+
+                <!-- Modal Header -->
+                <div class="modal-header bg-white" style="border-bottom: none; height: 51px;">
+                    <div class="modal-title">
+                        <div class="ml-2" style="font-weight: 600; font-size: 15px; line-height: 18px; color: #7C7C7C;">
+                            Add Client
+                        </div>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" style="outline:none;">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body m-3 p-0 pr-3" style="overflow-y: auto;" id="style-2">
+                    <div class="w-100 d-flex">
+                        <div style="width: 27.495%;">
+                            <label class="label-text w-100">Logo</label>
+                            <div class="w-100 position-relative d-flex"
+                                style="height: 111px; padding: 0px 10.274%; background: #EFEFEF; border-radius: 2px;">
+                                <img src="./img/Super Admin/Group 1325.png" class="my-auto mx-auto" />
+                                <img src="./img/Super Admin/Vector (1).png"
+                                    style="position: absolute; top: 7px; right: 7px;" />
+                                <div class="upload-logo">
+                                    <img src="./img/Super Admin/icon.png" class="img-fluid my-auto mx-auto" />
+                                </div>
+                                <input type="file" class="upload-logo-input" />
+                            </div>
+                        </div>
+                        <div style="width: 69.492%; margin-left: 3.013%;">
+                            <div class="row m-0 w-100">
+                                <div style="width: 50.136%; margin-right: 2.981%;">
+                                    <label class="label-text">Company Name</label>
+                                    <input type="text" class="input-text" value="ucd Pharma" />
+                                </div>
+                                <div style="width: 18.157%; margin-right: 2.981%;">
+                                    <label class="label-text">Acronym</label>
+                                    <input type="text" class="input-text" value="UCD" />
+                                </div>
+                                <div style="width: 25.745%;">
+                                    <label class="label-text">Legal Form</label>
+                                    <select class="input-select">
+                                        <option>SRL</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row m-0 w-100" style="margin-top: 12px !important;">
+                                <div style="width: 36.314%; margin-right: 2.981%;">
+                                    <label class="label-text">TVA</label>
+                                    <input type="text" class="input-text" value="BE 0999999999" />
+                                </div>
+                                <div style="width: 36.314%; margin-right: 5.962%;">
+                                    <label class="label-text">NACE</label>
+                                    <input type="text" class="input-text" value="Nacebel CODE" />
+                                </div>
+                                <div style="width: 18.429%;">
+                                    <label class="label-text w-100">Status</label>
+                                    <label class="switch my-auto ml-auto">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 w-100" style="margin-top: 21px !important;">
+                        <label class="label-text">Description</label>
+                        <textarea type="text" class="input-textarea"
+                            id="style-2">Lorem ipsum dolor sit amet, consectetur adipislum.</textarea>
+                    </div>
+                    <div class="row m-0 w-100" style="margin-top: 12px !important;">
+                        <div style="width: 67.42%; margin-right: 1.883%;">
+                            <label class="label-text">Address</label>
+                            <input type="text" class="input-text" value="Rue des Fraisiers" />
+                        </div>
+                        <div style="width: 11.299%; margin-right: 2.072%;">
+                            <label class="label-text">Nº</label>
+                            <input type="text" class="input-text" value="91" />
+                        </div>
+                        <div style="width: 17.137%;">
+                            <label class="label-text">PO Box</label>
+                            <input type="text" class="input-text" value="B-4041" />
+                        </div>
+                    </div>
+                    <div class="row m-0 w-100" style="margin-top: 12px !important;">
+                        <div style="width: 17.137%; margin-right: 2.072%;">
+                            <label class="label-text">Zip Code</label>
+                            <input type="text" class="input-text" value="B-4041" />
+                        </div>
+                        <div style="width: 30.132%; margin-right: 2.072%;">
+                            <label class="label-text">City</label>
+                            <input type="text" class="input-text" value="Herstal-Vottem" />
+                        </div>
+                        <div style="width: 26.177%;">
+                            <label class="label-text">Country</label>
+                            <select class="input-select">
+                                <option>Belgium</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row m-0 w-100" style="margin-top: 12px !important;">
+                        <div style="width: 50.847%; margin-right: 2.072%;">
+                            <label class="label-text">Website</label>
+                            <input type="text" class="input-text" value="www.company-name.com" />
+                        </div>
+                        <div style="width: 32.203%;">
+                            <label class="label-text w-100">Phone Number</label>
+                            <div class="row m-0 w-100">
+                                <div style="width: 35.673%; margin-right: 2.339%;">
+                                    <select class="input-select" style="padding-left: 8px; padding-right: 0px;">
+                                        <option>+32</option>
+                                    </select>
+                                </div>
+                                <div style="width: 61.988%;">
+                                    <input type="text" class="input-text" value="4 227 18 08" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="w-100" style="font-weight: 600; font-size: 14px; line-height: 17px; color: #2C8EFF;">
+                        CONTACT PERSON
+                    </div>
+                    <div class="row m-0 w-100" style="margin-top: 12px !important;">
+                        <div style="width: 23.541%;">
+                            <label class="label-text w-100">Profile Photo</label>
+                            <div class="w-100 d-flex">
+                                <img src="./img/Super Admin/Vector (1).png" style="margin-right: 5px; height: 100%;" />
+                                <div class="position-relative profile-img" style="">
+                                    <div class="upload-logo">
+                                        <img src="./img/Super Admin/icon.png" class="img-fluid my-auto mx-auto" />
+                                    </div>
+                                    <input type="file" class="upload-logo-input" />
+                                </div>
+                            </div>
+                        </div>
+                        <div style="width: 30.508%; margin-right: 1.883%;">
+                            <label class="label-text">First Name</label>
+                            <input type="text" class="input-text" value="Prewitt" />
+                        </div>
+                        <div style="width: 30.508%; margin-right: 2.072%;">
+                            <label class="label-text">Last Name</label>
+                            <input type="text" class="input-text" value="Lemaître" />
+                        </div>
+                        <div style="width: 11.488%;">
+                            <label class="label-text">Acronym</label>
+                            <input type="text" class="input-text" value="BDO" />
+                        </div>
+                    </div>
+                    <div class="row m-0 w-100" style="margin-top: 12px !important;">
+                        <div style="width: 27.119%; margin-right: 1.883%;">
+                            <div class="w-100 d-flex" style="margin-top: 0.3rem;">
+                                <label class="label-text mr-auto">Birthday</label>
+                                <label class="ml-auto mt-1"
+                                    style="font-weight: 600; font-size: 10px; line-height: 12px; color: #B8B8B8;">Optional</label>
+                            </div>
+                            <div class="w-100 position-relative" style="height: fit-content;">
+                                <input type="text" value="DD/MM/YYYY" class="birthday input-text position-absolute"
+                                    style="top: 0; left: 0; right: 0; cursor: pointer;" id="birthday" />
+                                <img src="./img/Super Admin/calendar.png" class="img-fluid position-absolute"
+                                    style="right: 11px; top: 10px;" />
+                            </div>
+                        </div>
+                        <div style="width: 36.535%; margin-right: 2.072%;">
+                            <label class="label-text">Email</label>
+                            <input type="email" class="input-text" value="prewitt.emaître@newelec.be" />
+                        </div>
+                        <div style="width: 32.203%;">
+                            <label class="label-text w-100">Phone Number</label>
+                            <div class="row m-0 w-100">
+                                <div style="width: 35.673%; margin-right: 2.339%;">
+                                    <select class="input-select" style="padding-left: 8px; padding-right: 0px;">
+                                        <option>+32</option>
+                                    </select>
+                                </div>
+                                <div style="width: 61.988%;">
+                                    <input type="text" class="input-text" value="4 227 18 08" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer border-0" style="padding-right:1.5rem !important;">
+                    <button type="button" class="btn-cancel" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn-create" data-dismiss="modal">Create And Send Email</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#password-field").on('keypress', function () {
+                $('.oldpass').css('display', 'block');
+            });
+
+            $("#password-field1").on('keypress', function () {
+                $('.newpass').css('display', 'block');
+            });
+
+            $("#password-field2").on('keypress', function () {
+                $('.conpass').css('display', 'block');
+            });
+
+            $(".toggle-password").click(function () {
+                $(this).toggleClass("fa-eye fa-eye-slash");
+                var input = $($(this).attr("toggle"));
+                if (input.attr("type") == "password") {
+                    input.attr("type", "text");
+                } else {
+                    input.attr("type", "password");
+                }
+            });
+
+            //select all checkboxes
+            $("#selectall").change(function(){  //"select all" change 
+                $(".select-checkbox").prop('checked', $(this).prop("checked")); //change all ".checkbox" checked status
+            });
+
+            //".checkbox" change 
+            $('.select-checkbox').change(function(){ 
+                //uncheck "select all", if one of the listed checkbox item is unchecked
+                if(false == $(this).prop("checked")){ //if this item is unchecked
+                    $("#selectall").prop('checked', false); //change "select all" checked status to false
+                }
+                //check "select all" if all checkbox items are checked
+                if ($('.select-checkbox:checked').length == $('.select-checkbox').length ){
+                    $("#selectall").prop('checked', true);
+                }
+            });
+
+        });
+    </script>
+
+
+    <!--Date Picker-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <!--Date Picker End-->
+
+
+    <!--Date Picker-->
+    <script>
+        var startDate = new Date(1991, 1 - 1, 1),
+            endDate = new Date(new Date().getFullYear() - 18, 12 - 1, 31);
+        $(".birthday").datepicker({
+            autoclose: true,
+            disableTouchKeyboard: true,
+            format: "dd/mm/yyyy",
+            startDate: startDate,
+            endDate: endDate
+        });
+    </script>
+    <!--Date Picker End-->
+
+
+    <script>
+        $(document).ready(function () {
+            $(".manage-clients").show();
+            $(".manage-clients-link").addClass('color-blue');
+            $(".my-profile").hide();
+
+            $(".manage-clients-link").click(function () {
+                $(".my-profile").hide();
+                $(".manage-clients-link").addClass('color-blue');
+                $(".manage-clients").show(200);
+            });
+
+            $(".my-profile-link").click(function () {
+                $(".manage-clients").hide();
+                $(".color-blue").removeClass('color-blue');
+                $(".my-profile").show(200);
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
