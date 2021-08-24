@@ -185,6 +185,27 @@ select.classic {
     border: 1px solid #2C8EFF;
 }
 
+.checkbox-primary-12 {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 2px !important;
+}
+
+.checkbox-primary-12:checked:before {
+    color: #FFFFFF !important;
+    top: 0px !important;
+    left: 2px !important;
+}
+
+.checkbox-primary-12:checked {
+    background: #2C8EFF;
+    border: 1px solid #2C8EFF;
+}
+
+
+
+
+
 /* The switch - the box around the slider */
 
 .switch {
@@ -389,17 +410,31 @@ input:checked+.slider:before {
     padding: 7px 15px;
     color: #FFFFFF;
     border: none;
-    background-color: transparent;
     background: #2C8EFF;
     border-radius: 5px;
 }
 
-.btn-cancel:focus {
+.btn-create:focus {
+    outline: none;
+}
+
+.btn-delete {
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 7px 20px;
+    color: #FFFFFF;
+    border: none;
+    background: #F53D50;
+    border-radius: 5px;
+}
+
+.btn-delete:focus {
     outline: none;
 }
 
 .manage-clients {
-    padding-left: 9.736%;
+    padding-left: 9.536%;
     padding-right: 9.736%;
     padding-top: 28px;
     padding-bottom: 46px;
@@ -411,7 +446,7 @@ input:checked+.slider:before {
 }
 
 .my-profile {
-    padding-left: 9.736%;
+    padding-left: 9.536%;
     padding-right: 9.736%;
     padding-top: 25px;
     padding-bottom: 46px;
@@ -528,6 +563,7 @@ input:checked+.slider:before {
     width: 60.538%;
     display: flex;
     min-width: 127px;
+    max-width: 170px;
     cursor: pointer;
 }
 
@@ -542,7 +578,11 @@ input:checked+.slider:before {
 }
 
 @media (min-width: 576px) {
-    .modal-dialog {
+    #myModal1 .modal-dialog {
         margin: 3.5rem auto !important;
+    }
+
+    #myModal2 .modal-dialog {
+        margin: 6rem auto !important;
     }
 }
