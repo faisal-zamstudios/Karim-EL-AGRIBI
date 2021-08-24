@@ -362,7 +362,7 @@ input:checked+.slider:before {
     height: 48px;
     width: 48px;
     border-radius: 50%;
-    background-image: url('../img/Super\ Admin/Ellipse\ 37\ (1).png');
+    border: 1px solid #ccc;
     background-size: contain;
 }
 
@@ -517,6 +517,9 @@ input:checked+.slider:before {
     margin-top: -22px;
     position: relative;
     z-index: 2;
+    width: 14px; 
+    height: 16px;
+    cursor: pointer;
 }
 
 .my-profile-link {

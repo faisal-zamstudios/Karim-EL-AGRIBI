@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="./css/superAdmin.css">
-    
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    
+
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
 
     <title>Super Admin</title>
@@ -27,7 +28,8 @@
             <div style="min-width: 150px; width: 75.683%; height: 32px; position: relative;">
                 <input id="myInput" type="text" class="form-input general-form"
                     style="padding-left: 2rem; min-width: 170px;" placeholder="Quick Search" autocomplete="off">
-                <img src="./img/Super Admin/searchIcon.png" class="img-fluid" style="position: absolute; left: 8px; margin-top: 9px;" />
+                <img src="./img/Super Admin/searchIcon.png" class="img-fluid"
+                    style="position: absolute; left: 8px; margin-top: 9px;" />
             </div>
             <div class="my-auto text-center" style="font-size: 14px; color: #B6B6B6; width: 15%; min-width: 75px;">
                 Dashboard
@@ -41,10 +43,11 @@
             <img src="./img/Super Admin/notification.png" class="img-fluid" />
             <img src="./img/Super Admin/english.png" class="img-fluid" />
             <div class="media my-profile-link">
-                <img class="mr-2 img-fluid" style="max-width: 32px; max-height: 32px;" src="./img/Super Admin/profile.png">
+                <img class="mr-2 img-fluid" style="max-width: 32px; max-height: 32px;"
+                    src="./img/Super Admin/profile.png">
                 <div class="media-body" style="font-size: 11px; font-weight: 500; color: #9F9F9F; min-width: 97px;">
-                  <h5 class="m-0" style="font-size: 13px; font-weight: 600; color: #6B6B6B;">Karim EL AGRIBI</h5>
-                  Super Admin
+                    <h5 class="m-0" style="font-size: 13px; font-weight: 600; color: #6B6B6B;">Karim EL AGRIBI</h5>
+                    Super Admin
                 </div>
             </div>
         </div>
@@ -256,17 +259,19 @@
                                     files are
                                     allowed. Image must be less than 2 MB</div>
                                 <div style="max-width: 360px; display: flex; align-items: center;">
-                                    <img src="./img/Super Admin/Ellipse 49.png" class="mx-auto"
-                                        style="width: 100px; height: 100px; margin-bottom: 8px;" />
+                                    <div class="mx-auto" id="imagePreview2"
+                                        style="width: 100px; height: 100px; border-radius: 50%; background-size: contain; margin-bottom: 8px; border: 1px solid #ccc;">
+                                    </div>
                                     <div class="mx-auto" style="min-width: 235px; display: flex; height: fit-content;">
                                         <div class="fs-11 text-center mx-auto position-relative"
                                             style="font-weight: 700; padding: 8px 20px; margin-right: 12px; color: white; background: #42A4DF; border-radius: 5px;">
                                             UPLOAD IMAGE
-                                            <input type="file"
-                                                style="cursor: pointer; position: absolute; opacity: 0; top: 0; left: 0; bottom: 0; right: 0;" />
+                                            <input type="file" id="imageUpload2"
+                                                style="cursor: pointer; position: absolute; opacity: 0; top: 0; left: 0; bottom: 0; right: 0;"
+                                                accept=".png, .jpg, .jpeg" />
                                         </div>
-                                        <div class="fs-11 text-center fw-500 mx-auto"
-                                            style="color: #EF3C3C; padding: 8px 20px;">
+                                        <div class="fs-11 text-center fw-500 mx-auto position-relative" id="delete-img"
+                                            style="color: #EF3C3C; padding: 8px 20px; cursor: pointer;">
                                             Remove image</div>
                                     </div>
                                 </div>
@@ -335,7 +340,7 @@
                                     style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 2px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
                                     name="password">
                                 <img src="./img/Super Admin/hide.png" toggle="#password-field"
-                                    class="field-icon toggle-password oldpass" style="display: none;" />
+                                    class="field-icon toggle-password oldpass" />
                             </div>
                             <label class="fw-500 fs-11" style="color: #616161; margin-top: 13px;">New Password</label>
                             <div class="w-100">
@@ -343,7 +348,7 @@
                                     style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 2px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
                                     name="password">
                                 <img src="./img/Super Admin/hide.png" toggle="#password-field1"
-                                    class="field-icon toggle-password newpass" style="display: none;" />
+                                    class="field-icon toggle-password newpass" />
                             </div>
                             <label class="fw-500 fs-11" style="color: #616161; margin-top: 13px;">Confirm
                                 Password</label>
@@ -352,7 +357,7 @@
                                     style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 2px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
                                     name="password">
                                 <img src="./img/Super Admin/hide.png" toggle="#password-field2"
-                                    class="field-icon toggle-password conpass" style="display: none;" />
+                                    class="field-icon toggle-password conpass" />
                             </div>
                         </div>
 
@@ -393,14 +398,16 @@
                         <div style="width: 27.495%;">
                             <label class="label-text w-100">Logo</label>
                             <div class="w-100 position-relative d-flex"
-                                style="height: 111px; padding: 0px 10.274%; background: #EFEFEF; border-radius: 2px;">
-                                <img src="./img/Super Admin/Group 1325.png" class="my-auto mx-auto" />
-                                <img src="./img/Super Admin/Vector (1).png"
+                                style="height: 111px; padding: 5% 10.274%; background: #EFEFEF; border-radius: 2px;">
+                                <img id="imagePreview" class="my-auto mx-auto"
+                                    style="height: fit-content; width: 100%; display: none;" />
+                                <img src="./img/Super Admin/Vector (1).png" id="delete-logo"
                                     style="position: absolute; top: 7px; right: 7px;" />
                                 <div class="upload-logo">
                                     <img src="./img/Super Admin/icon.png" class="img-fluid my-auto mx-auto" />
                                 </div>
-                                <input type="file" class="upload-logo-input" />
+                                <input type="file" class="upload-logo-input" id="imageUpload"
+                                    accept=".png, .jpg, .jpeg" />
                             </div>
                         </div>
                         <div style="width: 69.492%; margin-left: 3.013%;">
@@ -501,12 +508,14 @@
                         <div style="width: 23.541%;">
                             <label class="label-text w-100">Profile Photo</label>
                             <div class="w-100 d-flex">
-                                <img src="./img/Super Admin/Vector (1).png" style="margin-right: 5px; height: 100%;" />
-                                <div class="position-relative profile-img" style="">
+                                <img src="./img/Super Admin/Vector (1).png" id="delete-photo"
+                                    style="margin-right: 5px; height: 100%;" />
+                                <div class="position-relative profile-img" id="imagePreview1">
                                     <div class="upload-logo">
                                         <img src="./img/Super Admin/icon.png" class="img-fluid my-auto mx-auto" />
                                     </div>
-                                    <input type="file" class="upload-logo-input" />
+                                    <input type="file" class="upload-logo-input" id="imageUpload1"
+                                        accept=".png, .jpg, .jpeg" />
                                 </div>
                             </div>
                         </div>
@@ -568,8 +577,6 @@
     </div>
 
 
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -584,53 +591,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-    <script>
-
-        $(document).ready(function () {
-
-            $("#password-field").on('keypress', function () {
-                $('.oldpass').css('display', 'block');
-            });
-
-            $("#password-field1").on('keypress', function () {
-                $('.newpass').css('display', 'block');
-            });
-
-            $("#password-field2").on('keypress', function () {
-                $('.conpass').css('display', 'block');
-            });
-
-            $(".toggle-password").click(function () {
-                $(this).toggleClass("fa-eye fa-eye-slash");
-                var input = $($(this).attr("toggle"));
-                if (input.attr("type") == "password") {
-                    input.attr("type", "text");
-                } else {
-                    input.attr("type", "password");
-                }
-            });
-
-            //select all checkboxes
-            $("#selectall").change(function(){  //"select all" change 
-                $(".select-checkbox").prop('checked', $(this).prop("checked")); //change all ".checkbox" checked status
-            });
-
-            //".checkbox" change 
-            $('.select-checkbox').change(function(){ 
-                //uncheck "select all", if one of the listed checkbox item is unchecked
-                if(false == $(this).prop("checked")){ //if this item is unchecked
-                    $("#selectall").prop('checked', false); //change "select all" checked status to false
-                }
-                //check "select all" if all checkbox items are checked
-                if ($('.select-checkbox:checked').length == $('.select-checkbox').length ){
-                    $("#selectall").prop('checked', true);
-                }
-            });
-
-        });
-    </script>
-
-
     <!--Date Picker-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
@@ -638,42 +598,7 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <!--Date Picker End-->
 
-
-    <!--Date Picker-->
-    <script>
-        var startDate = new Date(1991, 1 - 1, 1),
-            endDate = new Date(new Date().getFullYear() - 18, 12 - 1, 31);
-        $(".birthday").datepicker({
-            autoclose: true,
-            disableTouchKeyboard: true,
-            format: "dd/mm/yyyy",
-            startDate: startDate,
-            endDate: endDate
-        });
-    </script>
-    <!--Date Picker End-->
-
-
-    <script>
-        $(document).ready(function () {
-            $(".manage-clients").show();
-            $(".manage-clients-link").addClass('color-blue');
-            $(".my-profile").hide();
-
-            $(".manage-clients-link").click(function () {
-                $(".my-profile").hide();
-                $(".manage-clients-link").addClass('color-blue');
-                $(".manage-clients").show(200);
-            });
-
-            $(".my-profile-link").click(function () {
-                $(".manage-clients").hide();
-                $(".color-blue").removeClass('color-blue');
-                $(".my-profile").show(200);
-            });
-
-        });
-    </script>
+    <script src="./js/superAdmin.js"></script>
 
 </body>
 
