@@ -66,11 +66,11 @@ $("#imageUpload2").change(function () {
 
 
 
-
-
-
-
 $(document).ready(function () {
+
+    $("#dismiss-success").click(function () {
+        $("#successful-msg").hide(300);
+    });
 
     $(".toggle-password").click(function () {
         var input = $($(this).attr("toggle"));
@@ -138,3 +138,5 @@ $(document).ready(function () {
     });
 
 });
+
+
