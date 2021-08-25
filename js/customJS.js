@@ -267,7 +267,6 @@ $(document).ready(function () {
 
     $(".manage-clients").show();
     $(".clients-link").addClass('color-blue');
-    $(".worker-dashboard-link").addClass('color-blue');
     $(".my-profile").hide();
 
     $(".clients-link").click(function () {
@@ -292,6 +291,13 @@ $(document).ready(function () {
   *********************************  Worker Area Style  ************************************
   ******************************************************************************************
 */
+
+
+
+$(document).ready(function () {
+    $(".worker-dashboard-link").addClass('color-blue');
+
+});
 
 
 
