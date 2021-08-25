@@ -295,6 +295,7 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
+
     $(".worker-dashboard").show();
     $(".worker-dashboard-link").addClass('color-blue');
     $(".worker-profile").hide();

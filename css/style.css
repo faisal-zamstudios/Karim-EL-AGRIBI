@@ -714,7 +714,7 @@ input:checked+.slider:before {
   flex-wrap: wrap;
 }
 
-.super-admin-profile {
+.super-admin-profile, .worker-profile {
   padding-top: 25px;
   display: -ms-flexbox;
   display: flex;
@@ -824,7 +824,7 @@ input:checked+.slider:before {
   cursor: pointer;
 }
 
-.super-admin-profile-link {
+.super-admin-profile-link, .worker-profile-link {
   width: 60.538%;
   display: flex;
   min-width: 127px;
@@ -865,6 +865,7 @@ input:checked+.slider:before {
   margin-top: auto !important;
   margin-bottom: auto !important;
   text-align: center;
+  cursor: pointer;
 }
 
 .my-training-btn {
