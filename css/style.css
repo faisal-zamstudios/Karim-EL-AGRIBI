@@ -73,7 +73,7 @@ select.classic-down-arrow {
     -ms-flex: 0 0 32.333%;
     flex: 0 0 32.333%;
     max-width: 32.333%;
-  }  
+  }
 }
 
 /*
@@ -299,10 +299,10 @@ select.classic-down-arrow {
 */
 
 .super-admin-clients-link {
-  font-size: 14px; 
-  color: #B6B6B6; 
-  width: 5%; 
-  min-width: 45px; 
+  font-size: 14px;
+  color: #B6B6B6;
+  width: 5%;
+  min-width: 45px;
   cursor: pointer;
   margin-top: auto !important;
   margin-bottom: auto !important;
@@ -858,9 +858,9 @@ input:checked+.slider:before {
 }
 
 .worker-dashboard-link {
-  font-size: 14px; 
-  color: #B6B6B6; 
-  width: 15%; 
+  font-size: 14px;
+  color: #B6B6B6;
+  width: 15%;
   min-width: 75px;
   margin-top: auto !important;
   margin-bottom: auto !important;
@@ -990,13 +990,12 @@ input:checked+.slider:before {
   background: rgba(237, 76, 92, 0.05);
 }
 
-
 .total-trainings-section {
   width: 100%;
   max-height: 532px;
   padding: 15px 2.273%;
-  background: #FFFFFF; 
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05); 
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
 }
 
@@ -1061,4 +1060,3 @@ input:checked+.slider:before {
   vertical-align: middle;
   border-top: none !important;
 }
-
