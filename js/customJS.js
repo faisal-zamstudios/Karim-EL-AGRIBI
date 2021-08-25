@@ -317,3 +317,25 @@ $(document).ready(function () {
 
 
 
+function readURL3(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#imagePreview3').css('background-image', 'url(' + e.target.result + ')');
+            $('#imagePreview3').css('border', 'none');
+            $('#imagePreview3').hide();
+            $('#imagePreview3').fadeIn(650);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#delete-worker-signature").click(function () {
+    $('#imagePreview3').css('background-image', 'none');
+    $('#imagePreview3').css('border', '1px solid #ccc');
+});
+
+$("#imageUpload3").change(function () {
+    readURL3(this);
+});
+
