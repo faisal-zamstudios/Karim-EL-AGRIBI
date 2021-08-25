@@ -298,6 +298,17 @@ select.classic-down-arrow {
   ******************************************************************************************
 */
 
+.super-admin-clients-link {
+  font-size: 14px; 
+  color: #B6B6B6; 
+  width: 5%; 
+  min-width: 45px; 
+  cursor: pointer;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+  text-align: right;
+}
+
 .general-form {
   width: 100%;
   height: 100%;
@@ -703,7 +714,7 @@ input:checked+.slider:before {
   flex-wrap: wrap;
 }
 
-.my-profile {
+.super-admin-profile {
   padding-top: 25px;
   display: -ms-flexbox;
   display: flex;
@@ -813,7 +824,7 @@ input:checked+.slider:before {
   cursor: pointer;
 }
 
-.my-profile-link {
+.super-admin-profile-link {
   width: 60.538%;
   display: flex;
   min-width: 127px;
@@ -842,7 +853,7 @@ input:checked+.slider:before {
   ******************************************************************************************
 */
 
-.dashboard {
+.worker-dashboard {
   margin-top: 51px;
 }
 

@@ -266,20 +266,20 @@ $(".birthday").datepicker({
 $(document).ready(function () {
 
     $(".manage-clients").show();
-    $(".clients-link").addClass('color-blue');
-    $(".my-profile").hide();
+    $(".super-admin-clients-link").addClass('color-blue');
+    $(".super-admin-profile").hide();
 
-    $(".clients-link").click(function () {
-        $(".my-profile").hide();
-        $(".clients-link").addClass('color-blue');
+    $(".super-admin-clients-link").click(function () {
+        $(".super-admin-profile").hide();
+        $(".super-admin-clients-link").addClass('color-blue');
         $(".manage-clients").show(200);
     });
 
-    $(".my-profile-link").click(function () {
+    $(".super-admin-profile-link").click(function () {
         $(".manage-clients").hide();
         $(".color-blue").removeClass('color-blue');
         $(".worker-dashboard-link").addClass('color-blue');
-        $(".my-profile").show(200);
+        $(".super-admin-profile").show(200);
     });
 
 });
@@ -295,7 +295,22 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
+    $(".worker-dashboard").show();
     $(".worker-dashboard-link").addClass('color-blue');
+    $(".worker-profile").hide();
+    
+    $(".worker-dashboard-link").click(function () {
+        $(".worker-profile").hide();
+        $(".worker-dashboard-link").addClass('color-blue');
+        $(".worker-dashboard").show(200);
+    });
+
+    $(".worker-profile-link").click(function () {
+        $(".worker-dashboard").hide();
+        $(".color-blue").removeClass('color-blue');
+        $(".super-admin-clients-link").addClass('color-blue');
+        $(".worker-profile").show(200);
+    });
 
 });
 
