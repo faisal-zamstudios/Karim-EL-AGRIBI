@@ -942,6 +942,55 @@ input:checked+.slider:before {
   background: rgba(116, 116, 116, 0.05);
 }
 
+.color-green {
+  background: rgba(71, 202, 91, 0.01);
+}
+
+.color-green span {
+  background: rgba(71, 202, 91, 0.03);
+}
+
+.color-green span label {
+  background: rgba(71, 202, 91, 0.05);
+}
+
+.color-blue {
+  background: rgba(44, 142, 255, 0.01);
+}
+
+.color-blue span {
+  background: rgba(44, 142, 255, 0.03);
+}
+
+.color-blue span label {
+  background: rgba(44, 142, 255, 0.05);
+}
+
+.color-orange {
+  background: rgba(235, 116, 33, 0.01);
+}
+
+.color-orange span {
+  background: rgba(235, 116, 33, 0.03);
+}
+
+.color-orange span label {
+  background: rgba(235, 116, 33, 0.05);
+}
+
+.color-pink {
+  background: rgba(237, 76, 92, 0.01);
+}
+
+.color-pink span {
+  background: rgba(237, 76, 92, 0.03);
+}
+
+.color-pink span label {
+  background: rgba(237, 76, 92, 0.05);
+}
+
+
 .total-trainings-section {
   width: 100%;
   max-height: 532px;
