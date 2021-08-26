@@ -310,7 +310,7 @@ $(document).ready(function () {
         $(".worker-dashboard").hide();
         $(".blue-color").removeClass('blue-color');
         $(".super-admin-clients-link").addClass('blue-color');
-        $("#personal-information-link").addClass('blue-color');
+        $("#worker-personal-information-link").addClass('blue-color');
         $(".worker-profile").show(200);
     });
 
@@ -362,21 +362,21 @@ $("#imageUpload4").change(function () {
 
 
 $(document).ready(function () {
-    $("#personal-information").show();
-    $("#personal-information-link").addClass('blue-color');
+    $("#worker-personal-information").show();
+    $("#worker-personal-information-link").addClass('blue-color');
     $("#legal-documents").hide();
     $("#training-certificates").hide();
 
-    $("#personal-information-link").click(function () {
+    $("#worker-personal-information-link").click(function () {
       $("#legal-documents").hide();
       $("#training-certificates").hide();
       $(".set-color .blue-color").removeClass('blue-color');
-      $("#personal-information-link").addClass('blue-color');
-      $("#personal-information").show(200);
+      $("#worker-personal-information-link").addClass('blue-color');
+      $("#worker-personal-information").show(200);
     });
 
     $("#legal-documents-link").click(function () {
-      $("#personal-information").hide();
+      $("#worker-personal-information").hide();
       $("#training-certificates").hide();
       $(".set-color .blue-color").removeClass('blue-color');
       $("#legal-documents-link").addClass('blue-color');
@@ -384,7 +384,7 @@ $(document).ready(function () {
     });
 
     $("#training-certificates-link").click(function () {
-      $("#personal-information").hide();
+      $("#worker-personal-information").hide();
       $("#legal-documents").hide();
       $(".set-color .blue-color").removeClass('blue-color');
       $("#training-certificates-link").addClass('blue-color');

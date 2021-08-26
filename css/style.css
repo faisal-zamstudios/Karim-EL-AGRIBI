@@ -771,7 +771,7 @@ input:checked+.slider:before {
 
 .super-admin-upload-img, .worker-upload-img {
   font-weight: 700;
-  padding: 8px 20px;
+  padding: 7px 20px;
   margin-right: 12px;
   color: white;
   background: #42A4DF;
@@ -786,7 +786,7 @@ input:checked+.slider:before {
 
 #delete-img, #delete-img2 {
   color: #EF3C3C;
-  padding: 8px 20px;
+  padding: 7px 20px;
   cursor: pointer;
   font-size: 11px !important;
   line-height: 13px !important;
@@ -1197,15 +1197,17 @@ input:checked+.slider:before {
   }
   .adjust-badges-alignment div {
     margin-top: 1px;
-    margin-right: auto;
   }
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1200px) {
   .col-adj {
     width: 100% !important;
   }
   .col-adj div.d-flex {
-    justify-content: center;
+    justify-content: center !important;
+  }
+  .adjust-badges-alignment div {
+    margin-right: auto;
   }
 }
