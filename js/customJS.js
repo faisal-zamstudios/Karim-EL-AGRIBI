@@ -266,19 +266,19 @@ $(".birthday").datepicker({
 $(document).ready(function () {
 
     $(".manage-clients").show();
-    $(".super-admin-clients-link").addClass('color-blue');
+    $(".super-admin-clients-link").addClass('blue-color');
     $(".super-admin-profile").hide();
 
     $(".super-admin-clients-link").click(function () {
         $(".super-admin-profile").hide();
-        $(".super-admin-clients-link").addClass('color-blue');
+        $(".super-admin-clients-link").addClass('blue-color');
         $(".manage-clients").show(200);
     });
 
     $(".super-admin-profile-link").click(function () {
         $(".manage-clients").hide();
-        $(".color-blue").removeClass('color-blue');
-        $(".worker-dashboard-link").addClass('color-blue');
+        $(".blue-color").removeClass('blue-color');
+        $(".worker-dashboard-link").addClass('blue-color');
         $(".super-admin-profile").show(200);
     });
 
@@ -297,25 +297,24 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     $(".worker-dashboard").show();
-    $(".worker-dashboard-link").addClass('color-blue');
+    $(".worker-dashboard-link").addClass('blue-color');
     $(".worker-profile").hide();
     
     $(".worker-dashboard-link").click(function () {
         $(".worker-profile").hide();
-        $(".worker-dashboard-link").addClass('color-blue');
+        $(".worker-dashboard-link").addClass('blue-color');
         $(".worker-dashboard").show(200);
     });
 
     $(".worker-profile-link").click(function () {
         $(".worker-dashboard").hide();
-        $(".color-blue").removeClass('color-blue');
-        $(".super-admin-clients-link").addClass('color-blue');
+        $(".blue-color").removeClass('blue-color');
+        $(".super-admin-clients-link").addClass('blue-color');
+        $("#personal-information-link").addClass('blue-color');
         $(".worker-profile").show(200);
     });
 
 });
-
-
 
 function readURL3(input) {
     if (input.files && input.files[0]) {
@@ -330,7 +329,7 @@ function readURL3(input) {
     }
 }
 
-$("#delete-worker-signature").click(function () {
+$("#delete-img2").click(function () {
     $('#imagePreview3').css('background-image', 'none');
     $('#imagePreview3').css('border', '1px solid #ccc');
 });
@@ -339,3 +338,57 @@ $("#imageUpload3").change(function () {
     readURL3(this);
 });
 
+function readURL4(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#imagePreview4').css('background-image', 'url(' + e.target.result + ')');
+            $('#imagePreview4').css('border', 'none');
+            $('#imagePreview4').hide();
+            $('#imagePreview4').fadeIn(650);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#delete-worker-signature").click(function () {
+    $('#imagePreview4').css('background-image', 'none');
+    $('#imagePreview4').css('border', '1px solid #ccc');
+});
+
+$("#imageUpload4").change(function () {
+    readURL4(this);
+});
+
+
+$(document).ready(function () {
+    $("#personal-information").show();
+    $("#personal-information-link").addClass('blue-color');
+    $("#legal-documents").hide();
+    $("#training-certificates").hide();
+
+    $("#personal-information-link").click(function () {
+      $("#legal-documents").hide();
+      $("#training-certificates").hide();
+      $(".set-color .blue-color").removeClass('blue-color');
+      $("#personal-information-link").addClass('blue-color');
+      $("#personal-information").show(200);
+    });
+
+    $("#legal-documents-link").click(function () {
+      $("#personal-information").hide();
+      $("#training-certificates").hide();
+      $(".set-color .blue-color").removeClass('blue-color');
+      $("#legal-documents-link").addClass('blue-color');
+      $("#legal-documents").show(200);
+    });
+
+    $("#training-certificates-link").click(function () {
+      $("#personal-information").hide();
+      $("#legal-documents").hide();
+      $(".set-color .blue-color").removeClass('blue-color');
+      $("#training-certificates-link").addClass('blue-color');
+      $("#training-certificates").show(200);
+    });
+
+  });

@@ -54,12 +54,15 @@
     <div class="w-100" style="height: 100vh;">
         <div class="w-100" style="height: 70px;"></div>
         <div class="manage-clients padding-percent-9">
-            <div class="w-100 navbar" id="successful-msg" style="margin-bottom: 19px; padding: 0px 17.5px !important; height: 44px; background: #E4FFE8; border-radius: 5px;">
+            <div class="w-100 navbar" id="successful-msg"
+                style="margin-bottom: 19px; padding: 0px 17.5px !important; height: 44px; background: #E4FFE8; border-radius: 5px;">
                 <img src="./img/Super Admin/best.png" class="my-auto" />
-                <div style="font-weight: 500; font-size: 14px; line-height: 30px; color: #47CA5B; margin-left: 14.5px;" class="my-auto mr-auto">
+                <div style="font-weight: 500; font-size: 14px; line-height: 30px; color: #47CA5B; margin-left: 14.5px;"
+                    class="my-auto mr-auto">
                     The client <strong>“NEWELEC”</strong> has been created successfully
                 </div>
-                <img src="./img/Super Admin/Vector (6).png" class="my-auto" id="dismiss-success" style="cursor: pointer;" />
+                <img src="./img/Super Admin/Vector (6).png" class="my-auto" id="dismiss-success"
+                    style="cursor: pointer;" />
             </div>
             <div class="header-style">
                 Manage Clients
@@ -68,7 +71,8 @@
                 <select class="bg-white select-css mc-tbl-sel classic">
                     <option>Status</option>
                 </select>
-                <img src="./img/Super Admin/Vector (1).png" style="width: 16px; height: 16.68px; cursor: pointer;" class="ml-auto" data-toggle="modal" data-target="#myModal2" />
+                <img src="./img/Super Admin/Vector (1).png" style="width: 16px; height: 16.68px; cursor: pointer;"
+                    class="ml-auto" data-toggle="modal" data-target="#myModal2" />
                 <label class="switch my-auto" style="margin-left: 19px;">
                     <input type="checkbox" checked>
                     <span class="slider round"></span>
@@ -264,30 +268,22 @@
                 My Profile
             </div>
             <div class="row m-0 w-100">
-                <div class="bg-white" style="width: 68.273%; height: auto; margin-right: 2.182%; padding: 1.864% 3.329%; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05);
-                    border-radius: 5px;">
+                <div class="super-admin-profile-left">
                     <div class="w-100">
                         <div class="navbar p-0 w-100">
                             <div style="padding-right: 8px; width: 410px;">
-                                <div class="w-100 fs-12 fw-500" style="color: #616161; margin-bottom: 5px;">Photo</div>
-                                <div class="fs-11 tc-grey fw-500" style="margin-bottom: 15px; width: 88%;">Only JPG, PNG
+                                <div class="w-100 fs-12 fw-600" style="color: #616161; margin-bottom: 5px;">Photo</div>
+                                <div class="fs-11 tc-grey fw-600" style="margin-bottom: 15px; width: 88%;">Only JPG, PNG
                                     files are
                                     allowed. Image must be less than 2 MB</div>
                                 <div style="max-width: 360px; display: flex; align-items: center;">
-                                    <div class="mx-auto" id="imagePreview2"
-                                        style="width: 100px; height: 100px; border-radius: 50%; background-size: contain; margin-bottom: 8px; border: 1px solid #ccc;">
-                                    </div>
+                                    <div class="mx-auto" id="imagePreview2"></div>
                                     <div class="mx-auto" style="min-width: 235px; display: flex; height: fit-content;">
-                                        <div class="fs-11 text-center mx-auto position-relative"
-                                            style="font-weight: 700; padding: 8px 20px; margin-right: 12px; color: white; background: #42A4DF; border-radius: 5px;">
+                                        <div class="super-admin-upload-img">
                                             UPLOAD IMAGE
-                                            <input type="file" id="imageUpload2"
-                                                class="hide-absolute"
-                                                accept=".png, .jpg, .jpeg" />
+                                            <input type="file" id="imageUpload2" class="hide-absolute" accept=".png, .jpg, .jpeg" />
                                         </div>
-                                        <div class="fs-11 text-center fw-500 mx-auto position-relative" id="delete-img"
-                                            style="color: #EF3C3C; padding: 8px 20px; cursor: pointer;">
-                                            Remove image</div>
+                                        <div id="delete-img">Remove image</div>
                                     </div>
                                 </div>
                             </div>
@@ -297,14 +293,14 @@
                         <div class="w-100 navbar p-0">
                             <div class="d-flex col-adj" style="padding: 0px !important; width: 38.494%;">
                                 <div style="width: 46.863%; margin-right: 2.583%;">
-                                    <label style="color: #616161;" class="fw-500 fs-11">First Name</label>
-                                    <input type="text" class="form-control fs-12 fw-500"
+                                    <label style="color: #616161;" class="fw-600 fs-11">First Name</label>
+                                    <input type="text" class="form-control fs-12 fw-600"
                                         style="border: 1px solid #DCDCDC; color: #313131; height: 29px;"
                                         value="Blaise" />
                                 </div>
                                 <div style="width: 50.554%;">
-                                    <label style="color: #616161;" class="fw-500 fs-11">Last Name</label>
-                                    <input type="text" class="form-control fs-12 fw-500"
+                                    <label style="color: #616161;" class="fw-600 fs-11">Last Name</label>
+                                    <input type="text" class="form-control fs-12 fw-600"
                                         style="border: 1px solid #DCDCDC; color: #313131; height: 29px;"
                                         value="Defloo" />
                                 </div>
@@ -312,19 +308,19 @@
                             <div style="width: 1.563%;"></div>
                             <div class="d-flex col-adj" style="padding: 0px !important; width: 59.943%;">
                                 <div style="width: 56.161%; margin-right: 2.37%;">
-                                    <label style="color: #616161;" class="fw-500 fs-11">Email</label>
-                                    <input type="email" class="form-control fs-12 fw-500"
+                                    <label style="color: #616161;" class="fw-600 fs-11">Email</label>
+                                    <input type="email" class="form-control fs-12 fw-600"
                                         style="border: 1px solid #DCDCDC; color: #313131; height: 29px;"
                                         value="blaise.defloo@newelec.be" />
                                 </div>
                                 <div style="width: 41.469%;">
-                                    <label style="color: #616161;" class="fw-500 fs-11">Mobile Phone</label>
+                                    <label style="color: #616161;" class="fw-600 fs-11">Mobile Phone</label>
                                     <div class="w-100 d-flex">
-                                        <select class="form-control fs-12 fw-500"
+                                        <select class="form-control fs-12 fw-600"
                                             style="border: 1px solid #DCDCDC; color: #313131; height: 29px; width: 34.857%; margin-right: 5.143%; padding-left: 5px !important; padding-right: 0px !important; padding-top: unset !important; padding-bottom: unset;">
                                             <option>+32</option>
                                         </select>
-                                        <input type="text" class="form-control fs-12 fw-500"
+                                        <input type="text" class="form-control fs-12 fw-600"
                                             style="border: 1px solid #DCDCDC; color: #313131; height: 29px; width: 60%;"
                                             value="4 227 18 08" />
                                     </div>
@@ -338,7 +334,7 @@
 
                     <div class="navbar p-0 w-100">
                         <button class="fs-12 ml-auto"
-                            style="width: 70px; height: 30px; background: #42A4DF; border-radius: 2px; color: white; font-weight: 700; border: none; outline: none;">
+                            style="width: 70px; height: 30px; background: #42A4DF; border-radius: 5px; color: white; font-weight: 700; border: none; outline: none;">
                             Save
                         </button>
                     </div>
@@ -349,27 +345,27 @@
                     style="width: 29.545%; height: auto; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05); border-radius: 5px;">
                     <div class="w-100 my-auto" style="padding: 0px 8.615%;">
                         <div class="w-100">
-                            <label class="fw-500 fs-11" style="color: #616161;">Old Password</label>
+                            <label class="fw-600 fs-11" style="color: #616161;">Old Password</label>
                             <div class="w-100">
                                 <input id="password-field" type="password" class="form-control fs-17 set-pass"
-                                    style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 2px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
+                                    style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 5px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
                                     name="password">
                                 <img src="./img/Super Admin/hide.png" toggle="#password-field"
                                     class="field-icon toggle-password oldpass" />
                             </div>
-                            <label class="fw-500 fs-11" style="color: #616161; margin-top: 13px;">New Password</label>
+                            <label class="fw-600 fs-11" style="color: #616161; margin-top: 13px;">New Password</label>
                             <div class="w-100">
                                 <input id="password-field1" type="password" class="form-control fs-17 set-pass"
-                                    style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 2px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
+                                    style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 5px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
                                     name="password">
                                 <img src="./img/Super Admin/hide.png" toggle="#password-field1"
                                     class="field-icon toggle-password newpass" />
                             </div>
-                            <label class="fw-500 fs-11" style="color: #616161; margin-top: 13px;">Confirm
+                            <label class="fw-600 fs-11" style="color: #616161; margin-top: 13px;">Confirm
                                 Password</label>
                             <div class="w-100">
                                 <input id="password-field2" type="password" class="form-control fs-17"
-                                    style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 2px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
+                                    style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 5px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
                                     name="password">
                                 <img src="./img/Super Admin/hide.png" toggle="#password-field2"
                                     class="field-icon toggle-password conpass" />
@@ -378,7 +374,7 @@
 
                         <div class="w-100" style="margin-top: 29px;">
                             <button class="form-control fs-12"
-                                style="color: #FFFFFF; font-weight: bold; background: #FF8D3E; border-radius: 2px; box-shadow: none; border: none;">
+                                style="color: #FFFFFF; font-weight: bold; background: #FF8D3E; border-radius: 5px; box-shadow: none; border: none;">
                                 Change Password
                             </button>
                         </div>
@@ -404,7 +400,8 @@
                             Add Client
                         </div>
                     </div>
-                    <button type="button" class="close" data-dismiss="modal" style="outline: none; color: #CCCCCC !important;">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal"
+                        style="outline: none; color: #CCCCCC !important;">&times;</button>
                 </div>
 
                 <!-- Modal body -->
@@ -413,11 +410,13 @@
                         <div style="width: 27.495%;">
                             <label class="label-text w-100">Logo</label>
                             <div class="w-100 position-relative d-flex"
-                                style="height: 111px; padding: 5% 10.274%; background: #EFEFEF; border-radius: 2px;">
+                                style="height: 111px; padding: 5% 10.274%; background: #EFEFEF; border-radius: 5px;">
                                 <img id="imagePreview" class="my-auto mx-auto img-fluid"
                                     style="display: none; max-height: 100%;" />
-                                <div class="d-flex" style="position: absolute; top: 5px; right: 4px; background: #EFEFEF; z-index: 1; width: 16px; height: 18px;">
-                                    <img src="./img/Super Admin/Vector (1).png" id="delete-logo" class="mx-auto my-auto" />
+                                <div class="d-flex"
+                                    style="position: absolute; top: 5px; right: 4px; background: #EFEFEF; z-index: 1; width: 16px; height: 18px;">
+                                    <img src="./img/Super Admin/Vector (1).png" id="delete-logo"
+                                        class="mx-auto my-auto" />
                                 </div>
                                 <div class="upload-logo">
                                     <img src="./img/Super Admin/icon.png" class="img-fluid my-auto mx-auto" />
@@ -607,26 +606,31 @@
                             Delete Confirmation
                         </div>
                     </div>
-                    <button type="button" class="close" data-dismiss="modal" style="outline: none; color: #CCCCCC !important;">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal"
+                        style="outline: none; color: #CCCCCC !important;">&times;</button>
                 </div>
 
                 <!-- Modal body -->
                 <div class="modal-body" style="padding: 18px 5.556% !important;">
                     <div style="width: 100%; font-weight: 500; font-size: 12px; line-height: 14px; color: #4E4E4E;">
-                        Please confirm that you want to delete this client and all associated content. This action cannot be undone!
+                        Please confirm that you want to delete this client and all associated content. This action
+                        cannot be undone!
                     </div>
-                    <div style="width: 100%; font-weight: bold; font-size: 12px; line-height: 14px; color: #4E4E4E; margin-top: 18px;">
+                    <div
+                        style="width: 100%; font-weight: bold; font-size: 12px; line-height: 14px; color: #4E4E4E; margin-top: 18px;">
                         I understand that the following will be deleted:
                     </div>
                     <div class="d-flex w-100" style="margin-top: 17px;">
                         <input type="checkbox" class="checkbox checkbox-primary-12 my-auto" checked />
-                        <div class="my-auto" style="margin-left: 12px; font-weight: 500; font-size: 12px; line-height: 14px; color: #4E4E4E;">
+                        <div class="my-auto"
+                            style="margin-left: 12px; font-weight: 500; font-size: 12px; line-height: 14px; color: #4E4E4E;">
                             All the training content belongs to this client including quiz questions
                         </div>
                     </div>
                     <div class="d-flex w-100" style="margin-top: 17px;">
                         <input type="checkbox" class="checkbox checkbox-primary-12 my-auto" checked />
-                        <div class="my-auto" style="margin-left: 12px; font-weight: 500; font-size: 12px; line-height: 14px; color: #4E4E4E;">
+                        <div class="my-auto"
+                            style="margin-left: 12px; font-weight: 500; font-size: 12px; line-height: 14px; color: #4E4E4E;">
                             Workers informations associated with this client
                         </div>
                     </div>
