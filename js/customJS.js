@@ -299,7 +299,7 @@ $(document).ready(function () {
     $(".worker-dashboard").show();
     $(".worker-dashboard-link").addClass('blue-color');
     $(".worker-profile").hide();
-    
+
     $(".worker-dashboard-link").click(function () {
         $(".worker-profile").hide();
         $(".worker-dashboard-link").addClass('blue-color');
@@ -364,31 +364,47 @@ $("#imageUpload4").change(function () {
 $(document).ready(function () {
     $("#worker-personal-information").show();
     $("#worker-personal-information-link").addClass('blue-color');
-    $("#legal-documents").hide();
-    $("#training-certificates").hide();
+    $("#worker-required-document").hide();
 
     $("#worker-personal-information-link").click(function () {
-      $("#legal-documents").hide();
-      $("#training-certificates").hide();
-      $(".set-color .blue-color").removeClass('blue-color');
-      $("#worker-personal-information-link").addClass('blue-color');
-      $("#worker-personal-information").show(200);
+        $("#worker-required-document").hide();
+        $(".set-color .blue-color").removeClass('blue-color');
+        $("#worker-personal-information-link").addClass('blue-color');
+        $("#worker-personal-information").show(200);
     });
 
-    $("#legal-documents-link").click(function () {
-      $("#worker-personal-information").hide();
-      $("#training-certificates").hide();
-      $(".set-color .blue-color").removeClass('blue-color');
-      $("#legal-documents-link").addClass('blue-color');
-      $("#legal-documents").show(200);
+    $("#worker-required-document-link").click(function () {
+        $("#worker-personal-information").hide();
+        $(".set-color .blue-color").removeClass('blue-color');
+        $("#worker-required-document-link").addClass('blue-color');
+        $("#worker-required-document").show(200);
     });
 
-    $("#training-certificates-link").click(function () {
-      $("#worker-personal-information").hide();
-      $("#legal-documents").hide();
-      $(".set-color .blue-color").removeClass('blue-color');
-      $("#training-certificates-link").addClass('blue-color');
-      $("#training-certificates").show(200);
+});
+
+
+$(function () {
+
+    $('.dropdown-lang > .caption-lang').on('click', function () {
+        $(this).parent().toggleClass('open');
     });
 
-  });
+    $('.dropdown-lang > .list-lang > .item').on('click', function () {
+        $('.dropdown-lang > .list-lang > .item').removeClass('selected');
+        $(this).addClass('selected').parent().parent().removeClass('open');
+        $('.caption-lang img').attr('src', $(this).children('img').prop('src'));
+    });
+
+    $(document).on('keyup', function (evt) {
+        if ((evt.keyCode || evt.which) === 27) {
+            $('.dropdown-lang').removeClass('open');
+        }
+    });
+
+    $(document).on('click', function (evt) {
+        if ($(evt.target).closest(".dropdown-lang > .caption-lang").length === 0) {
+            $('.dropdown-lang').removeClass('open');
+        }
+    });
+
+});
