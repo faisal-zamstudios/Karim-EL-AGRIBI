@@ -1461,9 +1461,14 @@ div.dropdown-notification.open > div.list-notification {
   width: 14px;
 }
 
+.my-training {
+  margin-top: 49px;
+  overflow: hidden;
+}
 
-
-
+.catagories {
+  float: left;
+}
 
 
 
