@@ -43,7 +43,39 @@
             </div>
         </div>
         <div class="navbar p-0" style="width: 16.325%; min-width: 177px;">
-            <img src="./img/Super Admin/notification.png" class="img-fluid" />
+            <div class="dropdown-notification">
+                <div class="caption-notification">
+                    <img src="./img/Super Admin/notification.png" class="img-fluid" />
+                    <div class="total-messages"></div>
+                </div>
+                <div class="list-notification">
+                    <img src="./img/Worker Area/Polygon 1.png" class="poly" width="14" height="14" />
+                    <div class="item">
+                        <img src="./img/Worker Area/trainings (1).png" />
+                        <div class="message">
+                            <div class="title">You have a new training</div>
+                            <span class="description">Working at height</span>
+                        </div>
+                        <img src="./img/Worker Area/status (4).png" />
+                    </div>
+                    <div class="item">
+                        <img src="./img/Worker Area/trainings (1).png" />
+                        <div class="message">
+                            <div class="title">You have a new training</div>
+                            <span class="description">Working at height</span>
+                        </div>
+                        <img src="./img/Worker Area/status (4).png" />
+                    </div>
+                    <div class="item">
+                        <img src="./img/Worker Area/trainings (1).png" />
+                        <div class="message">
+                            <div class="title">You have a new training</div>
+                            <span class="description">Working at height</span>
+                        </div>
+                        <img src="./img/Worker Area/status (4).png" />
+                    </div>
+                </div>
+            </div>
             <div class="dropdown-lang">
                 <div class="caption-lang">
                     <img src="./img/Super Admin/english.png" class="img-fluid my-auto" />
@@ -64,12 +96,27 @@
                     </div>
                 </div>
             </div>
-            <div class="media worker-profile-link">
-                <img class="mr-2 img-fluid" style="max-width: 32px; max-height: 32px;"
-                    src="./img/Worker Area/profile.png">
-                <div class="media-body" style="font-size: 11px; font-weight: 500; color: #9F9F9F; min-width: 97px;">
-                    <h5 class="m-0" style="font-size: 13px; font-weight: 600; color: #6B6B6B;">Blaise Defloo</h5>
-                    Worker
+            <div class="dropdown-profile">
+                <div class="caption-profile">
+                    <div class="media worker-profile-media">
+                        <img class="mr-2 img-fluid" style="max-width: 32px; max-height: 32px;"
+                            src="./img/Worker Area/profile.png">
+                        <div class="media-body" style="font-size: 11px; font-weight: 500; color: #9F9F9F; min-width: 97px;">
+                            <h5 class="m-0" style="font-size: 13px; font-weight: 600; color: #6B6B6B;">Blaise Defloo</h5>
+                            Worker
+                        </div>
+                    </div>
+                </div>
+                <div class="list-profile">
+                    <img src="./img/Worker Area/Polygon 1.png" class="poly" width="14" height="14" />
+                    <div class="item first-item">
+                        <div>Blaise DEFLOO</div>
+                        <span>blaise.defloo@newelec.be</span>
+                    </div>
+                    <div class="item worker-profile-link">Profile settings</div>
+                    <div class="item">Privacy policy</div>
+                    <div class="item">About</div>
+                    <div class="item last-item">Log out</div>
                 </div>
             </div>
         </div>
@@ -708,35 +755,63 @@
                         <div class="w-100 my-auto">
                             <div class="w-100">
                                 <label class="fw-600 fs-11" style="color: #616161;">Old Password</label>
-                                <div class="w-100">
-                                    <input id="password-field" type="password" class="form-control fs-17 set-pass"
+                                <div class="w-100 position-relative">
+                                    <input id="password-field1" type="password" class="form-control fs-17"
                                         style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 5px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
                                         name="password">
-                                    <img src="./img/Super Admin/hide.png" toggle="#password-field"
-                                        class="field-icon toggle-password oldpass" />
+                                    <img src="./img/Login/lock.png" class="img-fluid lock-icon1 abc"
+                                        style="cursor: pointer;">
+                                    <img src="./img/Login/unlock.png" class="img-fluid unlock-icon1 abc"
+                                        style="cursor: pointer;">
+                                    <img src="./img/Login/lock2.png" class="img-fluid lock2-icon1 abc"
+                                        style="cursor: pointer;">
+                                </div>
+                                <div class="d-flex warning-msg2">
+                                    <img src="./img/Login/warning.png" class="img-fluid error2" alt="">
+                                    <p class="error2">Password must contains at least 8 characters,
+                                        including uppercase, lowercase, numbers,
+                                        and symbols.</p>
                                 </div>
                                 <label class="fw-600 fs-11" style="color: #616161; margin-top: 13px;">New
                                     Password</label>
-                                <div class="w-100">
-                                    <input id="password-field1" type="password" class="form-control fs-17 set-pass"
-                                        style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 5px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
-                                        name="password">
-                                    <img src="./img/Super Admin/hide.png" toggle="#password-field1"
-                                        class="field-icon toggle-password newpass" />
-                                </div>
-                                <label class="fw-600 fs-11" style="color: #616161; margin-top: 13px;">Confirm
-                                    Password</label>
-                                <div class="w-100">
+                                <div class="w-100 position-relative">
                                     <input id="password-field2" type="password" class="form-control fs-17"
                                         style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 5px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
                                         name="password">
-                                    <img src="./img/Super Admin/hide.png" toggle="#password-field2"
-                                        class="field-icon toggle-password conpass" />
+                                    <img src="./img/Login/lock.png" class="img-fluid lock-icon1 abc"
+                                        style="cursor: pointer;">
+                                    <img src="./img/Login/unlock.png" class="img-fluid unlock-icon1 abc"
+                                        style="cursor: pointer;">
+                                    <img src="./img/Login/lock2.png" class="img-fluid lock2-icon1 abc"
+                                        style="cursor: pointer;">
+                                </div>
+                                <div class="d-flex warning-msg2">
+                                    <img src="./img/Login/warning.png" class="img-fluid error3" alt="">
+                                    <p class="error3">Password must contains at least 8 characters,
+                                        including uppercase, lowercase, numbers,
+                                        and symbols.</p>
+                                </div>
+                                <label class="fw-600 fs-11" style="color: #616161; margin-top: 13px;">Confirm
+                                    Password</label>
+                                <div class="w-100 position-relative">
+                                    <input id="password-field3" type="password" class="form-control fs-17"
+                                        style="color: #313131; border: 1px solid #DCDCDC; box-sizing: border-box; border-radius: 5px; height: 29px; padding-left: 10px; padding-bottom: 9px;"
+                                        name="password">
+                                    <img src="./img/Login/lock.png" class="img-fluid lock-icon1 abc"
+                                        style="cursor: pointer;">
+                                    <img src="./img/Login/unlock.png" class="img-fluid unlock-icon1 abc"
+                                        style="cursor: pointer;">
+                                    <img src="./img/Login/lock2.png" class="img-fluid lock2-icon1 abc"
+                                        style="cursor: pointer;">
+                                </div>
+                                <div class="d-flex warning-msg2">
+                                    <img src="./img/Login/warning.png" class="img-fluid error4" alt="">
+                                    <p class="error4">Confirm password must be same as new password.</p>
                                 </div>
                             </div>
 
                             <div class="w-100" style="margin-top: 29px;">
-                                <button class="form-control fs-12"
+                                <button class="form-control fs-12" id="changePassword"
                                     style="color: #FFFFFF; font-weight: bold; background: #FF8D3E; border-radius: 5px; box-shadow: none; border: none;">
                                     Change Password
                                 </button>

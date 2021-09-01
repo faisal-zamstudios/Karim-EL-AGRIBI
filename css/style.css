@@ -154,23 +154,7 @@ select.classic-down-arrow {
   color: #40A7E3;
 }
 
-.lock-icon {
-  position: absolute;
-  right: 8px;
-  margin-top: 10px;
-  width: 18px;
-  height: 20px;
-}
-
-.unlock-icon {
-  position: absolute;
-  right: 8px;
-  margin-top: 10px;
-  width: 18px;
-  height: 20px;
-}
-
-.lock2-icon {
+.lock-icon, .unlock-icon, .lock2-icon {
   position: absolute;
   right: 8px;
   margin-top: 10px;
@@ -183,14 +167,13 @@ select.classic-down-arrow {
   height: 40px;
   padding: 8px 8px;
   margin: 8px 0;
-  display: inline-block;
-  border: 0.5px solid #BBBBBB;
+  display: inline-block;background: #FFFFFF;
+  border: 0.5px solid #BBBBBB !important;
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 13px;
   font-weight: 400;
   margin-top: 2px;
-  background-color: white;
 }
 
 .txt:focus {
@@ -899,13 +882,13 @@ input:checked+.slider:before {
   margin-right: 6px;
   margin-top: -22px;
   position: relative;
-  z-index: 2;
+  z-index: 0;
   width: 14px;
   height: 16px;
   cursor: pointer;
 }
 
-.super-admin-profile-link, .worker-profile-link {
+.super-admin-profile-media, .worker-profile-media {
   width: 60.538%;
   display: flex;
   min-width: 127px;
@@ -1203,7 +1186,7 @@ div.dropdown-lang > div.list-lang {
   box-shadow: 0px 0px 8px 5px rgb(0 0 0 / 5%), 0px 0px 2px rgb(0 0 0 / 7%), 0px 0px 1px rgb(0 0 0 / 5%);
   border-radius: 5px;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   display: none;
 }
 
@@ -1216,9 +1199,9 @@ div.dropdown-lang > div.list-lang > img.poly {
   position: absolute;
   top: -10px;
   left: 42px;
+  z-index: 1;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  z-index: -1;
   box-shadow: inset 0px 2px 1px 1px rgb(0 0 0 / 5%), 0px -7px 20px 1px rgb(0 0 0 / 7%), 0px 0px 0px rgb(0 0 0 / 5%);
 }
 
@@ -1252,6 +1235,237 @@ div.dropdown-lang > div.list-lang > div.item:hover {
 div.dropdown-lang.open > div.list-lang {
   display: block;
 }
+
+
+
+
+
+
+div.dropdown-profile {
+  position: relative;
+}
+
+div.dropdown-profile > div.caption-profile {
+  cursor: pointer;
+}
+
+div.dropdown-profile > div.list-profile {
+  min-width: max-content;
+  position: absolute;
+  left: -webkit-calc(-51% + 2px);
+  top: -webkit-calc(100% + 15px);
+  background: #FFFFFF;
+  box-shadow: 0px 0px 8px 5px rgb(0 0 0 / 5%), 0px 0px 2px rgb(0 0 0 / 7%), 0px 0px 1px rgb(0 0 0 / 5%);
+  border-radius: 5px;
+  width: 100%;
+  z-index: 2;
+  display: none;
+}
+
+div.dropdown-profile > div.list-profile > div.item {
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #313131;
+}
+
+div.dropdown-profile > div.list-profile > img.poly {
+  position: absolute;
+  top: -webkit-calc(0% - 10px);
+  left: -webkit-calc(50% - 7px);
+  z-index: 1;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  box-shadow: inset 0px 2px 1px 1px rgb(0 0 0 / 5%), 0px -7px 20px 1px rgb(0 0 0 / 7%), 0px 0px 0px rgb(0 0 0 / 5%);
+}
+
+div.dropdown-profile.open > div.list-profile > div.item.first-item {
+  padding-bottom: 15px !important; 
+  border-bottom: 1px solid #EBEBEB;
+  margin-bottom: 8px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+div.dropdown-profile.open > div.list-profile > div.item.first-item > div {
+  font-weight: bold; 
+  font-size: 12px; 
+  line-height: 14px; 
+  color: #313131; 
+  width: 100%;
+}
+
+div.dropdown-profile.open > div.list-profile > div.item.first-item > span {
+  font-weight: 600; 
+  font-size: 12px; 
+  line-height: 14px; 
+  color: #797979; 
+  width: 100%;
+}
+
+div.dropdown-profile > div.list-profile > div.item.last-item {
+  padding-top: 14px;
+  padding-bottom: 22px !important;
+  margin-top: 8px;
+  border-top: 1px solid #EBEBEB; 
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+div.dropdown-profile > div.list-profile > div.item > label {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+div.dropdown-profile > div.list-profile > div.item.selected > label {
+  font-weight: 600;
+  color: #313131;
+}
+
+div.dropdown-profile > div.list-profile > div.item:hover {
+  background-color: #eee;
+}
+
+div.dropdown-profile.open > div.list-profile {
+  display: block;
+}
+
+
+
+
+
+
+div.dropdown-notification {
+  position: relative;
+}
+
+div.dropdown-notification > div.caption-notification {
+  cursor: pointer;
+}
+
+div.dropdown-notification > div.caption-notification > div.total-messages {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: -5px;
+  right: -10px;
+  width: 14px;
+  z-index: 1;
+  height: 14px;
+  border-radius: 50%;
+  background: #2C8EFF;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  color: #FFFFFF;
+}
+
+div.dropdown-notification > div.list-notification {
+  min-width: max-content;
+  position: absolute;
+  left: -150px;
+  top: -webkit-calc(100% + 15px);
+  background: #FFFFFF;
+  box-shadow: 0px 0px 8px 5px rgb(0 0 0 / 5%), 0px 0px 2px rgb(0 0 0 / 7%), 0px 0px 1px rgb(0 0 0 / 5%);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 315px;
+  z-index: 2;
+  display: none;
+}
+
+div.dropdown-notification > div.list-notification > div.item {
+  padding: 10px 16px;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  border-top: 1px solid #EBEBEB;
+}
+
+div.dropdown-notification > div.list-notification > div.item > img {
+  width: 100%;
+  max-width: 40px;
+  height: fit-content;
+  max-height: 100%;
+}
+
+div.dropdown-notification > div.list-notification > div.item > .message {
+  padding: 0px 9px;
+  min-width: 227px;
+}
+
+div.dropdown-notification > div.list-notification > img.poly {
+  position: absolute;
+  top: -webkit-calc(0% - 10px);
+  left: -webkit-calc(50% - 7px);
+  z-index: 1;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  box-shadow: inset 0px 2px 1px 1px rgb(0 0 0 / 5%), 0px -7px 20px 1px rgb(0 0 0 / 7%), 0px 0px 0px rgb(0 0 0 / 5%);
+}
+
+div.dropdown-notification > div.list-notification > div.item:first-child {
+  border-top: none !important;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+div.dropdown-notification > div.list-notification > div.item > div.message > div.title {
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 16px;
+  color: #343434;
+  width: 100%;
+}
+
+div.dropdown-notification > div.list-notification > div.item > div.message > span.description {
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+  color: #777777;
+  width: 100%;
+}
+
+div.dropdown-notification > div.list-notification > div.item:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+div.dropdown-notification > div.list-notification > div.item > label {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+div.dropdown-notification > div.list-notification > div.item.selected > label {
+  font-weight: 600;
+  color: #313131;
+}
+
+div.dropdown-notification > div.list-notification > div.item:hover {
+  background-color: #eee;
+}
+
+div.dropdown-notification.open > div.list-notification {
+  display: block;
+}
+
+
+.lock-icon1, .unlock-icon1, .lock2-icon1 {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  margin-top: 6px;
+  width: 14px;
+}
+
+
+
+
+
+
 
 
 @media screen and (max-width: 1400px) {

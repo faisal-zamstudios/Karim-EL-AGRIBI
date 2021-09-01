@@ -383,8 +383,14 @@ $(document).ready(function () {
 });
 
 
-$(function () {
+$(document).ready(function () {
 
+    $('div.dropdown-lang > div.list-lang > div.item > img').each(function () {
+        if ($('.caption-lang img').attr('src') == $(this).attr('src')) {
+            $(this).parent().addClass('selected');
+        }
+    });
+    
     $('.dropdown-lang > .caption-lang').on('click', function () {
         $(this).parent().toggleClass('open');
     });
@@ -407,4 +413,183 @@ $(function () {
         }
     });
 
+});
+
+
+$(document).ready(function () {
+
+    $('.dropdown-profile > .caption-profile').on('click', function () {
+        $(this).parent().toggleClass('open');
+    });
+
+    $('.dropdown-profile > .list-profile > .item').on('click', function () {
+        $('.dropdown-profile > .list-profile > .item').removeClass('selected');
+        $(this).addClass('selected').parent().parent().removeClass('open');
+    });
+
+    $(document).on('keyup', function (evt) {
+        if ((evt.keyCode || evt.which) === 27) {
+            $('.dropdown-profile').removeClass('open');
+        }
+    });
+
+    $(document).on('click', function (evt) {
+        if ($(evt.target).closest(".dropdown-profile > .caption-profile").length === 0) {
+            $('.dropdown-profile').removeClass('open');
+        }
+    });
+
+});
+
+$(document).ready(function () {
+
+    var total_messages = $('.dropdown-notification > .list-notification > .item').length;
+
+    $('.dropdown-notification > .caption-notification').on('click', function () {
+        if(total_messages>0) {
+            $(this).parent().toggleClass('open');
+        }
+    });
+
+    if(total_messages>0) {
+        $('div.dropdown-notification > div.caption-notification > div.total-messages').css('display', 'flex');
+        $('div.dropdown-notification > div.caption-notification > div.total-messages').text(total_messages);
+        $('div.dropdown-notification > div.caption-notification > img').attr('src', './img/Worker\ Area/notification.png');
+    } else {
+        $('div.dropdown-notification > div.caption-notification > div.total-messages').css('display', 'none');
+        $('div.dropdown-notification > div.caption-notification > img').attr('src', './img/Super\ Admin/notification.png');
+    }
+
+    $('.dropdown-notification > .list-notification > .item').on('click', function () {
+        $('.dropdown-notification > .list-notification > .item').removeClass('selected');
+        $(this).addClass('selected').parent().parent().removeClass('open');
+    });
+
+    $(document).on('keyup', function (evt) {
+        if ((evt.keyCode || evt.which) === 27) {
+            $('.dropdown-notification').removeClass('open');
+        }
+    });
+
+    $(document).on('click', function (evt) {
+        if ($(evt.target).closest(".dropdown-notification > .caption-notification").length === 0) {
+            $('.dropdown-notification').removeClass('open');
+        }
+    });
+
+});
+
+
+// for invalid password
+$(document).ready(function () {
+    var number = /([0-9])/;
+    var alphabets = /([a-zA-Z])/;
+    var capital_alphabets = /([A-Z])/;
+    var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<,.])/;
+    $('.error2').hide();
+    $('.error3').hide();
+    $('.error4').hide();
+    $('.unlock-icon1').hide();
+    $('.lock2-icon1').hide();
+
+    $('#password-field1').keyup(function () {
+        var password = $('#password-field1').val();
+        if (password == '' || password.length < 8) {
+            $('.error2').show();
+            $('#password-field1').css("border", "1.5px solid #E0B719");
+            $('#password-field1').css("background", "#FFF9E3");
+            return false;
+        }
+        if (password.match(number) && password.match(alphabets) && password.match(capital_alphabets) && password.match(special_characters)) {
+            $('.error2').hide();
+            $('#password-field1').parent().children('.lock-icon1').show();
+            $('#password-field1').parent().children('.lock2-icon1').hide();
+            $('#password-field1').css("border", "1.5px solid #40A7E3");
+            $('#password-field1').css("background", "white");
+            return false;
+        }
+    });
+
+    $('#password-field2').keyup(function () {
+        var password = $('#password-field2').val();
+        if (password == '' || password.length < 8) {
+            $('.error3').show();
+            $('#password-field2').css("border", "1.5px solid #E0B719");
+            $('#password-field2').css("background", "#FFF9E3");
+            return false;
+        }
+        if (password.match(number) && password.match(alphabets) && password.match(capital_alphabets) && password.match(special_characters)) {
+            $('.error3').hide();
+            $('#password-field2').parent().children('.lock-icon1').show();
+            $('#password-field2').parent().children('.lock2-icon1').hide();
+            $('#password-field2').css("border", "1.5px solid #40A7E3");
+            $('#password-field2').css("background", "white");
+            return false;
+        }
+    });
+
+    $('#password-field3').keyup(function () {
+        var password = $('#password-field3').val();
+        var password1 = $('#password-field2').val();
+        if (password != password1) {
+            $('.error4').show();
+            $('#password-field3').css("border", "1.5px solid #E0B719");
+            $('#password-field3').css("background", "#FFF9E3");
+        } else {
+            $('.error4').hide();
+            $('#password-field3').parent().children('.lock-icon1').show();
+            $('#password-field3').parent().children('.lock2-icon1').hide();
+            $('#password-field3').css("border", "1.5px solid #40A7E3");
+            $('#password-field3').css("background", "white");
+        }
+        return false;
+    });
+
+    $('#changePassword').click(function () {
+        var password1 = $('#password-field1');
+        var password2 = $('#password-field2');
+        var password3 = $('#password-field3');
+        if (password1.val() == '') {
+            $('.error2').show();
+            password1.parent().children('.lock-icon1').hide();
+            password1.parent().children('.unlock-icon1').hide();
+            password1.parent().children('.lock2-icon1').show();
+            password1.css("border", "1.5px solid #E0B719");
+            password1.css("background", "#FFF9E3");
+            return false;
+        }
+        if (password2.val() == '') {
+            $('.error3').show();
+            password2.parent().children('.lock-icon1').hide();
+            password2.parent().children('.unlock-icon1').hide();
+            password2.parent().children('.lock2-icon1').show();
+            password2.css("border", "1.5px solid #E0B719");
+            password2.css("background", "#FFF9E3");
+            return false;
+        }
+        if (password3.val() == '') {
+            $('.error4').show();
+            password3.parent().children('.lock-icon1').hide();
+            password3.parent().children('.unlock-icon1').hide();
+            password3.parent().children('.lock2-icon1').show();
+            password3.css("border", "1.5px solid #E0B719");
+            password3.css("background", "#FFF9E3");
+            return false;
+        }
+    });
+
+    $('.lock-icon1, .unlock-icon1, .lock2-icon1').on('click', function () {
+        $(this).toggleClass("abc");
+        var input = $(this).parent().children('input');
+        if (input.attr("type") === "password") {
+            input.attr("type", "text");
+            $(input).parent().children('.unlock-icon1').show();
+            $(input).parent().children('.lock-icon1').hide();
+            $(input).parent().children('.lock2-icon1').hide();
+        } else {
+            input.attr("type", "password");
+            $(input).parent().children('.unlock-icon1').hide();
+            $(input).parent().children('.lock-icon1').show();
+        }
+    });
 });
