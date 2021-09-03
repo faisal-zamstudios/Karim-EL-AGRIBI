@@ -299,15 +299,31 @@ $(document).ready(function () {
     $(".worker-dashboard").show();
     $(".worker-dashboard-link").addClass('blue-color');
     $(".worker-profile").hide();
+    $('.my-training').hide();
 
     $(".worker-dashboard-link").click(function () {
         $(".worker-profile").hide();
+        $('.my-training').hide();
+        $(".blue-color").removeClass('blue-color');
         $(".worker-dashboard-link").addClass('blue-color');
+        $(".super-admin-clients-link").addClass('blue-color');
+        $("#worker-personal-information-link").addClass('blue-color');
         $(".worker-dashboard").show(200);
+    });
+
+    $(".my-training-link").click(function () {
+        $(".worker-profile").hide();
+        $(".worker-dashboard").hide();
+        $(".blue-color").removeClass('blue-color');
+        $(".my-training-link").addClass('blue-color');
+        $(".super-admin-clients-link").addClass('blue-color');
+        $("#worker-personal-information-link").addClass('blue-color');
+        $(".my-training").show(200);
     });
 
     $(".worker-profile-link").click(function () {
         $(".worker-dashboard").hide();
+        $('.my-training').hide();
         $(".blue-color").removeClass('blue-color');
         $(".super-admin-clients-link").addClass('blue-color');
         $("#worker-personal-information-link").addClass('blue-color');
@@ -592,4 +608,15 @@ $(document).ready(function () {
             $(input).parent().children('.lock-icon1').show();
         }
     });
+});
+
+
+
+$(document).ready(function () {
+    
+    $('div.catagories > div.catagory-item').on('click', function () {
+        $('div.catagory-item.selected-catagory').removeClass('selected-catagory');
+        $(this).addClass('selected-catagory');
+    });
+
 });
