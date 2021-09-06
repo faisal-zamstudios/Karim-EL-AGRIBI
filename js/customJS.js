@@ -664,6 +664,7 @@ $(window).on('resize', function () {
     }
 });
 
+
 // finally, what happens when we are actually scrolling the menu
 $('.catagories').on('scroll', function () {
 
@@ -697,4 +698,39 @@ $(rightArrow).on('click', function () {
 // scroll to right
 $(leftArrow).on('click', function () {
     $('.catagories').animate({ scrollLeft: getMenuPosition() - 200 }, scrollDuration);
+});
+
+
+// WTTC Catagories
+
+$(document).ready(function () {
+
+    $('div.wttc-items > div.item').on('click', function () {
+        $('div.wttc-items > div.item.selected').removeClass('selected');
+        $(this).addClass('selected');
+        if($(this).text() == "All") {
+            $('span.wttc-quoted-text').text("\"All Catagories\"");
+        } else {
+            $('span.wttc-quoted-text').text("\"" + $(this).text() + " Catagory\"");
+        }
+    });
+    
+    var totalExpiredItems = $('.wttc-inner-card-expired-btn').length;
+
+    if (totalExpiredItems > 0) {
+        $('div.wttc-items > div.item.expired-item > div.total-expired-items').css('display', 'flex');
+        $('div.wttc-items > div.item.expired-item > div.total-expired-items').text(totalExpiredItems);
+    } else {
+        $('div.wttc-items > div.item.expired-item > div.total-expired-items').css('display', 'none');
+    }
+
+    var totalNearlyExpiredItems = $('.wttc-inner-card-nearly-expired-btn').length;
+
+    if (totalNearlyExpiredItems > 0) {
+        $('div.wttc-items > div.item.nearly-expired-item > div.total-nearly-expired-items').css('display', 'flex');
+        $('div.wttc-items > div.item.nearly-expired-item > div.total-nearly-expired-items').text(totalNearlyExpiredItems);
+    } else {
+        $('div.wttc-items > div.item.expired-item > div.total-nearly-expired-items').css('display', 'none');
+    }
+
 });

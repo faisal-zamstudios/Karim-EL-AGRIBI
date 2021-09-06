@@ -1567,6 +1567,186 @@ div.catagories > div.catagory-item > div {
   right: 0;
 }
 
+.worker-training-top-catagories {
+  height: 36px;
+  width: 100%;
+  margin-top: 52px;
+}
+
+.wttc-header-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #7C7C7C;
+  margin-top: auto;
+}
+
+.wttc-quoted-text {
+  color: #2C8EFF;
+}
+
+div.wttc-items {
+  margin-top: auto !important;
+  width: max-content;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+div.wttc-items > div.item {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #B6B6B6;
+  padding: 5px 13px;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+div.wttc-items > div.item.selected {
+  border: 1.5px solid #2C8EFF;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 5px 26px;
+  color: #2C8EFF;
+}
+
+div.wttc-items > div.item.expired-item, div.wttc-items > div.item.nearly-expired-item {
+  position: relative;
+}
+
+div.wttc-items > div.item.expired-item > div.total-expired-items {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: -5px;
+  right: -10px;
+  z-index: 1;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #ED4C5C;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  color: #FFFFFF;
+}
+
+div.wttc-items > div.item.nearly-expired-item > div.total-nearly-expired-items {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: -5px;
+  right: -10px;
+  z-index: 1;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #FFD42F;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  color: #FFFFFF;
+}
+
+div.wttc-training {
+  margin-top: 1px;
+}
+
+div.wttc-training > div.wttc-card {
+  margin-top: 20px; 
+  height: auto;
+}
+
+div.wttc-training > div.wttc-card > div.wttc-inner-card {
+  width: 100%;
+  background-color: white !important;
+  border-radius: 5px; 
+  height: 100%; 
+  padding: 11px 4.231%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05);
+}
+
+div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-img {
+  width: 100%;
+  height: 151px; 
+  border-radius: 3px; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-body > div.navbar > div.wttc-inner-card-header > div.header-type {
+  font-weight: 800; 
+  font-size: 10px; 
+  line-height: 12px; 
+  color: #D9D9D9;
+}
+
+div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-body > div.navbar > div.wttc-inner-card-header > div.header-title {
+  font-weight: bold; 
+  font-size: 14px; 
+  line-height: 17px; 
+  color: #6B6B6B; 
+  margin-top: 2px;
+}
+
+div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-body > div.navbar > div.wttc-inner-card-header > div.header-line {
+  background: #2C8EFF; 
+  border-radius: 2px; 
+  width: 25px; 
+  height: 2px; 
+  margin-top: 7px;
+}
+
+div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-body > div.wttc-inner-card-description {
+  width: 100%;
+  margin-top: 11px; 
+  font-weight: 600; 
+  font-size: 12px; 
+  line-height: 14px; 
+  color: #A0A0A0;
+}
+
+div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-body > div.navbar > div.wttc-inner-card-new-btn,
+div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-body > div.navbar > div.wttc-inner-card-nearly-expired-btn
+{
+  background: #47CA5B; 
+  border-radius: 2px; 
+  font-weight: bold; 
+  font-size: 12px; 
+  line-height: 14px; 
+  color: #FFFFFF; 
+  padding: 6px 14px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-body > div.navbar > div.wttc-inner-card-certified-btn {
+  font-weight: 600; 
+  font-size: 12px; 
+  line-height: 14px; 
+  color: #2C8EFF;
+  padding: 6px 0px;
+  margin-left: auto;
+  text-align: right;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+
+div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-body > div.navbar > div.wttc-inner-card-expired-btn {
+  font-weight: 600; 
+  font-size: 12px; 
+  line-height: 14px; 
+  color: #ED4C5C;
+  padding: 6px 0px;
+  margin-left: auto;
+  text-align: right;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 1400px) {
   #imagePreview4 {
