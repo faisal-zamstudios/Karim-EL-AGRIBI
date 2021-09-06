@@ -406,7 +406,7 @@ $(document).ready(function () {
             $(this).parent().addClass('selected');
         }
     });
-    
+
     $('.dropdown-lang > .caption-lang').on('click', function () {
         $(this).parent().toggleClass('open');
     });
@@ -462,12 +462,12 @@ $(document).ready(function () {
     var total_messages = $('.dropdown-notification > .list-notification > .item').length;
 
     $('.dropdown-notification > .caption-notification').on('click', function () {
-        if(total_messages>0) {
+        if (total_messages > 0) {
             $(this).parent().toggleClass('open');
         }
     });
 
-    if(total_messages>0) {
+    if (total_messages > 0) {
         $('div.dropdown-notification > div.caption-notification > div.total-messages').css('display', 'flex');
         $('div.dropdown-notification > div.caption-notification > div.total-messages').text(total_messages);
         $('div.dropdown-notification > div.caption-notification > img').attr('src', './img/Worker\ Area/notification.png');
@@ -613,10 +613,88 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-    
+
     $('div.catagories > div.catagory-item').on('click', function () {
         $('div.catagory-item.selected-catagory').removeClass('selected-catagory');
         $(this).addClass('selected-catagory');
     });
 
+});
+
+///////////////////////////////////
+//////// Scroll with Arrow
+///////////////////////////////////
+
+// duration of scroll animation
+var scrollDuration = 300;
+// arrows
+var leftArrow = document.getElementsByClassName('left-scroll-arrow');
+var rightArrow = document.getElementsByClassName('right-scroll-arrow');
+// get some relevant size for the paddle triggering point
+var paddleMargin = 30;
+
+var menuWrapperSize = $('.catagory-wrapper').outerWidth();
+
+var menuSize = $('.catagory-text').outerWidth(true);
+var catagoryItems = document.getElementsByClassName('catagory-item');
+
+for(var i=0; i<$('.catagory-item').length; i++) {
+    menuSize += $(catagoryItems[i]).outerWidth(true);
+}
+
+// get how much have we scrolled to the left
+var getMenuPosition = function () {
+    return $('.catagories').scrollLeft();
+};
+
+if (menuSize <= menuWrapperSize) {
+    $(leftArrow).css('display', 'none');
+    $(rightArrow).css('display', 'none');
+}
+
+// the wrapper is responsive
+$(window).on('resize', function () {
+    menuWrapperSize = $('.catagory-wrapper').outerWidth();
+    if (menuSize <= menuWrapperSize) {
+        $(leftArrow).css('display', 'none');
+        $(rightArrow).css('display', 'none');
+    } else {
+        $(leftArrow).css('display', 'none');
+        $(rightArrow).css('display', 'flex');
+    }
+});
+
+// finally, what happens when we are actually scrolling the menu
+$('.catagories').on('scroll', function () {
+
+    // get how much of menu is invisible
+    var menuInvisibleSize = menuSize - menuWrapperSize;
+
+    // get how much have we scrolled so far
+    var menuPosition = getMenuPosition();
+
+    // show & hide the paddles 
+    // depending on scroll position
+    if (menuPosition <= 0) {
+        $(leftArrow).css('display', 'none');
+        $(rightArrow).css('display', 'flex');
+    } else if (menuPosition < menuInvisibleSize) {
+        // show both paddles in the middle
+        $(leftArrow).css('display', 'flex');
+        $(rightArrow).css('display', 'flex');
+    } else if (menuPosition >= menuInvisibleSize) {
+        $(leftArrow).css('display', 'flex');
+        $(rightArrow).css('display', 'none');
+    }
+
+});
+
+// scroll to left
+$(rightArrow).on('click', function () {
+    $('.catagories').animate({ scrollLeft: getMenuPosition() + 200 }, scrollDuration);
+});
+
+// scroll to right
+$(leftArrow).on('click', function () {
+    $('.catagories').animate({ scrollLeft: getMenuPosition() - 200 }, scrollDuration);
 });

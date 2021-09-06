@@ -1466,9 +1466,32 @@ div.dropdown-notification.open > div.list-notification {
   overflow: hidden;
 }
 
+.catagory-wrapper {
+  position: relative;
+  margin-left: -20px !important;
+  margin-right: -20px !important;
+}
+
 .catagories {
-  overflow-x: hidden;
-  height: 50px;
+  display: -webkit-box;
+  white-space: nowrap;
+  overflow-x: auto;
+  height: 54px;
+}
+
+.catagories::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.catagories::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: transparent;
+}
+
+.catagories::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: transparent;
 }
 
 div.catagories > div.catagory-text {
@@ -1491,13 +1514,17 @@ div.catagories > div.catagory-item {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 div.catagories > div.catagory-item.selected-catagory {
-  margin-top: 0px;
   border: 2px solid #2C8EFF;
   box-sizing: border-box;
   box-shadow: 0px 8px 9px rgba(0, 0, 0, 0.09), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05);
+  -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 div.catagories > div.catagory-item.selected-catagory > div {
@@ -1515,6 +1542,30 @@ div.catagories > div.catagory-item > div {
   color: #313131;
 }
 
+.scroll-arrows {
+  position: absolute;
+  background: #F8FAFD;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+}
+
+.left-scroll-arrow {
+  display: none;
+  left: 0;
+}
+
+.left-scroll-arrow img {
+  transform: rotate(180deg);
+}
+
+.right-scroll-arrow {
+  right: 0;
+}
 
 
 @media screen and (max-width: 1400px) {
