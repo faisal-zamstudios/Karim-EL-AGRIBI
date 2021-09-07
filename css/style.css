@@ -1607,32 +1607,21 @@ div.wttc-items > div.item.selected {
   border: 1.5px solid #2C8EFF;
   box-sizing: border-box;
   border-radius: 20px;
-  padding: 5px 26px;
+  padding: 5px 26px;  
+  margin-left: 10px;
   color: #2C8EFF;
 }
 
-div.wttc-items > div.item.expired-item, div.wttc-items > div.item.nearly-expired-item {
+div.wttc-items > div.item.new-item, 
+div.wttc-items > div.item.certified-item, 
+div.wttc-items > div.item.expired-item, 
+div.wttc-items > div.item.nearly-expired-item {
   position: relative;
 }
 
-div.wttc-items > div.item.expired-item > div.total-expired-items {
-  position: absolute;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  top: -5px;
-  right: -10px;
-  z-index: 1;
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  background: #ED4C5C;
-  font-weight: bold;
-  font-size: 10px;
-  line-height: 12px;
-  color: #FFFFFF;
-}
-
+div.wttc-items > div.item.new-item > div.total-new-items, 
+div.wttc-items > div.item.certified-item > div.total-certified-items, 
+div.wttc-items > div.item.expired-item > div.total-expired-items, 
 div.wttc-items > div.item.nearly-expired-item > div.total-nearly-expired-items {
   position: absolute;
   display: none;
@@ -1644,11 +1633,26 @@ div.wttc-items > div.item.nearly-expired-item > div.total-nearly-expired-items {
   width: 17px;
   height: 17px;
   border-radius: 50%;
-  background: #FFD42F;
   font-weight: bold;
   font-size: 10px;
   line-height: 12px;
   color: #FFFFFF;
+}
+
+div.wttc-items > div.item.new-item > div.total-new-items {
+  background: #47CA5B;
+}
+
+div.wttc-items > div.item.certified-item > div.total-certified-items {
+  background: #2C8EFF;
+}
+
+div.wttc-items > div.item.expired-item > div.total-expired-items {
+  background: #ED4C5C;
+}
+
+div.wttc-items > div.item.nearly-expired-item > div.total-nearly-expired-items {
+  background: #FFD42F;
 }
 
 div.wttc-training {

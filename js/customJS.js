@@ -749,15 +749,46 @@ $(leftArrow).on('click', function () {
 $(document).ready(function () {
 
     $('div.wttc-items > div.item').on('click', function () {
+        $('div.wttc-training > div.wttc-card').hide();
         $('div.wttc-items > div.item.selected').removeClass('selected');
         $(this).addClass('selected');
-        if($(this).text() == "All") {
+        $(this).children().fadeOut();
+        var wCatagoryText = $(this).clone().children().remove().end().text();
+        if(wCatagoryText == "All") {
             $('span.wttc-quoted-text').text("\"All Catagories\"");
+            $('div.wttc-training > div.wttc-card').show();
         } else {
-            $('span.wttc-quoted-text').text("\"" + $(this).text() + " Catagory\"");
+            $('span.wttc-quoted-text').text("\"" + wCatagoryText + " Catagory\"");
+            if(wCatagoryText == 'New') {
+                $('.wttc-inner-card-new-btn').parent().parent().parent().parent().show();
+            } else if(wCatagoryText == 'Certified') {
+                $('.wttc-inner-card-certified-btn').parent().parent().parent().parent().show();
+            } else if(wCatagoryText == 'Expired') {
+                $('.wttc-inner-card-expired-btn').parent().parent().parent().parent().show();
+            } else if(wCatagoryText == 'Nearly expired') {
+                $('.wttc-inner-card-nearly-expired-btn').parent().parent().parent().parent().show();
+            }
         }
     });
     
+    var totalNewItems = $('.wttc-inner-card-new-btn').length;
+
+    if (totalNewItems > 0) {
+        $('div.wttc-items > div.item.new-item > div.total-new-items').css('display', 'flex');
+        $('div.wttc-items > div.item.new-item > div.total-new-items').text(totalNewItems);
+    } else {
+        $('div.wttc-items > div.item.new-item > div.total-new-items').css('display', 'none');
+    }
+
+    var totalCertifiedItems = $('.wttc-inner-card-certified-btn').length;
+
+    if (totalCertifiedItems > 0) {
+        $('div.wttc-items > div.item.certified-item > div.total-certified-items').css('display', 'flex');
+        $('div.wttc-items > div.item.certified-item > div.total-certified-items').text(totalCertifiedItems);
+    } else {
+        $('div.wttc-items > div.item.certified-item > div.total-certified-items').css('display', 'none');
+    }
+
     var totalExpiredItems = $('.wttc-inner-card-expired-btn').length;
 
     if (totalExpiredItems > 0) {
@@ -773,7 +804,7 @@ $(document).ready(function () {
         $('div.wttc-items > div.item.nearly-expired-item > div.total-nearly-expired-items').css('display', 'flex');
         $('div.wttc-items > div.item.nearly-expired-item > div.total-nearly-expired-items').text(totalNearlyExpiredItems);
     } else {
-        $('div.wttc-items > div.item.expired-item > div.total-nearly-expired-items').css('display', 'none');
+        $('div.wttc-items > div.item.nearly-expired-item > div.total-nearly-expired-items').css('display', 'none');
     }
 
 });
