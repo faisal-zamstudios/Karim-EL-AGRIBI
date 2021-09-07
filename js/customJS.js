@@ -209,6 +209,49 @@ $("#imageUpload2").change(function () {
 });
 
 
+function readURL5(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#imagePreview5').attr('src', e.target.result);
+            $('#imagePreview5').hide();
+            $('#imagePreview5').fadeIn(650);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#delete-logo5").click(function () {
+    $('#imagePreview5').fadeOut(650);
+});
+
+$("#imageUpload5").change(function () {
+    readURL5(this);
+});
+
+function readURL6(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#imagePreview6').css('background-image', 'url(' + e.target.result + ')');
+            $('#imagePreview6').css('border', 'none');
+            $('#imagePreview6').hide();
+            $('#imagePreview6').fadeIn(650);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#delete-photo6").click(function () {
+    $('#imagePreview6').css('background-image', 'none');
+    $('#imagePreview6').css('border', '1px solid #ccc');
+});
+
+$("#imageUpload6").change(function () {
+    readURL6(this);
+});
+
+
 
 $(document).ready(function () {
 
