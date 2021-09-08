@@ -343,14 +343,23 @@ $(document).ready(function () {
     $(".worker-dashboard-link").addClass('blue-color');
     $(".worker-profile").hide();
     $('.my-training').hide();
+    $(".worker-training-page").hide();
+
+    $(".worker-profile-link").click(function () {
+        $(".worker-dashboard").hide();
+        $('.my-training').hide();
+        $(".blue-color").removeClass('blue-color');
+        $("#worker-personal-information").show();
+        $("#worker-personal-information-link").addClass('blue-color');
+        $("#worker-required-document").hide();
+        $(".worker-profile").show(200);
+    });
 
     $(".worker-dashboard-link").click(function () {
         $(".worker-profile").hide();
         $('.my-training').hide();
         $(".blue-color").removeClass('blue-color');
         $(".worker-dashboard-link").addClass('blue-color');
-        $(".super-admin-clients-link").addClass('blue-color');
-        $("#worker-personal-information-link").addClass('blue-color');
         $(".worker-dashboard").show(200);
     });
 
@@ -359,21 +368,40 @@ $(document).ready(function () {
         $(".worker-dashboard").hide();
         $(".blue-color").removeClass('blue-color');
         $(".my-training-link").addClass('blue-color');
-        $(".super-admin-clients-link").addClass('blue-color');
-        $("#worker-personal-information-link").addClass('blue-color');
         $(".my-training").show(200);
     });
 
-    $(".worker-profile-link").click(function () {
+    $(".worker-training-page-link").click(function () {
+        $(".worker-profile").hide();
         $(".worker-dashboard").hide();
-        $('.my-training').hide();
+        $(".my-training").hide();
         $(".blue-color").removeClass('blue-color');
-        $(".super-admin-clients-link").addClass('blue-color');
+        $(".my-training-link").addClass('blue-color');
         $("#worker-personal-information-link").addClass('blue-color');
-        $(".worker-profile").show(200);
+        $(".worker-training-page").show(200);
     });
 
 });
+
+
+//      Worker Profile Tabs Toggle
+
+$(document).ready(function () {
+    $("#worker-personal-information-link").click(function () {
+        $("#worker-required-document").hide();
+        $(".set-color .blue-color").removeClass('blue-color');
+        $("#worker-personal-information-link").addClass('blue-color');
+        $("#worker-personal-information").show(200);
+    });
+
+    $("#worker-required-document-link").click(function () {
+        $("#worker-personal-information").hide();
+        $(".set-color .blue-color").removeClass('blue-color');
+        $("#worker-required-document-link").addClass('blue-color');
+        $("#worker-required-document").show(200);
+    });
+});
+
 
 function readURL3(input) {
     if (input.files && input.files[0]) {
@@ -419,27 +447,6 @@ $("#imageUpload4").change(function () {
     readURL4(this);
 });
 
-
-$(document).ready(function () {
-    $("#worker-personal-information").show();
-    $("#worker-personal-information-link").addClass('blue-color');
-    $("#worker-required-document").hide();
-
-    $("#worker-personal-information-link").click(function () {
-        $("#worker-required-document").hide();
-        $(".set-color .blue-color").removeClass('blue-color');
-        $("#worker-personal-information-link").addClass('blue-color');
-        $("#worker-personal-information").show(200);
-    });
-
-    $("#worker-required-document-link").click(function () {
-        $("#worker-personal-information").hide();
-        $(".set-color .blue-color").removeClass('blue-color');
-        $("#worker-required-document-link").addClass('blue-color');
-        $("#worker-required-document").show(200);
-    });
-
-});
 
 
 $(document).ready(function () {
