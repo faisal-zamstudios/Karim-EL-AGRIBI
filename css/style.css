@@ -1787,7 +1787,7 @@ div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-bo
   cursor: pointer;
 }
 
-.worker-training-page {
+.worker-training-certified, .worker-training-new {
   margin-top: 50px;
   width: 100%;
 }
@@ -1851,7 +1851,22 @@ div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-bo
   width: 100%;
 }
 
-.wti-content > div.wtic-btn {
+.wti-content > div.wtic-new-btn {
+  width: fit-content;
+  background: #47CA5B; 
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #FFFFFF; 
+  padding: 8px 31px;
+  margin-top: 21px;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.wti-content > div.wtic-certified-btn {
   width: fit-content;
   background: #FFFFFF;
   border: 1.5px solid #2C8EFF;
@@ -1889,7 +1904,7 @@ div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-bo
   padding-right: 14px;
 }
 
-.worker-training-details-notes > div.w-100 > #wtdn-textarea {
+.worker-training-details-notes > div.w-100 > .wtdn-textarea {
   width: 100%;
   height: 97px;
   background: #FDFDFD;
@@ -1904,7 +1919,7 @@ div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-bo
   resize: none;
 }
 
-.worker-training-details-notes > div.w-100 > #wtdn-textarea:focus {
+.worker-training-details-notes > div.w-100 > .wtdn-textarea:focus {
   outline: none;
 }
 

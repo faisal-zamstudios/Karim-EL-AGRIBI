@@ -423,12 +423,14 @@ $(document).ready(function () {
     $(".worker-dashboard-link").addClass('blue-color');
     $(".worker-profile").hide();
     $('.my-training').hide();
-    $(".worker-training-page").hide();
+    $(".worker-training-certified").hide();
+    $(".worker-training-new").hide();
 
     $(".worker-profile-link").click(function () {
         $(".worker-dashboard").hide();
         $('.my-training').hide();
-        $(".worker-training-page").hide();
+        $(".worker-training-certified").hide();
+        $(".worker-training-new").hide();
         $(".blue-color").removeClass('blue-color');
         $("#worker-personal-information").show();
         $("#worker-personal-information-link").addClass('blue-color');
@@ -439,7 +441,8 @@ $(document).ready(function () {
     $(".worker-dashboard-link").click(function () {
         $(".worker-profile").hide();
         $('.my-training').hide();
-        $(".worker-training-page").hide();
+        $(".worker-training-certified").hide();
+        $(".worker-training-new").hide();
         $(".blue-color").removeClass('blue-color');
         $(".worker-dashboard-link").addClass('blue-color');
         $(".worker-dashboard").show(200);
@@ -448,20 +451,41 @@ $(document).ready(function () {
     $(".my-training-link").click(function () {
         $(".worker-profile").hide();
         $(".worker-dashboard").hide();
-        $(".worker-training-page").hide();
+        $(".worker-training-certified").hide();
+        $(".worker-training-new").hide();
         $(".blue-color").removeClass('blue-color');
         $(".my-training-link").addClass('blue-color');
         $(".my-training").show(200);
     });
 
-    $(".worker-training-page-link").click(function () {
+    $(".my-training-btn").click(function () {
+        $(".worker-profile").hide();
+        $(".worker-dashboard").hide();
+        $(".worker-training-certified").hide();
+        $(".worker-training-new").hide();
+        $(".blue-color").removeClass('blue-color');
+        $(".my-training-link").addClass('blue-color');
+        $(".my-training").show(200);
+    });
+
+    $(".worker-training-certified-link").click(function () {
         $(".worker-profile").hide();
         $(".worker-dashboard").hide();
         $(".my-training").hide();
         $(".blue-color").removeClass('blue-color');
         $(".my-training-link").addClass('blue-color');
         $("#worker-personal-information-link").addClass('blue-color');
-        $(".worker-training-page").show(200);
+        $(".worker-training-certified").show(200);
+    });
+
+    $(".worker-training-new-link").click(function () {
+        $(".worker-profile").hide();
+        $(".worker-dashboard").hide();
+        $(".my-training").hide();
+        $(".blue-color").removeClass('blue-color');
+        $(".my-training-link").addClass('blue-color');
+        $("#worker-personal-information-link").addClass('blue-color');
+        $(".worker-training-new").show(200);
     });
 
 });
@@ -930,7 +954,7 @@ function formattedDate(date) {
 $(document).ready( function() {
     $('div.wtdn-notes > div.wtdn-note > div.navbar > div > img.note-edit').on('click', function() {
         var noteMessage = $(this).parent().parent().parent().children('.wtdn-note-msg').text();
-        $('#wtdn-textarea').text(noteMessage);
+        $(this).parent().parent().parent().parent().parent().children('.w-100').children('.wtdn-textarea').text(noteMessage);
     });
 });
 
@@ -953,7 +977,7 @@ const viewerOptions = {
     defaultViewMode: "FIT_PAGE",
     showDownloadPDF: false,
     showPrintPDF: false,
-    showLeftHandPanel: true,
+    showLeftHandPanel: false,
     showAnnotationTools: false
 };
 
@@ -988,6 +1012,7 @@ function processEvent(event, previewFilePromise) {
 }
 
 document.addEventListener("adobe_dc_view_sdk.ready", function () {
+
     // Create embedded view
     var adobeDCView = new AdobeDC.View({
         clientId: clientId,
@@ -1001,18 +1026,35 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         },
         viewerOptions
     );
-    // create object to set events that we want to listen for
-    var eventOptions = {
-        listenOn: [AdobeDC.View.Enum.Events.PDF_VIEWER_OPEN],
-        enableFilePreviewEvents: true
-    };
     // register the event callback
     adobeDCView.registerCallback(
         AdobeDC.View.Enum.CallbackType.EVENT_LISTENER,
         function (event) {
             processEvent(event, previewFilePromise);
+        }
+    );
+    
+
+
+    // Create embedded view
+    var adobeDCView2 = new AdobeDC.View({
+        clientId: clientId,
+        divId: "embeddedView2"
+    });
+    // Show the file
+    var previewFilePromise2 = adobeDCView2.previewFile(
+        {
+            content: { promise: fetchPDF(urlToPDF) },
+            metaData: { fileName: urlToPDF.split("/").slice(-1)[0] }
         },
-        eventOptions
+        viewerOptions
+    );
+    // register the event callback
+    adobeDCView2.registerCallback(
+        AdobeDC.View.Enum.CallbackType.EVENT_LISTENER,
+        function (event) {
+            processEvent(event, previewFilePromise2);
+        }
     );
 });
 
