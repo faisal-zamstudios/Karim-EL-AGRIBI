@@ -20,6 +20,23 @@
   color: #2C8EFF !important;
 }
 
+#style-2::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #2C8EFF;
+}
+
 input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 1;
   display: block;
@@ -361,21 +378,8 @@ select.classic-down-arrow {
   outline: none;
 }
 
-#style-2::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: #F5F5F5;
-}
-
-#style-2::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
-  border-radius: 10px;
-  background-color: #F5F5F5;
-}
-
-#style-2::-webkit-scrollbar-thumb {
-  border-radius: 2px;
-  background-color: #2C8EFF;
+.selected-clients-manage {
+  display: none;
 }
 
 .tbl-client thead tr {

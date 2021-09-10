@@ -340,6 +340,11 @@ $(document).ready(function () {
     //select all checkboxes
     $("#selectall").change(function () {  //"select all" change 
         $(".select-checkbox").prop('checked', $(this).prop("checked")); //change all ".checkbox" checked status
+        if($('.select-checkbox:checked').length>0) {
+            $('.selected-clients-manage').css('display', 'flex');
+        } else {
+            $('.selected-clients-manage').css('display', 'none');
+        }
     });
 
     //".checkbox" change 
@@ -348,10 +353,18 @@ $(document).ready(function () {
         if (false == $(this).prop("checked")) { //if this item is unchecked
             $("#selectall").prop('checked', false); //change "select all" checked status to false
         }
+
+        if($('.select-checkbox:checked').length>0) {
+            $('.selected-clients-manage').css('display', 'flex');
+        } else {
+            $('.selected-clients-manage').css('display', 'none');
+        }
+
         //check "select all" if all checkbox items are checked
         if ($('.select-checkbox:checked').length == $('.select-checkbox').length) {
             $("#selectall").prop('checked', true);
         }
+
     });
 
 });
