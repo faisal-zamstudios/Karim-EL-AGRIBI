@@ -1919,6 +1919,7 @@ div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-bo
   color: #FFFFFF;
   margin-top: 8px;
   margin-left: auto;
+  cursor: pointer;
 }
 
 div.wtdn-notes {
