@@ -252,6 +252,73 @@ $("#imageUpload6").change(function () {
 });
 
 
+$(document).ready(function () {
+    $('.btn-create').on('click', function() {
+        if ($(this).text() == "Create And Send Email") {
+            var inputText = $('.input-text');
+            for(var i=0; i<inputText.length; i++) {
+                $(inputText).css("border", "1px solid #DCDCDC");
+                $(inputText).css("background", "#FFFFFF");
+                if($(inputText[i]).val() == "") {
+                    var warningMsg = $(inputText[i]).parent().parent();
+                    if(warningMsg.children('.add-client-warning-msg').length>0) {
+                        $(inputText[i]).css("border", "1.5px solid #E0B719");
+                        $(inputText[i]).css("background", "#FFF9E3");
+                        $(inputText[i]).focus();
+                        warningMsg = warningMsg.children('.add-client-warning-msg');
+                        var labelText = $(inputText[i]).parent().children('label').text();
+                        warningMsg.children('p').text(labelText + " cannot be empty.");
+                        $('.add-client-warning-msg').css('display', 'none');
+                        warningMsg.css('display', 'flex');
+                        return false;
+                    }
+                    if(warningMsg.parent().parent().children('.add-client-warning-msg').length>0) {
+                        $(inputText[i]).css("border", "1.5px solid #E0B719");
+                        $(inputText[i]).css("background", "#FFF9E3");
+                        $(inputText[i]).focus();
+                        warningMsg = warningMsg.parent().parent().children('.add-client-warning-msg');
+                        warningMsg.children('p').text("Phone number cannot be empty.");
+                        $('.add-client-warning-msg').css('display', 'none');
+                        warningMsg.css('display', 'flex');
+                        return false;
+                    }
+                }
+            }
+        } else {
+            var inputText = $('.input-text');
+            for(var i=0; i<inputText.length; i++) {
+                $(inputText).css("border", "1px solid #DCDCDC");
+                $(inputText).css("background", "#FFFFFF");
+                if($(inputText[i]).val() == "") {
+                    var warningMsg = $(inputText[i]).parent().parent();
+                    if(warningMsg.children('.update-client-warning-msg').length>0) {
+                        $(inputText[i]).css("border", "1.5px solid #E0B719");
+                        $(inputText[i]).css("background", "#FFF9E3");
+                        $(inputText[i]).focus();
+                        warningMsg = warningMsg.children('.update-client-warning-msg');
+                        var labelText = $(inputText[i]).parent().children('label').text();
+                        warningMsg.children('p').text(labelText + " cannot be empty.");
+                        $('.update-client-warning-msg').css('display', 'none');
+                        warningMsg.css('display', 'flex');
+                        return false;
+                    }
+                    if(warningMsg.parent().parent().children('.update-client-warning-msg').length>0) {
+                        $(inputText[i]).css("border", "1.5px solid #E0B719");
+                        $(inputText[i]).css("background", "#FFF9E3");
+                        $(inputText[i]).focus();
+                        warningMsg = warningMsg.parent().parent().children('.update-client-warning-msg');
+                        warningMsg.children('p').text("Phone number cannot be empty.");
+                        $('.update-client-warning-msg').css('display', 'none');
+                        warningMsg.css('display', 'flex');
+                        return false;
+                    }
+                }
+            }
+        }
+    });
+});
+
+
 
 $(document).ready(function () {
 
@@ -348,6 +415,7 @@ $(document).ready(function () {
     $(".worker-profile-link").click(function () {
         $(".worker-dashboard").hide();
         $('.my-training').hide();
+        $(".worker-training-page").hide();
         $(".blue-color").removeClass('blue-color');
         $("#worker-personal-information").show();
         $("#worker-personal-information-link").addClass('blue-color');
@@ -358,6 +426,7 @@ $(document).ready(function () {
     $(".worker-dashboard-link").click(function () {
         $(".worker-profile").hide();
         $('.my-training').hide();
+        $(".worker-training-page").hide();
         $(".blue-color").removeClass('blue-color');
         $(".worker-dashboard-link").addClass('blue-color');
         $(".worker-dashboard").show(200);
@@ -366,6 +435,7 @@ $(document).ready(function () {
     $(".my-training-link").click(function () {
         $(".worker-profile").hide();
         $(".worker-dashboard").hide();
+        $(".worker-training-page").hide();
         $(".blue-color").removeClass('blue-color');
         $(".my-training-link").addClass('blue-color');
         $(".my-training").show(200);
@@ -688,7 +758,7 @@ var menuWrapperSize = $('.catagory-wrapper').outerWidth();
 var menuSize = $('.catagory-text').outerWidth(true);
 var catagoryItems = document.getElementsByClassName('catagory-item');
 
-for(var i=0; i<$('.catagory-item').length; i++) {
+for (var i = 0; i < $('.catagory-item').length; i++) {
     menuSize += $(catagoryItems[i]).outerWidth(true);
 }
 
@@ -761,23 +831,23 @@ $(document).ready(function () {
         $(this).addClass('selected');
         $(this).children().fadeOut();
         var wCatagoryText = $(this).clone().children().remove().end().text();
-        if(wCatagoryText == "All") {
+        if (wCatagoryText == "All") {
             $('span.wttc-quoted-text').text("\"All Catagories\"");
             $('div.wttc-training > div.wttc-card').show();
         } else {
             $('span.wttc-quoted-text').text("\"" + wCatagoryText + " Catagory\"");
-            if(wCatagoryText == 'New') {
+            if (wCatagoryText == 'New') {
                 $('.wttc-inner-card-new-btn').parent().parent().parent().parent().show();
-            } else if(wCatagoryText == 'Certified') {
+            } else if (wCatagoryText == 'Certified') {
                 $('.wttc-inner-card-certified-btn').parent().parent().parent().parent().show();
-            } else if(wCatagoryText == 'Expired') {
+            } else if (wCatagoryText == 'Expired') {
                 $('.wttc-inner-card-expired-btn').parent().parent().parent().parent().show();
-            } else if(wCatagoryText == 'Nearly expired') {
+            } else if (wCatagoryText == 'Nearly expired') {
                 $('.wttc-inner-card-nearly-expired-btn').parent().parent().parent().parent().show();
             }
         }
     });
-    
+
     var totalNewItems = $('.wttc-inner-card-new-btn').length;
 
     if (totalNewItems > 0) {
@@ -815,3 +885,139 @@ $(document).ready(function () {
     }
 
 });
+
+
+
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+////////////////////    Date   //////////////////////
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+
+
+
+
+const date = new Date();
+// Results below assume UTC timezone - your results may vary
+
+function formattedDate(date) {
+    // Specify date and time format using "style" options (i.e. full, long, medium, short)
+    var formattedDate = new Intl.DateTimeFormat('en-BE', { dateStyle: 'long', timeStyle: 'short' }).format(date);
+    // Expected output "10 May 2021 at 18:23"
+    
+    formattedDate = formattedDate.replace('at', '-');
+    // Expected output "10 May 2021 - 18:23"
+    
+    formattedDate = formattedDate.substr(0, formattedDate.length - 13) + ',' + formattedDate.substr(formattedDate.length - 13, formattedDate.length);
+    // Expected output "10 May, 2021 - 18:23"
+
+    return formattedDate;
+}
+
+$(document).ready( function() {
+    $('div.wtdn-notes > div.wtdn-note > div.navbar > div > img.note-edit').on('click', function() {
+        var noteMessage = $(this).parent().parent().parent().children('.wtdn-note-msg').text();
+        $('#wtdn-textarea').text(noteMessage);
+    });
+});
+
+
+
+
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+/////////////////    PDF Viewer   ///////////////////
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+
+
+// Add ?page=4 to the end of the URL
+const urlToPDF = "https://documentcloud.adobe.com/view-sdk-demo/PDFs/Summary.pdf";
+const clientId = "e800d12fc12c4d60960778b2bc4370af";
+
+const viewerOptions = {
+    embedMode: "FULL_WINDOW",
+    defaultViewMode: "FIT_PAGE",
+    showDownloadPDF: false,
+    showPrintPDF: false,
+    showLeftHandPanel: true,
+    showAnnotationTools: false
+};
+
+function fetchPDF(urlToPDF) {
+    return new Promise((resolve) => {
+        fetch(urlToPDF)
+            .then((resolve) => resolve.blob())
+            .then((blob) => {
+                resolve(blob.arrayBuffer());
+            });
+    });
+}
+
+function goToPage(previewFilePromise, pageNum) {
+    previewFilePromise.then((adobeViewer) => {
+        adobeViewer.getAPIs().then((apis) => {
+            // Go to the page. Page numbers are 1 based.
+            apis.gotoLocation(parseInt(pageNum));
+        });
+    });
+}
+
+function processEvent(event, previewFilePromise) {
+    if (event.type == "PDF_VIEWER_OPEN") {
+        // Get the page parameter from the URL
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const pageNum = urlParams.get("page");
+        // Go to the page number specified in the URL
+        goToPage(previewFilePromise, pageNum);
+    }
+}
+
+document.addEventListener("adobe_dc_view_sdk.ready", function () {
+    // Create embedded view
+    var adobeDCView = new AdobeDC.View({
+        clientId: clientId,
+        divId: "embeddedView"
+    });
+    // Show the file
+    var previewFilePromise = adobeDCView.previewFile(
+        {
+            content: { promise: fetchPDF(urlToPDF) },
+            metaData: { fileName: urlToPDF.split("/").slice(-1)[0] }
+        },
+        viewerOptions
+    );
+    // create object to set events that we want to listen for
+    var eventOptions = {
+        listenOn: [AdobeDC.View.Enum.Events.PDF_VIEWER_OPEN],
+        enableFilePreviewEvents: true
+    };
+    // register the event callback
+    adobeDCView.registerCallback(
+        AdobeDC.View.Enum.CallbackType.EVENT_LISTENER,
+        function (event) {
+            processEvent(event, previewFilePromise);
+        },
+        eventOptions
+    );
+});
+
+// Helper Function: Add arrayBuffer if necessary i.e. Safari
+(function () {
+    if (Blob.arrayBuffer != "function") {
+        Blob.prototype.arrayBuffer = myArrayBuffer;
+    }
+
+    function myArrayBuffer() {
+        return new Promise((resolve) => {
+            let fileReader = new FileReader();
+            fileReader.onload = () => {
+                resolve(fileReader.result);
+            };
+            fileReader.readAsArrayBuffer(this);
+        });
+    }
+})();
+
+

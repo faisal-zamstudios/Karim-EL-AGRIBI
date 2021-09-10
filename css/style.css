@@ -626,6 +626,30 @@ input:checked+.slider:before {
   outline: none;
 }
 
+.add-client-warning-msg,
+.update-client-warning-msg {
+  width: 100%;
+  display: none;
+}
+
+.add-client-warning-msg > img,
+.update-client-warning-msg > img {
+  max-width: 100%;
+  height: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.add-client-warning-msg > p,
+.update-client-warning-msg > p {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 6px;
+  color: #E0B719;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .input-textarea {
   width: 100%;
   height: 47px;
@@ -1339,6 +1363,7 @@ div.dropdown-profile.open > div.list-profile {
 
 div.dropdown-notification {
   position: relative;
+  margin-right: 5px;
 }
 
 div.dropdown-notification > div.caption-notification {
@@ -1474,6 +1499,8 @@ div.dropdown-notification.open > div.list-notification {
 
 .catagories {
   display: -webkit-box;
+  margin: auto;
+  max-width: max-content;
   white-space: nowrap;
   overflow-x: auto;
   height: 54px;
@@ -1500,11 +1527,11 @@ div.catagories > div.catagory-text {
   line-height: 22px; 
   text-align: right; 
   color: #7C7C7C; 
-  margin-right: 13px;
+  margin-right: 15px;
 }
 
 div.catagories > div.catagory-item {
-  padding: 11px 18px;
+  padding: 11px 21px;
   margin-top: auto;
   margin-bottom: 4px;
   display: flex;
@@ -1765,18 +1792,18 @@ div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-bo
   width: 100%;
   display: inline-flex;
   flex-wrap: nowrap;
-  padding: 18px !important;
+  padding: 1.636% !important;
   background: #FFFFFF;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
 }
 
-.worker-training-info img:first-child {
-  width: 1.317%; height: fit-content; min-width: 10px; max-width: 14px; margin-right: 1.317%;
+.worker-training-info > img:first-child {
+  height: fit-content; width: 14px; margin-right: 1.317%; margin-top: 1px;
 }
 
-.worker-training-info img:last-child {
-  width: 26.341%; height: auto; max-width: 280px;
+.worker-training-info > img:last-child {
+  width: 26.341%; object-fit: cover; height: fit-content; margin: auto; max-height: 185px; border-radius: 3px;
 }
 
 .wti-content {
@@ -1792,23 +1819,23 @@ div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-bo
 }
 
 .wti-content > div.wtic-bottom {
-  margin-top: 11px; width: 100%;
+  margin-top: 11px; width: 100%; display: -webkit-box;
 }
 
 .wti-content > div.wtic-bottom > div.wtic-bottom-item {
-  margin-right: 21px; display: flex;
+  margin-right: 2.966%; display: flex; height: fit-content;
 }
 
 .wti-content > div.wtic-bottom > div.wtic-bottom-item > img {
   margin-right: 5px;
   width: 100%;
-  height: auto;
-  max-width: auto;
+  height: fit-content;
+  max-width: fit-content;
   max-height: 20px;
 }
 
 .wti-content > div.wtic-bottom > div.wtic-bottom-item > div {
-  font-weight: bold; font-size: 12px; line-height: 14px; color: #D9D9D9;
+  font-weight: bold; font-size: 12px; line-height: 14px; color: #D9D9D9; margin-top: auto; margin-bottom: auto;
 }
 
 .wti-content > div.wtic-description {
@@ -1821,17 +1848,117 @@ div.wttc-training > div.wttc-card > div.wttc-inner-card > div.wttc-inner-card-bo
 }
 
 .wti-content > div.wtic-btn {
-  width: 148px;
-  height: 32px;
+  width: fit-content;
   background: #FFFFFF;
   border: 1.5px solid #2C8EFF;
   box-sizing: border-box;
   border-radius: 3px;
   padding: 8px 37px;
+  margin-top: 21px;
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
   color: #2C8EFF;
+}
+
+.worker-training-details {
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  padding: 14px 1.36% !important;
+  margin-top: 15px !important;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.worker-training-details-pdf {
+  width: 67.88%;
+  height: 398px;
+}
+
+.worker-training-details-notes {
+  width: 30.439%;
+}
+
+.worker-training-details-notes > div.w-100 {
+  padding-right: 14px;
+}
+
+.worker-training-details-notes > div.w-100 > #wtdn-textarea {
+  width: 100%;
+  height: 97px;
+  background: #FDFDFD;
+  border: 1px solid #E7E7E7;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 3.195% 4.792%;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 16px;
+  color: #A7A7A7;
+  resize: none;
+}
+
+.worker-training-details-notes > div.w-100 > #wtdn-textarea:focus {
+  outline: none;
+}
+
+.worker-training-details-notes > div.w-100 > div.wtdn-save-btn {
+  width: fit-content;
+  background: #2C8EFF;
+  border-radius: 3px;
+  padding: 5px 7%;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  margin-top: 8px;
+  margin-left: auto;
+}
+
+div.wtdn-notes {
+  width: 100%;
+  padding-right: 10px;
+  height: 227px;
+  overflow-y: scroll;
+}
+
+div.wtdn-notes > div.wtdn-note {
+  background: #F4F4F4;
+  border-radius: 3px;
+  padding: 3.514%;
+}
+
+div.wtdn-notes > div.wtdn-note:not(:first-child) {
+  margin-top: 15px;
+}
+
+div.wtdn-notes > div.wtdn-note > div.navbar > div.d-flex > img.img-fluid {
+  margin-right: 6px;
+}
+
+div.wtdn-notes > div.wtdn-note > div.navbar > div.d-flex > div.wtdn-date {
+  font-weight: 600; font-size: 11px; line-height: 13px; color: #A7A7A7; margin-top: auto; margin-bottom: auto;
+}
+
+div.wtdn-notes > div.wtdn-note > div.navbar > div > img.note-edit {
+  margin-right: 13px;
+}
+
+div.wtdn-notes > div.wtdn-note > div.navbar > div > img.note-edit,
+div.wtdn-notes > div.wtdn-note > div.navbar > div > img.note-delete {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+div.wtdn-notes > div.wtdn-note > div.wtdn-note-msg {
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #838383;
 }
 
 @media screen and (max-width: 1400px) {
