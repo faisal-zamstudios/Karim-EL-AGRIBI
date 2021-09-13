@@ -54,16 +54,6 @@ $(document).ready(function() {
         $("#sub-cont-export").hide();
     });
 });
-/*checkbox*/
-$(document).ready(function() {
-    $('.checkbox').click(function() {
-        if ($(this).prop('checked')) {
-            $("#sub-cont-export").show(); // This should show the associated tinypic with the same number as the cbox that was clicked.
-        } else {
-            $("#sub-cont-export").hide(); // This should hide the associated tinypic with the same number as the cbox that was clicked.
-        }
-    });
-});
 /*Profile page*/
 $(document).ready(function() {
     $("#sub-cont-personal-information").show();

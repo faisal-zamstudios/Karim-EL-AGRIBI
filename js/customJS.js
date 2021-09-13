@@ -1,18 +1,15 @@
-
-
-
 /*
-  ******************************************************************************************
-  ************************************  Login Style  ***************************************
-  ******************************************************************************************
-*/
+ ******************************************************************************************
+ ************************************  Login Style  ***************************************
+ ******************************************************************************************
+ */
 
 
 
 // for invalid email
-$(document).ready(function () {
+$(document).ready(function() {
     $('.error').hide();
-    $('input[type=password]').focus(function () {
+    $('input[type=password]').focus(function() {
         var email = $('#email').val();
         if (email == '') {
             $('.error').show();
@@ -34,7 +31,7 @@ $(document).ready(function () {
         }
         return false;
     });
-    $('#submit').click(function () {
+    $('#submit').click(function() {
         var email = $('#email').val();
         if (email == '') {
             $('.error').show();
@@ -69,7 +66,7 @@ function IsEmail(email) {
 
 
 // for invalid password
-$(document).ready(function () {
+$(document).ready(function() {
     var number = /([0-9])/;
     var alphabets = /([a-zA-Z])/;
     var capital_alphabets = /([A-Z])/;
@@ -77,7 +74,7 @@ $(document).ready(function () {
     $('.error2').hide();
     $('.unlock-icon').hide();
     $('.lock2-icon').hide();
-    $('#password').keyup(function () {
+    $('#password').keyup(function() {
         var password = $('#password').val();
         if (password == '') {
             $('.error2').show();
@@ -105,7 +102,7 @@ $(document).ready(function () {
     });
 
 
-    $('#submit').click(function () {
+    $('#submit').click(function() {
         var password = $('#password').val();
         var email = $('#email').val();
         if (email != '' && password == '') {
@@ -117,7 +114,7 @@ $(document).ready(function () {
         }
     });
 
-    $("body").on('click', '.lock-icon, .unlock-icon, .lock2-icon', function () {
+    $("body").on('click', '.lock-icon, .unlock-icon, .lock2-icon', function() {
         $(this).toggleClass("abc");
         var input = $("#password");
         if (input.attr("type") === "password") {
@@ -136,17 +133,17 @@ $(document).ready(function () {
 
 
 /*
-  ******************************************************************************************
-  *********************************  Super Admin Style  ************************************
-  ******************************************************************************************
-*/
+ ******************************************************************************************
+ *********************************  Super Admin Style  ************************************
+ ******************************************************************************************
+ */
 
 
 
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             $('#imagePreview').attr('src', e.target.result);
             $('#imagePreview').hide();
             $('#imagePreview').fadeIn(650);
@@ -155,18 +152,18 @@ function readURL(input) {
     }
 }
 
-$("#delete-logo").click(function () {
+$("#delete-logo").click(function() {
     $('#imagePreview').fadeOut(650);
 });
 
-$("#imageUpload").change(function () {
+$("#imageUpload").change(function() {
     readURL(this);
 });
 
 function readURL1(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             $('#imagePreview1').css('background-image', 'url(' + e.target.result + ')');
             $('#imagePreview1').css('border', 'none');
             $('#imagePreview1').hide();
@@ -176,12 +173,12 @@ function readURL1(input) {
     }
 }
 
-$("#delete-photo").click(function () {
+$("#delete-photo").click(function() {
     $('#imagePreview1').css('background-image', 'none');
     $('#imagePreview1').css('border', '1px solid #ccc');
 });
 
-$("#imageUpload1").change(function () {
+$("#imageUpload1").change(function() {
     readURL1(this);
 });
 
@@ -189,7 +186,7 @@ $("#imageUpload1").change(function () {
 function readURL2(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             $('#imagePreview2').css('background-image', 'url(' + e.target.result + ')');
             $('#imagePreview2').css('border', 'none');
             $('#imagePreview2').hide();
@@ -199,12 +196,12 @@ function readURL2(input) {
     }
 }
 
-$("#delete-img").click(function () {
+$("#delete-img").click(function() {
     $('#imagePreview2').css('background-image', 'none');
     $('#imagePreview2').css('border', '1px solid #ccc');
 });
 
-$("#imageUpload2").change(function () {
+$("#imageUpload2").change(function() {
     readURL2(this);
 });
 
@@ -212,7 +209,7 @@ $("#imageUpload2").change(function () {
 function readURL5(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             $('#imagePreview5').attr('src', e.target.result);
             $('#imagePreview5').hide();
             $('#imagePreview5').fadeIn(650);
@@ -221,18 +218,18 @@ function readURL5(input) {
     }
 }
 
-$("#delete-logo5").click(function () {
+$("#delete-logo5").click(function() {
     $('#imagePreview5').fadeOut(650);
 });
 
-$("#imageUpload5").change(function () {
+$("#imageUpload5").change(function() {
     readURL5(this);
 });
 
 function readURL6(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             $('#imagePreview6').css('background-image', 'url(' + e.target.result + ')');
             $('#imagePreview6').css('border', 'none');
             $('#imagePreview6').hide();
@@ -242,26 +239,26 @@ function readURL6(input) {
     }
 }
 
-$("#delete-photo6").click(function () {
+$("#delete-photo6").click(function() {
     $('#imagePreview6').css('background-image', 'none');
     $('#imagePreview6').css('border', '1px solid #ccc');
 });
 
-$("#imageUpload6").change(function () {
+$("#imageUpload6").change(function() {
     readURL6(this);
 });
 
 
-$(document).ready(function () {
+$(document).ready(function() {
     $('.btn-create').on('click', function() {
         if ($(this).text() == "Create And Send Email") {
             var inputText = $('.input-text');
-            for(var i=0; i<inputText.length; i++) {
+            for (var i = 0; i < inputText.length; i++) {
                 $(inputText).css("border", "1px solid #DCDCDC");
                 $(inputText).css("background", "#FFFFFF");
-                if($(inputText[i]).val() == "") {
+                if ($(inputText[i]).val() == "") {
                     var warningMsg = $(inputText[i]).parent().parent();
-                    if(warningMsg.children('.add-client-warning-msg').length>0) {
+                    if (warningMsg.children('.add-client-warning-msg').length > 0) {
                         $(inputText[i]).css("border", "1.5px solid #E0B719");
                         $(inputText[i]).css("background", "#FFF9E3");
                         $(inputText[i]).focus();
@@ -272,7 +269,7 @@ $(document).ready(function () {
                         warningMsg.css('display', 'flex');
                         return false;
                     }
-                    if(warningMsg.parent().parent().children('.add-client-warning-msg').length>0) {
+                    if (warningMsg.parent().parent().children('.add-client-warning-msg').length > 0) {
                         $(inputText[i]).css("border", "1.5px solid #E0B719");
                         $(inputText[i]).css("background", "#FFF9E3");
                         $(inputText[i]).focus();
@@ -286,12 +283,12 @@ $(document).ready(function () {
             }
         } else {
             var inputText = $('.input-text');
-            for(var i=0; i<inputText.length; i++) {
+            for (var i = 0; i < inputText.length; i++) {
                 $(inputText).css("border", "1px solid #DCDCDC");
                 $(inputText).css("background", "#FFFFFF");
-                if($(inputText[i]).val() == "") {
+                if ($(inputText[i]).val() == "") {
                     var warningMsg = $(inputText[i]).parent().parent();
-                    if(warningMsg.children('.update-client-warning-msg').length>0) {
+                    if (warningMsg.children('.update-client-warning-msg').length > 0) {
                         $(inputText[i]).css("border", "1.5px solid #E0B719");
                         $(inputText[i]).css("background", "#FFF9E3");
                         $(inputText[i]).focus();
@@ -302,7 +299,7 @@ $(document).ready(function () {
                         warningMsg.css('display', 'flex');
                         return false;
                     }
-                    if(warningMsg.parent().parent().children('.update-client-warning-msg').length>0) {
+                    if (warningMsg.parent().parent().children('.update-client-warning-msg').length > 0) {
                         $(inputText[i]).css("border", "1.5px solid #E0B719");
                         $(inputText[i]).css("background", "#FFF9E3");
                         $(inputText[i]).focus();
@@ -320,13 +317,13 @@ $(document).ready(function () {
 
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $("#dismiss-success").click(function () {
+    $("#dismiss-success").click(function() {
         $("#successful-msg").hide(300);
     });
 
-    $(".toggle-password").click(function () {
+    $(".toggle-password").click(function() {
         var input = $($(this).attr("toggle"));
         if (input.attr("type") == "password") {
             input.attr("type", "text");
@@ -338,26 +335,30 @@ $(document).ready(function () {
     });
 
     //select all checkboxes
-    $("#selectall").change(function () {  //"select all" change 
+    $("#selectall").change(function() { //"select all" change 
         $(".select-checkbox").prop('checked', $(this).prop("checked")); //change all ".checkbox" checked status
-        if($('.select-checkbox:checked').length>0) {
+        if ($('.select-checkbox:checked').length > 0) {
             $('.selected-clients-manage').css('display', 'flex');
+            $("#sub-cont-export").show();
         } else {
             $('.selected-clients-manage').css('display', 'none');
+            $("#sub-cont-export").hide();
         }
     });
 
     //".checkbox" change 
-    $('.select-checkbox').change(function () {
+    $('.select-checkbox').change(function() {
         //uncheck "select all", if one of the listed checkbox item is unchecked
         if (false == $(this).prop("checked")) { //if this item is unchecked
             $("#selectall").prop('checked', false); //change "select all" checked status to false
         }
 
-        if($('.select-checkbox:checked').length>0) {
+        if ($('.select-checkbox:checked').length > 0) {
             $('.selected-clients-manage').css('display', 'flex');
+            $("#sub-cont-export").show();
         } else {
             $('.selected-clients-manage').css('display', 'none');
+            $("#sub-cont-export").hide();
         }
 
         //check "select all" if all checkbox items are checked
@@ -386,19 +387,19 @@ $(".birthday").datepicker({
 /*     Date Picker End      */
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     $(".manage-clients").show();
     $(".super-admin-clients-link").addClass('blue-color');
     $(".super-admin-profile").hide();
 
-    $(".super-admin-clients-link").click(function () {
+    $(".super-admin-clients-link").click(function() {
         $(".super-admin-profile").hide();
         $(".super-admin-clients-link").addClass('blue-color');
         $(".manage-clients").show(200);
     });
 
-    $(".super-admin-profile-link").click(function () {
+    $(".super-admin-profile-link").click(function() {
         $(".manage-clients").hide();
         $(".blue-color").removeClass('blue-color');
         $(".worker-dashboard-link").addClass('blue-color');
@@ -410,14 +411,14 @@ $(document).ready(function () {
 
 
 /*
-  ******************************************************************************************
-  *********************************  Worker Area Style  ************************************
-  ******************************************************************************************
-*/
+ ******************************************************************************************
+ *********************************  Worker Area Style  ************************************
+ ******************************************************************************************
+ */
 
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     $(".worker-dashboard").show();
     $(".worker-dashboard-link").addClass('blue-color');
@@ -426,7 +427,7 @@ $(document).ready(function () {
     $(".worker-training-certified").hide();
     $(".worker-training-new").hide();
 
-    $(".worker-profile-link").click(function () {
+    $(".worker-profile-link").click(function() {
         $(".worker-dashboard").hide();
         $('.my-training').hide();
         $(".worker-training-certified").hide();
@@ -438,7 +439,7 @@ $(document).ready(function () {
         $(".worker-profile").show(200);
     });
 
-    $(".worker-dashboard-link").click(function () {
+    $(".worker-dashboard-link").click(function() {
         $(".worker-profile").hide();
         $('.my-training').hide();
         $(".worker-training-certified").hide();
@@ -448,7 +449,7 @@ $(document).ready(function () {
         $(".worker-dashboard").show(200);
     });
 
-    $(".my-training-link").click(function () {
+    $(".my-training-link").click(function() {
         $(".worker-profile").hide();
         $(".worker-dashboard").hide();
         $(".worker-training-certified").hide();
@@ -458,7 +459,7 @@ $(document).ready(function () {
         $(".my-training").show(200);
     });
 
-    $(".my-training-btn").click(function () {
+    $(".my-training-btn").click(function() {
         $(".worker-profile").hide();
         $(".worker-dashboard").hide();
         $(".worker-training-certified").hide();
@@ -468,7 +469,7 @@ $(document).ready(function () {
         $(".my-training").show(200);
     });
 
-    $(".worker-training-certified-link").click(function () {
+    $(".worker-training-certified-link").click(function() {
         $(".worker-profile").hide();
         $(".worker-dashboard").hide();
         $(".my-training").hide();
@@ -478,7 +479,7 @@ $(document).ready(function () {
         $(".worker-training-certified").show(200);
     });
 
-    $(".worker-training-new-link").click(function () {
+    $(".worker-training-new-link").click(function() {
         $(".worker-profile").hide();
         $(".worker-dashboard").hide();
         $(".my-training").hide();
@@ -493,15 +494,15 @@ $(document).ready(function () {
 
 //      Worker Profile Tabs Toggle
 
-$(document).ready(function () {
-    $("#worker-personal-information-link").click(function () {
+$(document).ready(function() {
+    $("#worker-personal-information-link").click(function() {
         $("#worker-required-document").hide();
         $(".set-color .blue-color").removeClass('blue-color');
         $("#worker-personal-information-link").addClass('blue-color');
         $("#worker-personal-information").show(200);
     });
 
-    $("#worker-required-document-link").click(function () {
+    $("#worker-required-document-link").click(function() {
         $("#worker-personal-information").hide();
         $(".set-color .blue-color").removeClass('blue-color');
         $("#worker-required-document-link").addClass('blue-color');
@@ -513,7 +514,7 @@ $(document).ready(function () {
 function readURL3(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             $('#imagePreview3').css('background-image', 'url(' + e.target.result + ')');
             $('#imagePreview3').css('border', 'none');
             $('#imagePreview3').hide();
@@ -523,19 +524,19 @@ function readURL3(input) {
     }
 }
 
-$("#delete-img2").click(function () {
+$("#delete-img2").click(function() {
     $('#imagePreview3').css('background-image', 'none');
     $('#imagePreview3').css('border', '1px solid #ccc');
 });
 
-$("#imageUpload3").change(function () {
+$("#imageUpload3").change(function() {
     readURL3(this);
 });
 
 function readURL4(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             $('#imagePreview4').css('background-image', 'url(' + e.target.result + ')');
             $('#imagePreview4').css('border', 'none');
             $('#imagePreview4').hide();
@@ -545,42 +546,42 @@ function readURL4(input) {
     }
 }
 
-$("#delete-worker-signature").click(function () {
+$("#delete-worker-signature").click(function() {
     $('#imagePreview4').css('background-image', 'none');
     $('#imagePreview4').css('border', '1px solid #ccc');
 });
 
-$("#imageUpload4").change(function () {
+$("#imageUpload4").change(function() {
     readURL4(this);
 });
 
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $('div.dropdown-lang > div.list-lang > div.item > img').each(function () {
+    $('div.dropdown-lang > div.list-lang > div.item > img').each(function() {
         if ($('.caption-lang img').attr('src') == $(this).attr('src')) {
             $(this).parent().addClass('selected');
         }
     });
 
-    $('.dropdown-lang > .caption-lang').on('click', function () {
+    $('.dropdown-lang > .caption-lang').on('click', function() {
         $(this).parent().toggleClass('open');
     });
 
-    $('.dropdown-lang > .list-lang > .item').on('click', function () {
+    $('.dropdown-lang > .list-lang > .item').on('click', function() {
         $('.dropdown-lang > .list-lang > .item').removeClass('selected');
         $(this).addClass('selected').parent().parent().removeClass('open');
         $('.caption-lang img').attr('src', $(this).children('img').prop('src'));
     });
 
-    $(document).on('keyup', function (evt) {
+    $(document).on('keyup', function(evt) {
         if ((evt.keyCode || evt.which) === 27) {
             $('.dropdown-lang').removeClass('open');
         }
     });
 
-    $(document).on('click', function (evt) {
+    $(document).on('click', function(evt) {
         if ($(evt.target).closest(".dropdown-lang > .caption-lang").length === 0) {
             $('.dropdown-lang').removeClass('open');
         }
@@ -589,24 +590,24 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $('.dropdown-profile > .caption-profile').on('click', function () {
+    $('.dropdown-profile > .caption-profile').on('click', function() {
         $(this).parent().toggleClass('open');
     });
 
-    $('.dropdown-profile > .list-profile > .item').on('click', function () {
+    $('.dropdown-profile > .list-profile > .item').on('click', function() {
         $('.dropdown-profile > .list-profile > .item').removeClass('selected');
         $(this).addClass('selected').parent().parent().removeClass('open');
     });
 
-    $(document).on('keyup', function (evt) {
+    $(document).on('keyup', function(evt) {
         if ((evt.keyCode || evt.which) === 27) {
             $('.dropdown-profile').removeClass('open');
         }
     });
 
-    $(document).on('click', function (evt) {
+    $(document).on('click', function(evt) {
         if ($(evt.target).closest(".dropdown-profile > .caption-profile").length === 0) {
             $('.dropdown-profile').removeClass('open');
         }
@@ -614,11 +615,11 @@ $(document).ready(function () {
 
 });
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     var total_messages = $('.dropdown-notification > .list-notification > .item').length;
 
-    $('.dropdown-notification > .caption-notification').on('click', function () {
+    $('.dropdown-notification > .caption-notification').on('click', function() {
         if (total_messages > 0) {
             $(this).parent().toggleClass('open');
         }
@@ -633,18 +634,18 @@ $(document).ready(function () {
         $('div.dropdown-notification > div.caption-notification > img').attr('src', './img/Super\ Admin/notification.png');
     }
 
-    $('.dropdown-notification > .list-notification > .item').on('click', function () {
+    $('.dropdown-notification > .list-notification > .item').on('click', function() {
         $('.dropdown-notification > .list-notification > .item').removeClass('selected');
         $(this).addClass('selected').parent().parent().removeClass('open');
     });
 
-    $(document).on('keyup', function (evt) {
+    $(document).on('keyup', function(evt) {
         if ((evt.keyCode || evt.which) === 27) {
             $('.dropdown-notification').removeClass('open');
         }
     });
 
-    $(document).on('click', function (evt) {
+    $(document).on('click', function(evt) {
         if ($(evt.target).closest(".dropdown-notification > .caption-notification").length === 0) {
             $('.dropdown-notification').removeClass('open');
         }
@@ -654,7 +655,7 @@ $(document).ready(function () {
 
 
 // for invalid password
-$(document).ready(function () {
+$(document).ready(function() {
     var number = /([0-9])/;
     var alphabets = /([a-zA-Z])/;
     var capital_alphabets = /([A-Z])/;
@@ -665,7 +666,7 @@ $(document).ready(function () {
     $('.unlock-icon1').hide();
     $('.lock2-icon1').hide();
 
-    $('#password-field1').keyup(function () {
+    $('#password-field1').keyup(function() {
         var password = $('#password-field1').val();
         if (password == '' || password.length < 8) {
             $('.error2').show();
@@ -683,7 +684,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#password-field2').keyup(function () {
+    $('#password-field2').keyup(function() {
         var password = $('#password-field2').val();
         if (password == '' || password.length < 8) {
             $('.error3').show();
@@ -701,7 +702,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#password-field3').keyup(function () {
+    $('#password-field3').keyup(function() {
         var password = $('#password-field3').val();
         var password1 = $('#password-field2').val();
         if (password != password1) {
@@ -718,7 +719,7 @@ $(document).ready(function () {
         return false;
     });
 
-    $('#changePassword').click(function () {
+    $('#changePassword').click(function() {
         var password1 = $('#password-field1');
         var password2 = $('#password-field2');
         var password3 = $('#password-field3');
@@ -751,7 +752,7 @@ $(document).ready(function () {
         }
     });
 
-    $('.lock-icon1, .unlock-icon1, .lock2-icon1').on('click', function () {
+    $('.lock-icon1, .unlock-icon1, .lock2-icon1').on('click', function() {
         $(this).toggleClass("abc");
         var input = $(this).parent().children('input');
         if (input.attr("type") === "password") {
@@ -769,9 +770,9 @@ $(document).ready(function () {
 
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $('div.catagories > div.catagory-item').on('click', function () {
+    $('div.catagories > div.catagory-item').on('click', function() {
         $('div.catagory-item.selected-catagory').removeClass('selected-catagory');
         $(this).addClass('selected-catagory');
     });
@@ -800,7 +801,7 @@ for (var i = 0; i < $('.catagory-item').length; i++) {
 }
 
 // get how much have we scrolled to the left
-var getMenuPosition = function () {
+var getMenuPosition = function() {
     return $('.catagories').scrollLeft();
 };
 
@@ -810,7 +811,7 @@ if (menuSize <= menuWrapperSize) {
 }
 
 // the wrapper is responsive
-$(window).on('resize', function () {
+$(window).on('resize', function() {
     menuWrapperSize = $('.catagory-wrapper').outerWidth();
     if (menuSize <= menuWrapperSize) {
         $(leftArrow).css('display', 'none');
@@ -823,7 +824,7 @@ $(window).on('resize', function () {
 
 
 // finally, what happens when we are actually scrolling the menu
-$('.catagories').on('scroll', function () {
+$('.catagories').on('scroll', function() {
 
     // get how much of menu is invisible
     var menuInvisibleSize = menuSize - menuWrapperSize;
@@ -848,21 +849,21 @@ $('.catagories').on('scroll', function () {
 });
 
 // scroll to left
-$(rightArrow).on('click', function () {
+$(rightArrow).on('click', function() {
     $('.catagories').animate({ scrollLeft: getMenuPosition() + 200 }, scrollDuration);
 });
 
 // scroll to right
-$(leftArrow).on('click', function () {
+$(leftArrow).on('click', function() {
     $('.catagories').animate({ scrollLeft: getMenuPosition() - 200 }, scrollDuration);
 });
 
 
 // WTTC Catagories
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $('div.wttc-items > div.item').on('click', function () {
+    $('div.wttc-items > div.item').on('click', function() {
         $('div.wttc-training > div.wttc-card').hide();
         $('div.wttc-items > div.item.selected').removeClass('selected');
         $(this).addClass('selected');
@@ -941,17 +942,17 @@ function formattedDate(date) {
     // Specify date and time format using "style" options (i.e. full, long, medium, short)
     var formattedDate = new Intl.DateTimeFormat('en-BE', { dateStyle: 'long', timeStyle: 'short' }).format(date);
     // Expected output "10 May 2021 at 18:23"
-    
+
     formattedDate = formattedDate.replace('at', '-');
     // Expected output "10 May 2021 - 18:23"
-    
+
     formattedDate = formattedDate.substr(0, formattedDate.length - 13) + ',' + formattedDate.substr(formattedDate.length - 13, formattedDate.length);
     // Expected output "10 May, 2021 - 18:23"
 
     return formattedDate;
 }
 
-$(document).ready( function() {
+$(document).ready(function() {
     $('div.wtdn-notes > div.wtdn-note > div.navbar > div > img.note-edit').on('click', function() {
         var noteMessage = $(this).parent().parent().parent().children('.wtdn-note-msg').text();
         $(this).parent().parent().parent().parent().parent().children('.w-100').children('.wtdn-textarea').text(noteMessage);
@@ -1011,7 +1012,7 @@ function processEvent(event, previewFilePromise) {
     }
 }
 
-document.addEventListener("adobe_dc_view_sdk.ready", function () {
+document.addEventListener("adobe_dc_view_sdk.ready", function() {
 
     // Create embedded view
     var adobeDCView = new AdobeDC.View({
@@ -1019,8 +1020,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         divId: "embeddedView"
     });
     // Show the file
-    var previewFilePromise = adobeDCView.previewFile(
-        {
+    var previewFilePromise = adobeDCView.previewFile({
             content: { promise: fetchPDF(urlToPDF) },
             metaData: { fileName: urlToPDF.split("/").slice(-1)[0] }
         },
@@ -1029,11 +1029,11 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
     // register the event callback
     adobeDCView.registerCallback(
         AdobeDC.View.Enum.CallbackType.EVENT_LISTENER,
-        function (event) {
+        function(event) {
             processEvent(event, previewFilePromise);
         }
     );
-    
+
 
 
     // Create embedded view
@@ -1042,8 +1042,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         divId: "embeddedView2"
     });
     // Show the file
-    var previewFilePromise2 = adobeDCView2.previewFile(
-        {
+    var previewFilePromise2 = adobeDCView2.previewFile({
             content: { promise: fetchPDF(urlToPDF) },
             metaData: { fileName: urlToPDF.split("/").slice(-1)[0] }
         },
@@ -1052,14 +1051,14 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
     // register the event callback
     adobeDCView2.registerCallback(
         AdobeDC.View.Enum.CallbackType.EVENT_LISTENER,
-        function (event) {
+        function(event) {
             processEvent(event, previewFilePromise2);
         }
     );
 });
 
 // Helper Function: Add arrayBuffer if necessary i.e. Safari
-(function () {
+(function() {
     if (Blob.arrayBuffer != "function") {
         Blob.prototype.arrayBuffer = myArrayBuffer;
     }
@@ -1074,5 +1073,3 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         });
     }
 })();
-
-
