@@ -117,6 +117,7 @@
             </div>
         </div>
     </nav>
+
     <div class="w-100" style="height: 100vh;">
         <div class="w-100" style="height: 70px;"></div>
         <div class="manage-clients padding-percent-9">
@@ -137,15 +138,17 @@
                 <select class="bg-white select-css mc-tbl-sel classic">
                     <option>Status</option>
                 </select>
-                <img src="./img/Super Admin/Vector (1).png" style="width: 16px; height: 16.68px; cursor: pointer;"
-                    class="ml-auto" data-toggle="modal" data-target="#myModal2" />
-                <label class="switch my-auto" style="margin-left: 19px;">
-                    <input type="checkbox" checked>
-                    <span class="slider round"></span>
-                </label>
-                <div style="font-weight: bold; font-size: 12px; line-height: 30px; color: #8C2CAE; margin-left: 22px;">
-                    Export
-                    <img src="./img/Super Admin/Vector (5).png" class="img-fluid ml-1" />
+                <div class="ml-auto selected-clients-manage">
+                    <img src="./img/Super Admin/Vector (1).png" style="width: 16px; height: 16.68px; cursor: pointer;"
+                        class="my-auto" data-toggle="modal" data-target="#myModal2" />
+                    <label class="switch my-auto" style="margin-left: 19px;">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <div class="my-auto" style="font-weight: bold; font-size: 12px; line-height: 30px; color: #8C2CAE; margin-left: 22px;">
+                        Export
+                        <img src="./img/Super Admin/Vector (5).png" class="img-fluid ml-1" />
+                    </div>
                 </div>
                 <button class="add-client-btn" style="margin-left: 25px;" data-toggle="modal" data-target="#myModal1">
                     Add New Client
@@ -523,11 +526,11 @@
                             <div class="row m-0 w-100">
                                 <div style="width: 50.136%; margin-right: 2.981%;">
                                     <label class="label-text">Company Name</label>
-                                    <input type="text" class="input-text" value="ucd Pharma" />
+                                    <input type="text" class="input-text" placeholder="ucd Pharma" />
                                 </div>
                                 <div style="width: 18.157%; margin-right: 2.981%;">
                                     <label class="label-text">Acronym</label>
-                                    <input type="text" class="input-text" value="UCD" />
+                                    <input type="text" class="input-text" placeholder="UCD" />
                                 </div>
                                 <div style="width: 25.745%;">
                                     <label class="label-text">Legal Form</label>
@@ -535,15 +538,19 @@
                                         <option>SRL</option>
                                     </select>
                                 </div>
+                                <div class="add-client-warning-msg">
+                                    <img src="./img/Login/warning.png" />
+                                    <p></p>
+                                </div>
                             </div>
                             <div class="row m-0 w-100" style="margin-top: 12px !important;">
                                 <div style="width: 36.314%; margin-right: 2.981%;">
                                     <label class="label-text">TVA</label>
-                                    <input type="text" class="input-text" value="BE 0999999999" />
+                                    <input type="text" class="input-text" placeholder="BE 0999999999" />
                                 </div>
                                 <div style="width: 36.314%; margin-right: 5.962%;">
                                     <label class="label-text">NACE</label>
-                                    <input type="text" class="input-text" value="Nacebel CODE" />
+                                    <input type="text" class="input-text" placeholder="Nacebel CODE" />
                                 </div>
                                 <div style="width: 18.429%;">
                                     <label class="label-text w-100">Status</label>
@@ -552,36 +559,44 @@
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
+                                <div class="add-client-warning-msg">
+                                    <img src="./img/Login/warning.png" />
+                                    <p></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row m-0 w-100" style="margin-top: 21px !important;">
                         <label class="label-text">Description</label>
                         <textarea type="text" class="input-textarea"
-                            id="style-2">Lorem ipsum dolor sit amet, consectetur adipislum.</textarea>
+                            id="style-2"></textarea>
                     </div>
                     <div class="row m-0 w-100" style="margin-top: 12px !important;">
                         <div style="width: 67.42%; margin-right: 1.883%;">
                             <label class="label-text">Address</label>
-                            <input type="text" class="input-text" value="Rue des Fraisiers" />
+                            <input type="text" class="input-text" placeholder="Rue des Fraisiers" />
                         </div>
                         <div style="width: 11.299%; margin-right: 2.072%;">
                             <label class="label-text">Nº</label>
-                            <input type="text" class="input-text" value="91" />
+                            <input type="text" class="input-text" placeholder="91" />
                         </div>
                         <div style="width: 17.137%;">
                             <label class="label-text">PO Box</label>
-                            <input type="text" class="input-text" value="B-4041" />
+                            <input type="text" class="input-text" placeholder="B-4041" />
+                        </div>
+                        <div class="add-client-warning-msg">
+                            <img src="./img/Login/warning.png" />
+                            <p></p>
                         </div>
                     </div>
                     <div class="row m-0 w-100" style="margin-top: 12px !important;">
                         <div style="width: 17.137%; margin-right: 2.072%;">
                             <label class="label-text">Zip Code</label>
-                            <input type="text" class="input-text" value="B-4041" />
+                            <input type="text" class="input-text" placeholder="B-4041" />
                         </div>
                         <div style="width: 30.132%; margin-right: 2.072%;">
                             <label class="label-text">City</label>
-                            <input type="text" class="input-text" value="Herstal-Vottem" />
+                            <input type="text" class="input-text" placeholder="Herstal-Vottem" />
                         </div>
                         <div style="width: 26.177%;">
                             <label class="label-text">Country</label>
@@ -589,11 +604,15 @@
                                 <option>Belgium</option>
                             </select>
                         </div>
+                        <div class="add-client-warning-msg">
+                            <img src="./img/Login/warning.png" />
+                            <p></p>
+                        </div>
                     </div>
                     <div class="row m-0 w-100" style="margin-top: 12px !important;">
                         <div style="width: 50.847%; margin-right: 2.072%;">
                             <label class="label-text">Website</label>
-                            <input type="text" class="input-text" value="www.company-name.com" />
+                            <input type="text" class="input-text" placeholder="www.company-name.com" />
                         </div>
                         <div style="width: 32.203%;">
                             <label class="label-text w-100">Phone Number</label>
@@ -604,9 +623,13 @@
                                     </select>
                                 </div>
                                 <div style="width: 61.988%;">
-                                    <input type="text" class="input-text" value="4 227 18 08" />
+                                    <input type="text" class="input-text" placeholder="4 227 18 08" />
                                 </div>
                             </div>
+                        </div>
+                        <div class="add-client-warning-msg">
+                            <img src="./img/Login/warning.png" />
+                            <p></p>
                         </div>
                     </div>
                     <hr />
@@ -630,15 +653,19 @@
                         </div>
                         <div style="width: 30.508%; margin-right: 1.883%;">
                             <label class="label-text">First Name</label>
-                            <input type="text" class="input-text" value="Prewitt" />
+                            <input type="text" class="input-text" placeholder="Prewitt" />
                         </div>
                         <div style="width: 30.508%; margin-right: 2.072%;">
                             <label class="label-text">Last Name</label>
-                            <input type="text" class="input-text" value="Lemaître" />
+                            <input type="text" class="input-text" placeholder="Lemaître" />
                         </div>
                         <div style="width: 11.488%;">
                             <label class="label-text">Acronym</label>
-                            <input type="text" class="input-text" value="BDO" />
+                            <input type="text" class="input-text" placeholder="BDO" />
+                        </div>
+                        <div class="add-client-warning-msg">
+                            <img src="./img/Login/warning.png" />
+                            <p></p>
                         </div>
                     </div>
                     <div class="row m-0 w-100" style="margin-top: 12px !important;">
@@ -657,7 +684,7 @@
                         </div>
                         <div style="width: 36.535%; margin-right: 2.072%;">
                             <label class="label-text">Email</label>
-                            <input type="email" class="input-text" value="prewitt.emaître@newelec.be" />
+                            <input type="email" class="input-text" placeholder="prewitt.emaître@newelec.be" />
                         </div>
                         <div style="width: 32.203%;">
                             <label class="label-text w-100">Phone Number</label>
@@ -668,9 +695,13 @@
                                     </select>
                                 </div>
                                 <div style="width: 61.988%;">
-                                    <input type="text" class="input-text" value="4 227 18 08" />
+                                    <input type="text" class="input-text" placeholder="4 227 18 08" />
                                 </div>
                             </div>
+                        </div>
+                        <div class="add-client-warning-msg">
+                            <img src="./img/Login/warning.png" />
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -678,7 +709,7 @@
                 <!-- Modal footer -->
                 <div class="modal-footer border-0" style="padding-right:1.5rem !important;">
                     <button type="button" class="btn-cancel" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn-create" data-dismiss="modal">Create And Send Email</button>
+                    <button type="button" class="btn-create">Create And Send Email</button>
                 </div>
 
             </div>
@@ -764,17 +795,17 @@
                             <label class="label-text w-100">Logo</label>
                             <div class="w-100 position-relative d-flex"
                                 style="height: 111px; padding: 5% 10.274%; background: #EFEFEF; border-radius: 5px;">
-                                <img id="imagePreview" class="my-auto mx-auto img-fluid"
+                                <img id="imagePreview5" class="my-auto mx-auto img-fluid"
                                     style="display: none; max-height: 100%;" />
                                 <div class="d-flex"
                                     style="position: absolute; top: 5px; right: 4px; background: #EFEFEF; z-index: 1; width: 16px; height: 18px;">
-                                    <img src="./img/Super Admin/Vector (1).png" id="delete-logo"
+                                    <img src="./img/Super Admin/Vector (1).png" id="delete-logo5"
                                         class="mx-auto my-auto" />
                                 </div>
                                 <div class="upload-logo">
                                     <img src="./img/Super Admin/icon.png" class="img-fluid my-auto mx-auto" />
                                 </div>
-                                <input type="file" class="upload-logo-input" id="imageUpload"
+                                <input type="file" class="upload-logo-input" id="imageUpload5"
                                     accept=".png, .jpg, .jpeg" />
                             </div>
                         </div>
@@ -782,11 +813,11 @@
                             <div class="row m-0 w-100">
                                 <div style="width: 50.136%; margin-right: 2.981%;">
                                     <label class="label-text">Company Name</label>
-                                    <input type="text" class="input-text" value="ucd Pharma" />
+                                    <input type="text" class="input-text" placeholder="ucd Pharma" />
                                 </div>
                                 <div style="width: 18.157%; margin-right: 2.981%;">
                                     <label class="label-text">Acronym</label>
-                                    <input type="text" class="input-text" value="UCD" />
+                                    <input type="text" class="input-text" placeholder="UCD" />
                                 </div>
                                 <div style="width: 25.745%;">
                                     <label class="label-text">Legal Form</label>
@@ -794,15 +825,19 @@
                                         <option>SRL</option>
                                     </select>
                                 </div>
+                                <div class="update-client-warning-msg">
+                                    <img src="./img/Login/warning.png" />
+                                    <p></p>
+                                </div>
                             </div>
                             <div class="row m-0 w-100" style="margin-top: 12px !important;">
                                 <div style="width: 36.314%; margin-right: 2.981%;">
                                     <label class="label-text">TVA</label>
-                                    <input type="text" class="input-text" value="BE 0999999999" />
+                                    <input type="text" class="input-text" placeholder="BE 0999999999" />
                                 </div>
                                 <div style="width: 36.314%; margin-right: 5.962%;">
                                     <label class="label-text">NACE</label>
-                                    <input type="text" class="input-text" value="Nacebel CODE" />
+                                    <input type="text" class="input-text" placeholder="Nacebel CODE" />
                                 </div>
                                 <div style="width: 18.429%;">
                                     <label class="label-text w-100">Status</label>
@@ -811,36 +846,44 @@
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
+                                <div class="update-client-warning-msg">
+                                    <img src="./img/Login/warning.png" />
+                                    <p></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row m-0 w-100" style="margin-top: 21px !important;">
                         <label class="label-text">Description</label>
                         <textarea type="text" class="input-textarea"
-                            id="style-2">Lorem ipsum dolor sit amet, consectetur adipislum.</textarea>
+                            id="style-2"></textarea>
                     </div>
                     <div class="row m-0 w-100" style="margin-top: 12px !important;">
                         <div style="width: 67.42%; margin-right: 1.883%;">
                             <label class="label-text">Address</label>
-                            <input type="text" class="input-text" value="Rue des Fraisiers" />
+                            <input type="text" class="input-text" placeholder="Rue des Fraisiers" />
                         </div>
                         <div style="width: 11.299%; margin-right: 2.072%;">
                             <label class="label-text">Nº</label>
-                            <input type="text" class="input-text" value="91" />
+                            <input type="text" class="input-text" placeholder="91" />
                         </div>
                         <div style="width: 17.137%;">
                             <label class="label-text">PO Box</label>
-                            <input type="text" class="input-text" value="B-4041" />
+                            <input type="text" class="input-text" placeholder="B-4041" />
+                        </div>
+                        <div class="update-client-warning-msg">
+                            <img src="./img/Login/warning.png" />
+                            <p></p>
                         </div>
                     </div>
                     <div class="row m-0 w-100" style="margin-top: 12px !important;">
                         <div style="width: 17.137%; margin-right: 2.072%;">
                             <label class="label-text">Zip Code</label>
-                            <input type="text" class="input-text" value="B-4041" />
+                            <input type="text" class="input-text" placeholder="B-4041" />
                         </div>
                         <div style="width: 30.132%; margin-right: 2.072%;">
                             <label class="label-text">City</label>
-                            <input type="text" class="input-text" value="Herstal-Vottem" />
+                            <input type="text" class="input-text" placeholder="Herstal-Vottem" />
                         </div>
                         <div style="width: 26.177%;">
                             <label class="label-text">Country</label>
@@ -848,11 +891,15 @@
                                 <option>Belgium</option>
                             </select>
                         </div>
+                        <div class="update-client-warning-msg">
+                            <img src="./img/Login/warning.png" />
+                            <p></p>
+                        </div>
                     </div>
                     <div class="row m-0 w-100" style="margin-top: 12px !important;">
                         <div style="width: 50.847%; margin-right: 2.072%;">
                             <label class="label-text">Website</label>
-                            <input type="text" class="input-text" value="www.company-name.com" />
+                            <input type="text" class="input-text" placeholder="www.company-name.com" />
                         </div>
                         <div style="width: 32.203%;">
                             <label class="label-text w-100">Phone Number</label>
@@ -863,9 +910,13 @@
                                     </select>
                                 </div>
                                 <div style="width: 61.988%;">
-                                    <input type="text" class="input-text" value="4 227 18 08" />
+                                    <input type="text" class="input-text" placeholder="4 227 18 08" />
                                 </div>
                             </div>
+                        </div>
+                        <div class="update-client-warning-msg">
+                            <img src="./img/Login/warning.png" />
+                            <p></p>
                         </div>
                     </div>
                     <hr />
@@ -876,28 +927,32 @@
                         <div style="width: 23.541%;">
                             <label class="label-text w-100">Profile Photo</label>
                             <div class="w-100 d-flex">
-                                <img src="./img/Super Admin/Vector (1).png" id="delete-photo"
+                                <img src="./img/Super Admin/Vector (1).png" id="delete-photo6"
                                     style="margin-right: 5px; height: 100%;" />
-                                <div class="position-relative profile-img" id="imagePreview1">
+                                <div class="position-relative profile-img" id="imagePreview6">
                                     <div class="upload-logo">
                                         <img src="./img/Super Admin/icon.png" class="img-fluid my-auto mx-auto" />
                                     </div>
-                                    <input type="file" class="upload-logo-input" id="imageUpload1"
+                                    <input type="file" class="upload-logo-input" id="imageUpload6"
                                         accept=".png, .jpg, .jpeg" />
                                 </div>
                             </div>
                         </div>
                         <div style="width: 30.508%; margin-right: 1.883%;">
                             <label class="label-text">First Name</label>
-                            <input type="text" class="input-text" value="Prewitt" />
+                            <input type="text" class="input-text" placeholder="Prewitt" />
                         </div>
                         <div style="width: 30.508%; margin-right: 2.072%;">
                             <label class="label-text">Last Name</label>
-                            <input type="text" class="input-text" value="Lemaître" />
+                            <input type="text" class="input-text" placeholder="Lemaître" />
                         </div>
                         <div style="width: 11.488%;">
                             <label class="label-text">Acronym</label>
-                            <input type="text" class="input-text" value="BDO" />
+                            <input type="text" class="input-text" placeholder="BDO" />
+                        </div>
+                        <div class="update-client-warning-msg">
+                            <img src="./img/Login/warning.png" />
+                            <p></p>
                         </div>
                     </div>
                     <div class="row m-0 w-100" style="margin-top: 12px !important;">
@@ -916,7 +971,7 @@
                         </div>
                         <div style="width: 36.535%; margin-right: 2.072%;">
                             <label class="label-text">Email</label>
-                            <input type="email" class="input-text" value="prewitt.emaître@newelec.be" />
+                            <input type="email" class="input-text" placeholder="prewitt.emaître@newelec.be" />
                         </div>
                         <div style="width: 32.203%;">
                             <label class="label-text w-100">Phone Number</label>
@@ -927,9 +982,13 @@
                                     </select>
                                 </div>
                                 <div style="width: 61.988%;">
-                                    <input type="text" class="input-text" value="4 227 18 08" />
+                                    <input type="text" class="input-text" placeholder="4 227 18 08" />
                                 </div>
                             </div>
+                        </div>
+                        <div class="update-client-warning-msg">
+                            <img src="./img/Login/warning.png" />
+                            <p></p>
                         </div>
                     </div>
                 </div>
