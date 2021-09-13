@@ -338,26 +338,30 @@ $(document).ready(function () {
     });
 
     //select all checkboxes
-    $("#selectall").change(function () {  //"select all" change 
+    $("#selectall").change(function() { //"select all" change 
         $(".select-checkbox").prop('checked', $(this).prop("checked")); //change all ".checkbox" checked status
-        if($('.select-checkbox:checked').length>0) {
+        if ($('.select-checkbox:checked').length > 0) {
             $('.selected-clients-manage').css('display', 'flex');
+            $("#sub-cont-export").show();
         } else {
             $('.selected-clients-manage').css('display', 'none');
+            $("#sub-cont-export").hide();
         }
     });
 
     //".checkbox" change 
-    $('.select-checkbox').change(function () {
+    $('.select-checkbox').change(function() {
         //uncheck "select all", if one of the listed checkbox item is unchecked
         if (false == $(this).prop("checked")) { //if this item is unchecked
             $("#selectall").prop('checked', false); //change "select all" checked status to false
         }
 
-        if($('.select-checkbox:checked').length>0) {
+        if ($('.select-checkbox:checked').length > 0) {
             $('.selected-clients-manage').css('display', 'flex');
+            $("#sub-cont-export").show();
         } else {
             $('.selected-clients-manage').css('display', 'none');
+            $("#sub-cont-export").hide();
         }
 
         //check "select all" if all checkbox items are checked
