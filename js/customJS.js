@@ -1,18 +1,15 @@
-
-
-
 /*
-  ******************************************************************************************
-  ************************************  Login Style  ***************************************
-  ******************************************************************************************
-*/
+ ******************************************************************************************
+ ************************************  Login Style  ***************************************
+ ******************************************************************************************
+ */
 
 
 
 // for invalid email
-$(document).ready(function () {
+$(document).ready(function() {
     $('.error').hide();
-    $('input[type=password]').focus(function () {
+    $('input[type=password]').focus(function() {
         var email = $('#email').val();
         if (email == '') {
             $('.error').show();
@@ -34,7 +31,7 @@ $(document).ready(function () {
         }
         return false;
     });
-    $('#submit').click(function () {
+    $('#submit').click(function() {
         var email = $('#email').val();
         if (email == '') {
             $('.error').show();
@@ -69,7 +66,7 @@ function IsEmail(email) {
 
 
 // for invalid password
-$(document).ready(function () {
+$(document).ready(function() {
     var number = /([0-9])/;
     var alphabets = /([a-zA-Z])/;
     var capital_alphabets = /([A-Z])/;
@@ -77,7 +74,7 @@ $(document).ready(function () {
     $('.error2').hide();
     $('.unlock-icon').hide();
     $('.lock2-icon').hide();
-    $('#password').keyup(function () {
+    $('#password').keyup(function() {
         var password = $('#password').val();
         if (password == '') {
             $('.error2').show();
@@ -105,7 +102,7 @@ $(document).ready(function () {
     });
 
 
-    $('#submit').click(function () {
+    $('#submit').click(function() {
         var password = $('#password').val();
         var email = $('#email').val();
         if (email != '' && password == '') {
@@ -117,7 +114,7 @@ $(document).ready(function () {
         }
     });
 
-    $("body").on('click', '.lock-icon, .unlock-icon, .lock2-icon', function () {
+    $("body").on('click', '.lock-icon, .unlock-icon, .lock2-icon', function() {
         $(this).toggleClass("abc");
         var input = $("#password");
         if (input.attr("type") === "password") {
@@ -136,17 +133,17 @@ $(document).ready(function () {
 
 
 /*
-  ******************************************************************************************
-  *********************************  Super Admin Style  ************************************
-  ******************************************************************************************
-*/
+ ******************************************************************************************
+ *********************************  Super Admin Style  ************************************
+ ******************************************************************************************
+ */
 
 
 
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             $('#imagePreview').attr('src', e.target.result);
             $('#imagePreview').hide();
             $('#imagePreview').fadeIn(650);
@@ -155,18 +152,18 @@ function readURL(input) {
     }
 }
 
-$("#delete-logo").click(function () {
+$("#delete-logo").click(function() {
     $('#imagePreview').fadeOut(650);
 });
 
-$("#imageUpload").change(function () {
+$("#imageUpload").change(function() {
     readURL(this);
 });
 
 function readURL1(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             $('#imagePreview1').css('background-image', 'url(' + e.target.result + ')');
             $('#imagePreview1').css('border', 'none');
             $('#imagePreview1').hide();
@@ -176,12 +173,12 @@ function readURL1(input) {
     }
 }
 
-$("#delete-photo").click(function () {
+$("#delete-photo").click(function() {
     $('#imagePreview1').css('background-image', 'none');
     $('#imagePreview1').css('border', '1px solid #ccc');
 });
 
-$("#imageUpload1").change(function () {
+$("#imageUpload1").change(function() {
     readURL1(this);
 });
 
@@ -189,7 +186,7 @@ $("#imageUpload1").change(function () {
 function readURL2(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             $('#imagePreview2').css('background-image', 'url(' + e.target.result + ')');
             $('#imagePreview2').css('border', 'none');
             $('#imagePreview2').hide();
@@ -199,24 +196,24 @@ function readURL2(input) {
     }
 }
 
-$("#delete-img").click(function () {
+$("#delete-img").click(function() {
     $('#imagePreview2').css('background-image', 'none');
     $('#imagePreview2').css('border', '1px solid #ccc');
 });
 
-$("#imageUpload2").change(function () {
+$("#imageUpload2").change(function() {
     readURL2(this);
 });
 
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $("#dismiss-success").click(function () {
+    $("#dismiss-success").click(function() {
         $("#successful-msg").hide(300);
     });
 
-    $(".toggle-password").click(function () {
+    $(".toggle-password").click(function() {
         var input = $($(this).attr("toggle"));
         if (input.attr("type") == "password") {
             input.attr("type", "text");
@@ -228,12 +225,12 @@ $(document).ready(function () {
     });
 
     //select all checkboxes
-    $("#selectall").change(function () {  //"select all" change 
-        $(".select-checkbox").prop('checked', $(this).prop("checked")); //change all ".checkbox" checked status
+    $("#selectall").change(function() { //"select all" change 
+        $(".select-checkbox").prop('checked', $(this).prop("checked")); //change all ".select-checkbox" checked status
     });
 
     //".checkbox" change 
-    $('.select-checkbox').change(function () {
+    $('.select-checkbox').change(function() {
         //uncheck "select all", if one of the listed checkbox item is unchecked
         if (false == $(this).prop("checked")) { //if this item is unchecked
             $("#selectall").prop('checked', false); //change "select all" checked status to false
@@ -263,19 +260,19 @@ $(".birthday").datepicker({
 /*     Date Picker End      */
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     $(".manage-clients").show();
     $(".super-admin-clients-link").addClass('blue-color');
     $(".super-admin-profile").hide();
 
-    $(".super-admin-clients-link").click(function () {
+    $(".super-admin-clients-link").click(function() {
         $(".super-admin-profile").hide();
         $(".super-admin-clients-link").addClass('blue-color');
         $(".manage-clients").show(200);
     });
 
-    $(".super-admin-profile-link").click(function () {
+    $(".super-admin-profile-link").click(function() {
         $(".manage-clients").hide();
         $(".blue-color").removeClass('blue-color');
         $(".worker-dashboard-link").addClass('blue-color');
@@ -287,21 +284,21 @@ $(document).ready(function () {
 
 
 /*
-  ******************************************************************************************
-  *********************************  Worker Area Style  ************************************
-  ******************************************************************************************
-*/
+ ******************************************************************************************
+ *********************************  Worker Area Style  ************************************
+ ******************************************************************************************
+ */
 
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     $(".worker-dashboard").show();
     $(".worker-dashboard-link").addClass('blue-color');
     $(".worker-profile").hide();
     $('.my-training').hide();
 
-    $(".worker-dashboard-link").click(function () {
+    $(".worker-dashboard-link").click(function() {
         $(".worker-profile").hide();
         $('.my-training').hide();
         $(".blue-color").removeClass('blue-color');
@@ -311,7 +308,7 @@ $(document).ready(function () {
         $(".worker-dashboard").show(200);
     });
 
-    $(".my-training-link").click(function () {
+    $(".my-training-link").click(function() {
         $(".worker-profile").hide();
         $(".worker-dashboard").hide();
         $(".blue-color").removeClass('blue-color');
@@ -321,7 +318,7 @@ $(document).ready(function () {
         $(".my-training").show(200);
     });
 
-    $(".worker-profile-link").click(function () {
+    $(".worker-profile-link").click(function() {
         $(".worker-dashboard").hide();
         $('.my-training').hide();
         $(".blue-color").removeClass('blue-color');
@@ -335,7 +332,7 @@ $(document).ready(function () {
 function readURL3(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             $('#imagePreview3').css('background-image', 'url(' + e.target.result + ')');
             $('#imagePreview3').css('border', 'none');
             $('#imagePreview3').hide();
@@ -345,19 +342,19 @@ function readURL3(input) {
     }
 }
 
-$("#delete-img2").click(function () {
+$("#delete-img2").click(function() {
     $('#imagePreview3').css('background-image', 'none');
     $('#imagePreview3').css('border', '1px solid #ccc');
 });
 
-$("#imageUpload3").change(function () {
+$("#imageUpload3").change(function() {
     readURL3(this);
 });
 
 function readURL4(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = function(e) {
             $('#imagePreview4').css('background-image', 'url(' + e.target.result + ')');
             $('#imagePreview4').css('border', 'none');
             $('#imagePreview4').hide();
@@ -367,29 +364,29 @@ function readURL4(input) {
     }
 }
 
-$("#delete-worker-signature").click(function () {
+$("#delete-worker-signature").click(function() {
     $('#imagePreview4').css('background-image', 'none');
     $('#imagePreview4').css('border', '1px solid #ccc');
 });
 
-$("#imageUpload4").change(function () {
+$("#imageUpload4").change(function() {
     readURL4(this);
 });
 
 
-$(document).ready(function () {
+$(document).ready(function() {
     $("#worker-personal-information").show();
     $("#worker-personal-information-link").addClass('blue-color');
     $("#worker-required-document").hide();
 
-    $("#worker-personal-information-link").click(function () {
+    $("#worker-personal-information-link").click(function() {
         $("#worker-required-document").hide();
         $(".set-color .blue-color").removeClass('blue-color');
         $("#worker-personal-information-link").addClass('blue-color');
         $("#worker-personal-information").show(200);
     });
 
-    $("#worker-required-document-link").click(function () {
+    $("#worker-required-document-link").click(function() {
         $("#worker-personal-information").hide();
         $(".set-color .blue-color").removeClass('blue-color');
         $("#worker-required-document-link").addClass('blue-color');
@@ -399,31 +396,31 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $('div.dropdown-lang > div.list-lang > div.item > img').each(function () {
+    $('div.dropdown-lang > div.list-lang > div.item > img').each(function() {
         if ($('.caption-lang img').attr('src') == $(this).attr('src')) {
             $(this).parent().addClass('selected');
         }
     });
-    
-    $('.dropdown-lang > .caption-lang').on('click', function () {
+
+    $('.dropdown-lang > .caption-lang').on('click', function() {
         $(this).parent().toggleClass('open');
     });
 
-    $('.dropdown-lang > .list-lang > .item').on('click', function () {
+    $('.dropdown-lang > .list-lang > .item').on('click', function() {
         $('.dropdown-lang > .list-lang > .item').removeClass('selected');
         $(this).addClass('selected').parent().parent().removeClass('open');
         $('.caption-lang img').attr('src', $(this).children('img').prop('src'));
     });
 
-    $(document).on('keyup', function (evt) {
+    $(document).on('keyup', function(evt) {
         if ((evt.keyCode || evt.which) === 27) {
             $('.dropdown-lang').removeClass('open');
         }
     });
 
-    $(document).on('click', function (evt) {
+    $(document).on('click', function(evt) {
         if ($(evt.target).closest(".dropdown-lang > .caption-lang").length === 0) {
             $('.dropdown-lang').removeClass('open');
         }
@@ -432,24 +429,24 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $('.dropdown-profile > .caption-profile').on('click', function () {
+    $('.dropdown-profile > .caption-profile').on('click', function() {
         $(this).parent().toggleClass('open');
     });
 
-    $('.dropdown-profile > .list-profile > .item').on('click', function () {
+    $('.dropdown-profile > .list-profile > .item').on('click', function() {
         $('.dropdown-profile > .list-profile > .item').removeClass('selected');
         $(this).addClass('selected').parent().parent().removeClass('open');
     });
 
-    $(document).on('keyup', function (evt) {
+    $(document).on('keyup', function(evt) {
         if ((evt.keyCode || evt.which) === 27) {
             $('.dropdown-profile').removeClass('open');
         }
     });
 
-    $(document).on('click', function (evt) {
+    $(document).on('click', function(evt) {
         if ($(evt.target).closest(".dropdown-profile > .caption-profile").length === 0) {
             $('.dropdown-profile').removeClass('open');
         }
@@ -457,17 +454,17 @@ $(document).ready(function () {
 
 });
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     var total_messages = $('.dropdown-notification > .list-notification > .item').length;
 
-    $('.dropdown-notification > .caption-notification').on('click', function () {
-        if(total_messages>0) {
+    $('.dropdown-notification > .caption-notification').on('click', function() {
+        if (total_messages > 0) {
             $(this).parent().toggleClass('open');
         }
     });
 
-    if(total_messages>0) {
+    if (total_messages > 0) {
         $('div.dropdown-notification > div.caption-notification > div.total-messages').css('display', 'flex');
         $('div.dropdown-notification > div.caption-notification > div.total-messages').text(total_messages);
         $('div.dropdown-notification > div.caption-notification > img').attr('src', './img/Worker\ Area/notification.png');
@@ -476,18 +473,18 @@ $(document).ready(function () {
         $('div.dropdown-notification > div.caption-notification > img').attr('src', './img/Super\ Admin/notification.png');
     }
 
-    $('.dropdown-notification > .list-notification > .item').on('click', function () {
+    $('.dropdown-notification > .list-notification > .item').on('click', function() {
         $('.dropdown-notification > .list-notification > .item').removeClass('selected');
         $(this).addClass('selected').parent().parent().removeClass('open');
     });
 
-    $(document).on('keyup', function (evt) {
+    $(document).on('keyup', function(evt) {
         if ((evt.keyCode || evt.which) === 27) {
             $('.dropdown-notification').removeClass('open');
         }
     });
 
-    $(document).on('click', function (evt) {
+    $(document).on('click', function(evt) {
         if ($(evt.target).closest(".dropdown-notification > .caption-notification").length === 0) {
             $('.dropdown-notification').removeClass('open');
         }
@@ -497,7 +494,7 @@ $(document).ready(function () {
 
 
 // for invalid password
-$(document).ready(function () {
+$(document).ready(function() {
     var number = /([0-9])/;
     var alphabets = /([a-zA-Z])/;
     var capital_alphabets = /([A-Z])/;
@@ -508,7 +505,7 @@ $(document).ready(function () {
     $('.unlock-icon1').hide();
     $('.lock2-icon1').hide();
 
-    $('#password-field1').keyup(function () {
+    $('#password-field1').keyup(function() {
         var password = $('#password-field1').val();
         if (password == '' || password.length < 8) {
             $('.error2').show();
@@ -526,7 +523,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#password-field2').keyup(function () {
+    $('#password-field2').keyup(function() {
         var password = $('#password-field2').val();
         if (password == '' || password.length < 8) {
             $('.error3').show();
@@ -544,7 +541,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#password-field3').keyup(function () {
+    $('#password-field3').keyup(function() {
         var password = $('#password-field3').val();
         var password1 = $('#password-field2').val();
         if (password != password1) {
@@ -561,7 +558,7 @@ $(document).ready(function () {
         return false;
     });
 
-    $('#changePassword').click(function () {
+    $('#changePassword').click(function() {
         var password1 = $('#password-field1');
         var password2 = $('#password-field2');
         var password3 = $('#password-field3');
@@ -594,7 +591,7 @@ $(document).ready(function () {
         }
     });
 
-    $('.lock-icon1, .unlock-icon1, .lock2-icon1').on('click', function () {
+    $('.lock-icon1, .unlock-icon1, .lock2-icon1').on('click', function() {
         $(this).toggleClass("abc");
         var input = $(this).parent().children('input');
         if (input.attr("type") === "password") {
@@ -612,9 +609,9 @@ $(document).ready(function () {
 
 
 
-$(document).ready(function () {
-    
-    $('div.catagories > div.catagory-item').on('click', function () {
+$(document).ready(function() {
+
+    $('div.catagories > div.catagory-item').on('click', function() {
         $('div.catagory-item.selected-catagory').removeClass('selected-catagory');
         $(this).addClass('selected-catagory');
     });
