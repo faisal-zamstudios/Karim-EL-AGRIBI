@@ -172,7 +172,6 @@ function readURL1(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
-
 $("#delete-photo").click(function() {
     $('#imagePreview1').css('background-image', 'none');
     $('#imagePreview1').css('border', '1px solid #ccc');

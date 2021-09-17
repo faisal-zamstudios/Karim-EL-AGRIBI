@@ -368,3 +368,88 @@
     vertical-align: middle;
     border-top: none !important;
 }
+
+.form-check-label {
+    font-size: 11px;
+    color: #B4B4B4;
+    font-weight: 600;
+}
+
+@media (min-width: 576px) {
+    #sub-cont-qrcode .modal-dialog {
+        margin: 6rem auto !important;
+    }
+    #sub-cont-myModal1 .modal-dialog {
+        margin: 3.5rem auto !important;
+    }
+    #sub-cont-mymodal3 .modal-dialog {
+        margin: 3.5rem auto !important;
+    }
+}
+
+
+/* CSV file */
+
+.sub-cont-requirement {
+    padding: 10px 3px 0 0;
+}
+
+
+/* Add User */
+
+.sub-cont-add-client-warning-msg,
+.sub-cont-update-client-warning-msg {
+    width: 100%;
+    display: none;
+}
+
+.sub-cont-add-client-warning-msg>img,
+.sub-cont-update-client-warning-msg>img {
+    max-width: 100%;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.sub-cont-add-client-warning-msg>p,
+.sub-cont-update-client-warning-msg>p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 6px;
+    color: #E0B719;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.progressbar {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #2C8EFF;
+    width: 20%;
+    z-index: 0;
+}
+
+.sub-cont-upload {
+    padding: 7px 9px !important;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-top: 15px;
+}
+
+.sub-cont-complete-upload {
+    padding: 7px 9px !important;
+    border-radius: 5px;
+    background-color: #47CA5B;
+    margin-top: 15px;
+}
+
+.sub-cont-error-uploading {
+    padding: 7px 9px !important;
+    border-radius: 5px;
+    background-color: #ED4C5C;
+    margin-top: 15px;
+}
