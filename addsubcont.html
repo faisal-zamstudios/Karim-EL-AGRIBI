@@ -1,0 +1,2619 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style1.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css" />
+    <title>SubContracterArea</title>
+
+    <style>
+        .add-sub-cont-dashboard-link,
+        .add-sub-cont-user-link1,
+        .add-sub-cont-user-link2,
+        .add-sub-cont-user-link3 {
+            font-size: 14px;
+            color: #B6B6B6;
+            width: 15%;
+            min-width: 75px;
+            margin-top: auto !important;
+            margin-bottom: auto !important;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .required {
+            display: none;
+        }
+        /*  
+        [data-title] {}
+        
+        [data-title]:hover::before {
+            content: attr(data-title);
+            position: absolute;
+            display: inline-block;
+            top: 40px;
+            right: 17px;
+            width: 147px;
+            height: 77px;
+            padding: 3px 6px;
+            border-radius: 2px;
+            background: #FFFFFF;
+            color: #888888;
+            font-size: 12px;
+            font-family: sans-serif;
+            box-shadow: 0px 0px 1px 0px #0000000D;
+            box-shadow: 0px 0px 2px 0px #00000012;
+            box-shadow: 0px 4px 8px 0px #0000000D;
+        }
+        
+        [data-title]:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: -5px;
+            display: inline-block;
+            color: #FFFFFF;
+            border: 8px solid transparent;
+            border-bottom: 10px solid #FFFFFF;
+        } */
+        /* table */
+        /*  
+        .add-sub-cont-tbl-client thead tr {
+            background: #FFFFFF;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05);
+        }
+        
+        .add-sub-cont-tbl-client thead tr td:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .add-sub-cont-tbl-client tr td:first-child {
+            padding-left: 22px;
+        }
+        
+        .add-sub-cont-tbl-client .second {
+            padding: 8px 0 0 179px;
+        }
+        
+        .add-sub-cont-tbl-client thead tr td:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .add-sub-cont-tbl-client thead tr td {
+            padding: 12px;
+            color: #737373;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 14px;
+            border-top: none !important;
+        }
+        
+        .add-sub-cont-tbl-client tr td {
+            text-align: center;
+        }
+        
+        .add-sub-cont-tbl-client tbody tr td {
+            padding-top: 22px;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 14px;
+            color: #313131;
+            vertical-align: middle;
+            border-top: none !important;
+        }
+        
+        .space tbody tr {
+            padding: 5px;
+        }
+        
+        .tbd td {
+            padding: 5px;
+        } */
+        
+        @media (min-width: 576px) {
+            #add-sub-cont-myModal1 .modal-dialog {
+                margin: 5.5rem auto !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .add-external {
+                margin-top: 24px;
+                display: flex;
+                font-size: 13px;
+            }
+            .add-client-btn {
+                margin-top: -6px;
+            }
+            .time-expected {
+                margin: 36px 0 0 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .add1 {
+                padding: 0 0 0 10px !important;
+            }
+            .add2 {
+                padding: 0 0 0 53px !important;
+            }
+            .add3 {
+                padding: 0 0 0 47px !important;
+            }
+            .add4 {
+                padding: 0 0 0 29px !important;
+            }
+            .add5 {
+                padding: 0 0 0 40px !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="background: #F8FAFD;">
+    <!--Navbar-->
+    <nav class="navbar bg-white position-fixed" style="top: 0; left: 0; right: 0; z-index: 1; padding: 12px 5.49% !important; box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);">
+        <div style="width: 13%;">
+            <img src="./img/addSubContracter/image 1.png" class="img-fluid" />
+        </div>
+        <div class="d-flex" style="width: 56.878%; margin-right: 43px;">
+            <div style="min-width: 150px; width: 392px; height: 32px; position: relative;">
+                <input id="myInput" type="text" class="form-input general-form" style="padding-left: 2rem; min-width: 170px;" placeholder="Quick Search" autocomplete="off">
+                <img src="./img/Super Admin/searchIcon.png" class="img-fluid" style="position: absolute; left: 8px; margin-top: 9px;" />
+            </div>
+            <div class="add-sub-cont-dashboard-link">
+                Dashboard
+            </div>
+            <div class="add-sub-cont-user-link1">
+                Trainings
+            </div>
+            <div class="add-sub-cont-user-link2">
+                Users
+            </div>
+            <div class="add-sub-cont-user-link3" style="font-size: 14px; color: #B6B6B6; min-width: 42px; cursor: pointer;">
+
+                <select class="form-control" style="overflow: hidden; border: none; color: #B6B6B6;">
+                    <option>Menu</option>
+                </select>
+            </div>
+        </div>
+        <div class="navbar p-0" style="width: 16.325%; min-width: 177px;">
+            <div class="dropdown-notification">
+                <div class="caption-notification">
+                    <img src="./img/Super Admin/notification.png" class="img-fluid" />
+                    <div class="total-messages"></div>
+                </div>
+                <div class="list-notification">
+                    <img src="./img/Worker Area/Polygon 1.png" class="poly" width="14" height="14" />
+                    <div class="item">
+                        <img src="./img/Worker Area/trainings (1).png" />
+                        <div class="message">
+                            <div class="title">You have a new training</div>
+                            <span class="description">Working at height</span>
+                        </div>
+                        <img src="./img/Worker Area/status (4).png" />
+                    </div>
+                    <div class="item">
+                        <img src="./img/Worker Area/trainings (1).png" />
+                        <div class="message">
+                            <div class="title">You have a new training</div>
+                            <span class="description">Working at height</span>
+                        </div>
+                        <img src="./img/Worker Area/status (4).png" />
+                    </div>
+                    <div class="item">
+                        <img src="./img/Worker Area/trainings (1).png" />
+                        <div class="message">
+                            <div class="title">You have a new training</div>
+                            <span class="description">Working at height</span>
+                        </div>
+                        <img src="./img/Worker Area/status (4).png" />
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-lang">
+                <div class="caption-lang">
+                    <img src="./img/Super Admin/english.png" class="img-fluid my-auto" />
+                </div>
+                <div class="list-lang">
+                    <img src="./img/Worker Area/Polygon 1.png" class="poly" width="14" height="14" />
+                    <div class="item">
+                        <img src="./img/Worker Area/French.png" />
+                        <label class="my-auto" style="margin-left: 12px;">
+                            French
+                        </label>
+                    </div>
+                    <div class="item">
+                        <img src="./img/Super Admin/english.png" />
+                        <label class="my-auto" style="margin-left: 12px;">
+                            English
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-profile">
+                <div class="caption-profile">
+                    <div class="media worker-profile-media">
+                        <img class="mr-2 img-fluid" style="max-width: 32px; max-height: 32px;" src="./img/Worker Area/profile.png">
+                        <div class="media-body" style="font-size: 11px; font-weight: 500; color: #9F9F9F; min-width: 97px;">
+                            <h5 class="m-0" style="font-size: 13px; font-weight: 600; color: #6B6B6B;">Blaise Defloo
+                            </h5>
+                            Sub-Contracter
+                        </div>
+                    </div>
+                </div>
+                <div class="list-profile">
+                    <img src="./img/Worker Area/Polygon 1.png" class="poly" width="14" height="14" />
+                    <div class="item first-item">
+                        <div>Blaise DEFLOO</div>
+                        <span>blaise.defloo@newelec.be</span>
+                    </div>
+                    <div class="item add-sub-cont-profile-link">Profile settings</div>
+                    <div class="item">Privacy policy</div>
+                    <div class="item">About</div>
+                    <div class="item last-item">Log out</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--End navbar-->
+
+
+
+
+    <!--Profile-->
+    <div class="w-100" style="height: 100vh;">
+        <div class="w-100" style="height: 70px;"></div>
+        <!--Users-->
+        <div class="sub-cont-manage-clients padding-percent-9">
+
+            <div class="sub-cont-select-menu">
+                <div class="navbar">
+                    <div style="width: 171px; height: 24px; color:#7C7C7C; font-size: 20px; font-weight: 600; line-height: 24px;">
+                        Manage Categories
+                    </div>
+                    <button class="add-client-btn" data-toggle="modal" data-target="#add-sub-cont-myModal1">
+                        Add New Category
+                    </button>
+                </div>
+            </div>
+            <div class="w-100" style="overflow: auto; max-height: 485px;" id="style-2">
+                <table class="table sub-cont-tbl-client" style="min-width: max-content;">
+                    <thead>
+                        <tr>
+                            <td><input class="checkbox checkbox-primary" id="selectall" type="checkbox"></td>
+                            <td>ID</td>
+                            <td>CATEGORY</td>
+                            <td>DATE CREATION</td>
+                            <td>ACTION</td>
+                            <td><img src="./img/Super Admin/Vector.png" class="img-fluid" /></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                            <td>22052021001</td>
+
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                    <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                        Safety
+                                    </div>
+                                </div>
+                            </td>
+                            <td>10/05/2021 - 18:30</td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                            <td>22052021001</td>
+
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                    <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                        Safety
+                                    </div>
+                                </div>
+                            </td>
+                            <td>10/05/2021 - 18:30</td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                            <td>22052021001</td>
+
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                    <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                        Safety
+                                    </div>
+                                </div>
+                            </td>
+                            <td>10/05/2021 - 18:30</td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                            <td>22052021001</td>
+
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                    <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                        Safety
+                                    </div>
+                                </div>
+                            </td>
+                            <td>10/05/2021 - 18:30</td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                            <td>22052021001</td>
+
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                    <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                        Safety
+                                    </div>
+                                </div>
+                            </td>
+                            <td>10/05/2021 - 18:30</td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                            <td>22052021001</td>
+
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                    <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                        Safety
+                                    </div>
+                                </div>
+                            </td>
+                            <td>10/05/2021 - 18:30</td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                            <td>22052021001</td>
+
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                    <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                        Safety
+                                    </div>
+                                </div>
+                            </td>
+                            <td>10/05/2021 - 18:30</td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                            <td>22052021001</td>
+
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                    <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                        Safety
+                                    </div>
+                                </div>
+                            </td>
+                            <td>10/05/2021 - 18:30</td>
+                            <td>
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                    <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                </div>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="10">
+                                <div class="d-flex mx-auto" style="width: fit-content;">
+                                    <img src="./img/Super Admin/Vector (4).png" class="img-fluid loader-img" style="margin-right: 8px;" />
+                                    <div style="font-weight: 600; font-style: normal; font-size: 14px; line-height: 17px; color: #A0A0A0;">
+                                        Loading more ...
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--End Users-->
+    </div>
+
+
+
+    <!--2nd-->
+    <div class="w-100" style="height: 100vh;">
+        <div class="w-100" style="height: 70px;"></div>
+        <!--Users-->
+        <div class="sub-cont-manage-clients padding-percent-9">
+
+            <div class="sub-cont-select-menu">
+                <div class="navbar">
+                    <div style="width: 171px; height: 24px; color:#7C7C7C; font-size: 20px; font-weight: 600; line-height: 24px;">
+                        Manage Topics
+                    </div>
+                    <div>
+                        Filter by
+                        <button class="add-client-btn" style="margin-right: 21px; margin-left: 22px; background-color: #FFFFFF !important; color: #7C7C7C;">
+                            Category
+                            <img src="./img/addSubContracter/Arrow 1.png" style="margin-left: 49px;">
+                        </button>
+                        <button class="add-client-btn" data-toggle="modal" data-target="#add-sub-cont-myModal102">
+                            Add New Topic
+                    </div>
+
+                    </button>
+                    </div>
+                </div>
+                <div class="w-100" style="overflow: auto; max-height: 485px;" id="style-2">
+                    <table class="table sub-cont-tbl-client" style="min-width: max-content;">
+                        <thead>
+                            <tr>
+                                <td><input class="checkbox checkbox-primary" id="selectall" type="checkbox"></td>
+                                <td>ID</td>
+                                <td>CATEGORY</td>
+                                <td>TOPICS</td>
+                                <td>DATE CREATION</td>
+                                <td>ACTION</td>
+                                <td><img src="./img/Super Admin/Vector.png" class="img-fluid" /></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                <td>22052021001</td>
+
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                        <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                            Safety
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                        <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                            VCA
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>10/05/2021 - 18:30</td>
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                        <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                <td>22052021001</td>
+
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                        <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                            Safety
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                        <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                            VCA
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>10/05/2021 - 18:30</td>
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                        <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                <td>22052021001</td>
+
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                        <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                            Safety
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                        <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                            VCA
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>10/05/2021 - 18:30</td>
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                        <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                <td>22052021001</td>
+
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                        <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                            Safety
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                        <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                            VCA
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>10/05/2021 - 18:30</td>
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                        <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                <td>22052021001</td>
+
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                        <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                            Safety
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                        <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                            VCA
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>10/05/2021 - 18:30</td>
+                                <td>
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                        <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="10">
+                                    <div class="d-flex mx-auto" style="width: fit-content;">
+                                        <img src="./img/Super Admin/Vector (4).png" class="img-fluid loader-img" style="margin-right: 8px;" />
+                                        <div style="font-weight: 600; font-style: normal; font-size: 14px; line-height: 17px; color: #A0A0A0;">
+                                            Loading more ...
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--End Users-->
+        </div>
+
+
+
+
+
+
+        <!--3rd-->
+        <div class="w-100" style="height: 100vh;">
+            <div class="w-100" style="height: 70px;"></div>
+            <!--Users-->
+            <div class="sub-cont-manage-clients padding-percent-9">
+
+                <div class="sub-cont-select-menu">
+                    <div class="navbar">
+                        <div style="width: 171px; height: 24px; color:#7C7C7C; font-size: 20px; font-weight: 600; line-height: 24px;">
+                            Manage Topics
+                        </div>
+                        <div class="add-external">
+                            Filter by
+                            <button class="add-client-btn" style="margin-right: 21px; margin-left: 22px; background-color: #FFFFFF !important; color: #7C7C7C;">
+                            Category
+                            <img src="./img/addSubContracter/Arrow 1.png" style="margin-left: 49px;"></button> Filter by
+                            <button class="add-client-btn" style="margin-right: 21px; margin-left: 22px; background-color: #FFFFFF !important; color: #7C7C7C;">
+                            Topic
+                            <img src="./img/addSubContracter/Arrow 1.png" style="margin-left: 49px;"></button>
+
+                            <button class="add-client-btn" data-toggle="modal" data-target="#add-sub-cont-myModal103">
+                            Add External Training
+                    </div>
+
+                    </button>
+                        </div>
+                    </div>
+                    <div class="w-100" style="overflow: auto; max-height: 485px;" id="style-2">
+                        <table class="table sub-cont-tbl-client" style="min-width: max-content;">
+                            <thead>
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary" id="selectall" type="checkbox"></td>
+                                    <td>ID</td>
+                                    <td>CATEGORY</td>
+                                    <td>TOPICS</td>
+                                    <td>TRAINING</td>
+                                    <td>DATE CREATION</td>
+                                    <td>ACTION</td>
+                                    <td><img src="./img/Super Admin/Vector.png" class="img-fluid" /></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                    <td>22052021001</td>
+
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Safety
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                VCA
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Working at height
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>10/05/2021 - 18:30</td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                            <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                    <td>22052021001</td>
+
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Safety
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                VCA
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Working at height
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>10/05/2021 - 18:30</td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                            <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                    <td>22052021001</td>
+
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Safety
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                VCA
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Working at height
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>10/05/2021 - 18:30</td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                            <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                    <td>22052021001</td>
+
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Safety
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                VCA
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Working at height
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>10/05/2021 - 18:30</td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                            <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                    <td>22052021001</td>
+
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Safety
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                VCA
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Working at height
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>10/05/2021 - 18:30</td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                            <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                    <td>22052021001</td>
+
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/security.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Safety
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                VCA
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/icon (1).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Working at height
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>10/05/2021 - 18:30</td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                            <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="10">
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (4).png" class="img-fluid loader-img" style="margin-right: 8px;" />
+                                            <div style="font-weight: 600; font-style: normal; font-size: 14px; line-height: 17px; color: #A0A0A0;">
+                                                Loading more ...
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--End Users-->
+            </div>
+
+
+
+
+
+
+            <!--4rth-->
+            <div class="w-100" style="height: 100vh;">
+                <div class="w-100" style="height: 70px;"></div>
+                <!--Users-->
+                <div class="sub-cont-manage-clients padding-percent-9">
+
+                    <div class="sub-cont-select-menu">
+                        <div class="navbar">
+                            <div style="height: 24px; color:#7C7C7C; font-size: 20px; font-weight: 600; line-height: 24px;">
+                                Manage Required Documents
+                            </div>
+
+                            <div>
+                                <button class="required btn btn-outline-primary">Not Required</button>
+                                <button class="required btn btn-primary mr-2">Required</button> Filter by
+                                <button class="add-client-btn" style="margin-right: 21px; margin-left: 22px; background-color: #FFFFFF !important; color: #7C7C7C;">
+                            Internal
+                            <img src="./img/addSubContracter/Arrow 1.png" style="margin-left: 49px;"></button>
+                                <button class="add-client-btn" data-toggle="modal" data-target="#add-sub-cont-myModal104">
+                            Add Document
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100" style="overflow: auto; max-height: 485px;" id="style-2">
+                        <table class="table sub-cont-tbl-client" style="min-width: max-content;">
+                            <thead>
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary" id="selectall" type="checkbox"></td>
+                                    <td>ID</td>
+                                    <td>DOCUMENT</td>
+                                    <td>ASSIGN TO</td>
+                                    <td>REQUIRED</td>
+                                    <td>CREATION DATE</td>
+                                    <td>ACTION</td>
+                                    <td><img src="./img/Super Admin/Vector.png" class="img-fluid" /></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                    <td>22052021001</td>
+
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/identity.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                ID / Passport
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        External & Foreign
+                                    </td>
+                                    <td>
+                                        <label class="switch my-auto ml-auto">
+                                    <input type="checkbox" class="coupon_question" onchange="valueChanged()" />
+                                    <span class="slider round"></span>
+                                </label>
+                                    </td>
+                                    <td>10/05/2021 - 18:30</td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                            <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                    <td>22052021001</td>
+
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/medicalCert.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Medical Certificate
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        All
+                                    </td>
+                                    <td>
+                                        <label class="switch my-auto ml-auto">
+                                    <input type="checkbox" class="coupon_question" onchange="valueChanged()" />
+                                    <span class="slider round"></span>
+                                </label>
+                                    </td>
+                                    <td>10/05/2021 - 18:30</td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                            <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                    <td>22052021001</td>
+
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/driverLicence.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Driving license
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        External
+                                    </td>
+                                    <td>
+                                        <label class="switch my-auto ml-auto">
+                                    <input type="checkbox" class="coupon_question" onchange="valueChanged()" />
+                                    <span class="slider round"></span>
+                                </label>
+                                    </td>
+                                    <td>10/05/2021 - 18:30</td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                            <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                    <td>22052021001</td>
+
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/limosa 1.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                DIMONA
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        External
+                                    </td>
+                                    <td>
+                                        <label class="switch my-auto ml-auto">
+                                    <input type="checkbox" class="coupon_question" onchange="valueChanged()" />
+                                    <span class="slider round"></span>
+                                </label>
+                                    </td>
+                                    <td>10/05/2021 - 18:30</td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                            <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                    <td>22052021001</td>
+
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/limosa 1.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                LIMOSA
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        Foreign
+                                    </td>
+                                    <td>
+                                        <label class="switch my-auto ml-auto">
+                                    <input type="checkbox" class="coupon_question" onchange="valueChanged()" />
+                                    <span class="slider round"></span>
+                                </label>
+                                    </td>
+                                    <td>10/05/2021 - 18:30</td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                            <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                    <td>22052021001</td>
+
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/A1.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                A1
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        Foreign
+                                    </td>
+                                    <td>
+                                        <label class="switch my-auto ml-auto">
+                                    <input type="checkbox" class="coupon_question" onchange="valueChanged()" />
+                                    <span class="slider round"></span>
+                                </label>
+                                    </td>
+                                    <td>10/05/2021 - 18:30</td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                            <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                    <td>22052021001</td>
+
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/criminalRecord.png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Criminal Record
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        External & Foreign
+                                    </td>
+                                    <td>
+                                        <label class="switch my-auto ml-auto">
+                                    <input type="checkbox" class="coupon_question" onchange="valueChanged()" />
+                                    <span class="slider round"></span>
+                                </label>
+                                    </td>
+                                    <td>10/05/2021 - 18:30</td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                            <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td><input class="checkbox checkbox-primary select-checkbox" type="checkbox"></td>
+                                    <td>22052021001</td>
+
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/addSubContracter/Vector (3).png" class="img-fluid" style="border-radius: 50%; width: 22px !important;" />
+                                            <div class="my-auto" style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131;">
+                                                Example
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        Internal
+                                    </td>
+                                    <td>
+                                        <label class="switch my-auto ml-auto">
+                                    <input type="checkbox" class="coupon_question" onchange="valueChanged()" />
+                                    <span class="slider round"></span>
+                                </label>
+                                    </td>
+                                    <td>10/05/2021 - 18:30</td>
+                                    <td>
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (1).png" class="img-fluid" style="margin-right: 8px;" />
+                                            <img src="./img/Super Admin/edit.png" class="img-fluid" style="margin-right: 8px; cursor: pointer;" data-toggle="modal" data-target="#sub-cont-myModal2" />
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="10">
+                                        <div class="d-flex mx-auto" style="width: fit-content;">
+                                            <img src="./img/Super Admin/Vector (4).png" class="img-fluid loader-img" style="margin-right: 8px;" />
+                                            <div style="font-weight: 600; font-style: normal; font-size: 14px; line-height: 17px; color: #A0A0A0;">
+                                                Loading more ...
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--End Users-->
+            </div>
+
+
+
+            <div class=" w-100 padding-percent-9">
+                <div class="sub-cont-select-menu ">
+                    <div class="navbar ">
+                        <div style="width: 171px; height: 24px; color:#7C7C7C; font-size: 20px; font-weight: 600; line-height: 24px; ">
+                            Manage Topics
+                        </div>
+                        <div>
+                            <button class="btn-create">Reset All</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar mb-2">
+                    <div class="bg-white " style="width: 255px; height: 170px;  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05); border-radius: 5px;">
+                        <div style="float: right; padding: 7px 10px 0 0 ; ">
+                            <a href="#" data-placement="bottom" data-toggle="tooltip" data-title="When the countdown
+                            is finished, the system
+                            will automatically
+                            move to the next
+                            question.">
+                                <img src="./img/addSubContracter/info.png" class="img-fluid " />
+                            </a>
+                        </div>
+                        <div class="text-center" style="padding: 20px;">
+                            <img src="./img/addSubContracter/time.png" class="img-fluid" />
+                            <div style="margin-top: 13px; font-size: 14px; color: #313131; font-weight: 600;">Time per question
+                            </div>
+                            <div style="margin-top: 25px; ">
+                                <button class="btn mr-1 btn-number " data-type="minus" data-field="quant[2]" style="width: 34px; height: 34px; background: #F1F1F1; color:#C8C8C8;">
+                            <span class="glyphicon glyphicon-minus"
+                                style="font-weight: bolder; font-size: x-large "></span>
+                        </button>
+                                <input class="btn btn-outline-primary mr-1 input-number" name="quant[2]" value="45S" min="1" max="100" style="width: 76px; height: 34px; font-size: large; " />
+                                <button class="btn btn-number" data-type="plus" data-field="quant[2]" style="width: 34px; height: 34px; background: #F1F1F1; color:#C8C8C8; ">
+                            <span class="glyphicon glyphicon-plus "
+                                style="font-weight: bolder; font-size: x-large "></span>
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white" style=" width: 255px; height: 170px;  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05); border-radius: 5px;">
+                        <div style="float: right; padding: 7px 10px 0 0 ; ">
+                            <a href="#" data-placement="bottom" data-toggle="tooltip" title="When the countdown is finished, the system
+                            will automatically
+                            move to the next
+                            question.">
+                                <img src="./img/addSubContracter/info.png" class="img-fluid " />
+                            </a>
+                        </div>
+                        <div class="text-center" style="padding: 20px;">
+                            <img src="./img/addSubContracter/score.png" class="img-fluid" />
+                            <div style="margin-top: 13px; font-size: 14px; color: #313131; font-weight: 600;">Passing score
+                            </div>
+                            <div style="margin-top: 25px; ">
+                                <button class=" btn mr-1 " style="width: 34px; height: 34px; background: #F1F1F1; color:#C8C8C8; ">
+                            <span class="glyphicon glyphicon-minus "
+                                style="font-weight: bolder; font-size: x-large "></span>
+                        </button>
+                                <button class="btn btn-outline-primary mr-1 " style="width: 76px; height: 34px; font-size: large; ">80%</button>
+                                <button class="btn" style="width: 34px; height: 34px; background: #F1F1F1; color:#C8C8C8; ">
+                            <span class="glyphicon glyphicon-plus "
+                                style="font-weight: bolder; font-size: x-large "></span>
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white time-expected" style="width: 255px; height: 170px;  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05); border-radius: 5px;">
+                        <div style="float: right; padding: 7px 10px 0 0 ; ">
+                            <a href="#" data-placement="bottom" data-toggle="tooltip" data-title="When the countdown
+                            is finished, the system
+                            will automatically
+                            move to the next
+                            question.">
+                                <img src="./img/addSubContracter/info.png" class="img-fluid " />
+                            </a>
+                        </div>
+                        <div class="text-center mt-2" style=" padding: 20px; ">
+                            <img src="./img/addSubContracter/photo.png " class="img-fluid " />
+                            <div style="margin-top: 13px; font-size: 14px; color: #313131; font-weight: 600; ">Webcam validation
+                            </div>
+                            <div style="margin-top: 25px; ">
+                                <label class="switch my-auto">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white time-expected" style="width: 255px; height: 170px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05), 0px 0px 2px rgba(0, 0, 0, 0.07), 0px 0px 1px rgba(0, 0, 0, 0.05); border-radius: 5px; ">
+                        <div style="float: right; padding: 7px 10px 0 0 ; ">
+                            <a href="#" data-placement="bottom" data-toggle="tooltip" data-title="When the countdown
+                            is finished, the system
+                            will automatically
+                            move to the next
+                            question.">
+                                <img src="./img/addSubContracter/info.png" class="img-fluid " />
+                            </a>
+                        </div>
+                        <div class="text-center " style="padding: 20px; ">
+                            <img src="./img/addSubContracter/timemin.png " class="img-fluid " />
+                            <div style="margin-top: 13px; font-size: 14px; color: #313131; font-weight: 600; ">Time Expected
+                            </div>
+                            <div style="margin-top: 25px; ">
+                                <button class=" btn mr-1 " style="width: 34px; height: 34px; background: #F1F1F1; color:#C8C8C8; ">
+                            <span class="glyphicon glyphicon-minus "
+                                style="font-weight: bolder; font-size: x-large "></span>
+                        </button>
+                                <button class="btn btn-outline-primary mr-1 " style="width: 76px; height: 34px; font-size: large; ">30min</button>
+                                <button class="btn " style="width: 34px; height: 34px; background: #F1F1F1; color:#C8C8C8; ">
+                            <span class="glyphicon glyphicon-plus "
+                                style="font-weight: bolder; font-size: x-large "></span>
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="bg-white " style="height: 532px; ">
+                    <div class="add-sub-cont-manage-clients " style="padding: 5px; ">
+
+                        <div class="sub-cont-select-menu ">
+                            <div class="navbar ">
+                                <div style="width: 171px; height: 24px; color:#7C7C7C; font-size: 20px; font-weight: 600; line-height: 24px; ">
+                                    Manage Topics
+                                </div>
+                                <div>
+                                    <select class="bg-white select-css mc-tbl-sel classic ">
+                                <option>Role</option>
+                            </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100 " style="overflow: auto; max-height: 485px; " id="style-2 ">
+                            <table class="table sub-cont-tbl-client " style="min-width: max-content; ">
+                                <thead>
+                                    <tr style="background-color:#F9F9F9; ">
+                                        <td>#</td>
+                                        <td>USER</td>
+                                        <td>TRAINING</td>
+                                        <td>CATEGORY</td>
+                                        <td>TOPIC</td>
+                                        <td>TYPE</td>
+                                        <td>STATUS</td>
+                                        <td>TIME</td>
+                                        <td>ISSUE DATE</td>
+                                        <td>EXPIRE</td>
+                                        <td>ACTION</td>
+                                        <td><img src="./img/Super Admin/Vector.png " class="img-fluid " /></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td>1</td>
+
+
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/SubContracterArea/Ellipse 37.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+                                                    Prewitt Lemaître
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    <a href="# ">Prewitt Lemaître </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/security.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    Safety
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    VCA
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/type.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/status.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/warning.png " class="img-fluid " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    02:22s
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>10/05/2021</td>
+                                        <td>10/05/2021</td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/Super Admin/Vector (1).png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/Super Admin/edit.png " class="img-fluid " style="margin-right: 8px; cursor: pointer; " data-toggle="modal " data-target="#sub-cont-myModal2 " />
+                                                <img src="./img/addSubContracter/save.png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/addSubContracter/view.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+
+
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/SubContracterArea/Ellipse 37.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+                                                    Prewitt Lemaître
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    <a href="# ">Prewitt Lemaître </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/security.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    Safety
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    VCA
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/type.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/status.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/warning.png " class="img-fluid " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    02:22s
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>10/05/2021</td>
+                                        <td>10/05/2021</td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/Super Admin/Vector (1).png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/Super Admin/edit.png " class="img-fluid " style="margin-right: 8px; cursor: pointer; " data-toggle="modal " data-target="#sub-cont-myModal2 " />
+                                                <img src="./img/addSubContracter/save.png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/addSubContracter/view.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+
+
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/SubContracterArea/Ellipse 37.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+                                                    Prewitt Lemaître
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    <a href="# ">Prewitt Lemaître </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/security.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    Safety
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    VCA
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/type.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/status.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/warning.png " class="img-fluid " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    02:22s
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>10/05/2021</td>
+                                        <td>10/05/2021</td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/Super Admin/Vector (1).png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/Super Admin/edit.png " class="img-fluid " style="margin-right: 8px; cursor: pointer; " data-toggle="modal " data-target="#sub-cont-myModal2 " />
+                                                <img src="./img/addSubContracter/save.png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/addSubContracter/view.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+
+
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/SubContracterArea/Ellipse 37.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+                                                    Prewitt Lemaître
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    <a href="# ">Prewitt Lemaître </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/security.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    Safety
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    VCA
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/type.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/status.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/warning.png " class="img-fluid " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    02:22s
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>10/05/2021</td>
+                                        <td>10/05/2021</td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/Super Admin/Vector (1).png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/Super Admin/edit.png " class="img-fluid " style="margin-right: 8px; cursor: pointer; " data-toggle="modal " data-target="#sub-cont-myModal2 " />
+                                                <img src="./img/addSubContracter/save.png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/addSubContracter/view.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+
+
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/SubContracterArea/Ellipse 37.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+                                                    Prewitt Lemaître
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    <a href="# ">Prewitt Lemaître </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/security.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    Safety
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    VCA
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/type.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/status.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/warning.png " class="img-fluid " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    02:22s
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>10/05/2021</td>
+                                        <td>10/05/2021</td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/Super Admin/Vector (1).png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/Super Admin/edit.png " class="img-fluid " style="margin-right: 8px; cursor: pointer; " data-toggle="modal " data-target="#sub-cont-myModal2 " />
+                                                <img src="./img/addSubContracter/save.png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/addSubContracter/view.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+
+
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/SubContracterArea/Ellipse 37.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+                                                    Prewitt Lemaître
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    <a href="# ">Prewitt Lemaître </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/security.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    Safety
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    VCA
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/type.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/status.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/warning.png " class="img-fluid " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    02:22s
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>10/05/2021</td>
+                                        <td>10/05/2021</td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/Super Admin/Vector (1).png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/Super Admin/edit.png " class="img-fluid " style="margin-right: 8px; cursor: pointer; " data-toggle="modal " data-target="#sub-cont-myModal2 " />
+                                                <img src="./img/addSubContracter/save.png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/addSubContracter/view.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+
+
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/SubContracterArea/Ellipse 37.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+                                                    Prewitt Lemaître
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    <a href="# ">Prewitt Lemaître </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/security.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    Safety
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    VCA
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/type.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/status.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/warning.png " class="img-fluid " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    02:22s
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>10/05/2021</td>
+                                        <td>10/05/2021</td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/Super Admin/Vector (1).png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/Super Admin/edit.png " class="img-fluid " style="margin-right: 8px; cursor: pointer; " data-toggle="modal " data-target="#sub-cont-myModal2 " />
+                                                <img src="./img/addSubContracter/save.png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/addSubContracter/view.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+
+
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/SubContracterArea/Ellipse 37.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+                                                    Prewitt Lemaître
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    <a href="# ">Prewitt Lemaître </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/security.png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    Safety
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/icon (1).png " class="img-fluid " style="border-radius: 50%; width: 22px !important; " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    VCA
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/type.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/status.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/addSubContracter/warning.png " class="img-fluid " />
+                                                <div class="my-auto " style="margin-left: 4px; font-weight: 600; font-size: 12px; line-height: 15px; color: #313131; ">
+
+                                                    02:22s
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>10/05/2021</td>
+                                        <td>10/05/2021</td>
+                                        <td>
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/Super Admin/Vector (1).png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/Super Admin/edit.png " class="img-fluid " style="margin-right: 8px; cursor: pointer; " data-toggle="modal " data-target="#sub-cont-myModal2 " />
+                                                <img src="./img/addSubContracter/save.png " class="img-fluid " style="margin-right: 8px; " />
+                                                <img src="./img/addSubContracter/view.png " class="img-fluid " />
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="10 ">
+                                            <div class="d-flex mx-auto " style="width: fit-content; ">
+                                                <img src="./img/Super Admin/Vector (4).png " class="img-fluid loader-img " style="margin-right: 8px; " />
+                                                <div style="font-weight: 600; font-style: normal; font-size: 14px; line-height: 17px; color: #A0A0A0; ">
+                                                    Loading more ...
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--End Users-->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Manage Roles -->
+        <div class="padding-percent-9">
+            <div class="row">
+                <div class="col-md-4 mt-1">
+                    <h3 style="font-size: 20px; font-weight: 600; color:#7C7C7C;">Manage Roles & Permissions</h3>
+                </div>
+                <div class="col-md-8" style="width: 772px;">
+                    <table class="table sub-cont-tbl-client add-sub-cont-tbl-client">
+                        <thead>
+                            <tr>
+                                <td>Account owner</td>
+                                <td>Administrator</td>
+                                <td>HR</td>
+                                <td>Manager</td>
+                                <td>Worker</td>
+                                <td><img src="./img/Super Admin/Vector.png" class="img-fluid" /></td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row bg-white" style="min-width: max-content;">
+                <div class="col-md-0" style="height: 198px; width: 35px; background-color: #75B5FF; border-bottom-left-radius: 4px; border-top-left-radius: 4px;">
+                    <h6 style="transform: rotate(-90deg); font-size: 12px; font-weight: 800; color: #FFFFFF; margin: 120px 0 0 0; line-height: 14.4px; letter-spacing: 2px; ">CONTRACTOR</h6>
+                </div>
+                <div class="col-md-4" style="margin: 12px 0 0 0;">
+                    <h6>Manage client</h6>
+                </div>
+                <div class="add-table col-md-7" style="margin: 14px 0 0 0;">
+                    <table style="border-top: none;">
+                        <tbody>
+                            <tr>
+                                <td class="add1" style="padding: 0 0 0 42px;">
+                                    <div class="mx-auto" style="width: fit-content;">
+                                        <label class="switch my-auto">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                    </div>
+                                </td>
+                                <td class="add2" style="padding: 0 0 0 155px;">
+                                    <div class="mx-auto" style="width: fit-content;">
+                                        <label class="switch my-auto">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                    </div>
+                                </td>
+                                <td class="add3" style="padding: 0 0 0 95px;">
+                                    <div class="mx-auto" style="width: fit-content;">
+                                        <label class="switch my-auto">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                    </div>
+                                </td>
+                                <td class="add4" style="padding: 0 0 0 67px;">
+                                    <div class="mx-auto" style="width: fit-content;">
+                                        <label class="switch my-auto">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                    </div>
+                                </td>
+                                <td class="add5" style="padding: 0 0 0 85px;">
+                                    <div class="mx-auto" style="width: fit-content;">
+                                        <label class="switch my-auto">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="row bg-white mt-5" style="min-width: max-content;">
+                <div class="col-md-0" style="height: 198px; width: 35px; background: #FCA66A;
+                border-bottom-left-radius: 4px; border-top-left-radius: 4px;">
+                    <h6 style="transform: rotate(-90deg); font-size: 12px; font-weight: 800; color: #FFFFFF; margin: 120px 0 0 0; line-height: 14.4px; letter-spacing: 2px; ">CONTRACTOR</h6>
+                </div>
+                <div class="col-md-4" style="margin: 12px 0 0 0;">
+                    <h6>Manage client</h6>
+                </div>
+                <div class="add-table col-md-7" style="margin: 14px 0 0 0;">
+                    <table style="border-top: none;">
+                        <tbody>
+                            <tr>
+                                <td class="add1" style="padding: 0 0 0 42px;">
+                                    <div class="mx-auto" style="width: fit-content;">
+                                        <label class="switch my-auto">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                    </div>
+                                </td>
+                                <td class="add2" style="padding: 0 0 0 155px;">
+                                    <div class="mx-auto" style="width: fit-content;">
+                                        <label class="switch my-auto">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                    </div>
+                                </td>
+                                <td class="add3" style="padding: 0 0 0 95px;">
+                                    <div class="mx-auto" style="width: fit-content;">
+                                        <label class="switch my-auto">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                    </div>
+                                </td>
+                                <td class="add4" style="padding: 0 0 0 67px;">
+                                    <div class="mx-auto" style="width: fit-content;">
+                                        <label class="switch my-auto">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                    </div>
+                                </td>
+                                <td class="add5" style="padding: 0 0 0 85px;">
+                                    <div class="mx-auto" style="width: fit-content;">
+                                        <label class="switch my-auto">
+                                                    <input type="checkbox" checked>
+                                                    <span class="slider round"></span>
+                                                </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="modal fade " id="add-sub-cont-myModal1 ">
+            <div class="modal-dialog " style="width: 328px; ">
+                <div class="modal-content " style="border-radius: 0px; border: 0.5px solid #EBEBEB; ">
+                    <!--Modal Head-->
+                    <div class="modal-header py-2 " style="background-color: #FFFFFF; ">
+                        <div class="tc " style="color: #616161; font-size: 15px; font-weight: 600; ">Add Category</div>
+                        <button type="button " class="close " data-dismiss="modal " aria-label="Close " style="outline: none !important; ">
+                        <span aria-hidden="true ">&times;</span>
+                    </button>
+                    </div>
+                    <!--Modal Body-->
+                    <div class="modal-body " style="padding: 18px; background: #F8FAFD; ">
+                        <div class="row w-100 m-0 ">
+                            <div class="w-100 " style="margin-top: 28px; margin-bottom: 5px; ">
+                                <div class=" " style="float: left; color:#616161; font-size: 14px; font-weight: 600; line-height: 14px; ">
+                                    Category</div>
+                            </div>
+                            <div class="drag-drop1 w-100 " style=" height: 36px;padding-bottom: 13px; border: 2px solid #DCDCDC; ">
+                                <div class="navbar " style="padding: 3px 4px 0px 4px; ">
+                                    <div style="width: 34px; color:#313131; ">Safety</div>
+                                    <img src="./img/SubContracterArea/modal.png " width="34px ">
+                                    <input class="drag-file-input " id="uploadPDF1 " type="file " accept=".pdf ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar p-0 w-100 add-pdf-file " style="margin-top: 13px; display: none; ">
+                            <div class="d-flex ">
+                                <div style="margin-right: 11px; ">
+                                    <img src="./img/SubContracterArea/Vector 2.png " />
+                                </div>
+                                <div class="my-auto ">
+                                    <div class="fs-12 fw-400 " id="uploadPDFText1 " style="color: #313131; max-width: 400px; ">
+                                    </div>
+                                    <div class="fs-11 " id="uploadPDFSize1 " style="color: #A7A7A7; "></div>
+                                </div>
+                            </div>
+                            <div style="display: flex; ">
+                                <div id="tick-file " style="margin-right: 15px; display: flex; ">
+                                    <img src="./img/SubContracterArea/tick.png " class="my-auto " />
+                                </div>
+                                <div id="cross-file " style="border-radius: 50%; width: 20px; height: 20px; display: flex; justify-content: center; align-items: center; background: #F0F0F0; ">
+                                    <img src="./img/SubContracterArea/cross.png " class="my-auto " />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 " style="float: right; ">
+                            <button type="button " class="btn-cancel " data-dismiss="modal ">Cancel</button>
+                            <button type="button " class="btn-create ">Create</button>
+                        </div>
+                    </div>
+                    <!--Modal Footer-->
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--Add client-->
+        <div class="modal fade " id="add-sub-cont-myModal102 ">
+            <div class="modal-dialog " style="width: 524px; ">
+                <div class="modal-content " style="border-radius: 0px; border: 0.5px solid #EBEBEB; ">
+                    <!--Modal Head-->
+                    <div class="modal-header py-2 " style="background-color: #FFFFFF; ">
+                        <div class="tc " style="color: #616161; font-size: 15px; font-weight: 600; ">Add Topic</div>
+                        <button type="button " class="close " data-dismiss="modal " aria-label="Close " style="outline: none !important; ">
+                        <span aria-hidden="true ">&times;</span>
+                    </button>
+                    </div>
+                    <!--Modal Body-->
+                    <div class="modal-body " style="padding: 18px; background: #F8FAFD; ">
+                        <div class="d-flex ">
+                            <div class="m-0 " style="width: 198px; margin: 16px 18px 0 0 !important; ">
+                                <label style="color: #616161; font-size: 14px !important; " class="fw-600 fs-11 ">Legal
+                                Form</label>
+                                <label style="float: right; color: #2C8EFF; "><a href="# ">Add new+</a></label>
+                                <select class="form-control fs-12 fw-600 " style="border: 1px solid #DCDCDC; color: #313131; height: 36px; ">
+                                <option>Newelec</option>
+                            </select>
+                            </div>
+                            <div>
+                                <div class="row w-100 m-0 ">
+                                    <div class="w-100 " style="margin-top: 28px; margin-bottom: 5px; ">
+                                        <div class=" " style="float: left; color:#616161; font-size: 14px; font-weight: 600; line-height: 14px; ">
+                                            Category</div>
+                                    </div>
+                                    <div class="drag-drop1 w-100 " style="height: 36px;padding-bottom: 13px; border: 2px solid #DCDCDC; width: 267px !important; ">
+                                        <div class="navbar " style="padding: 3px 4px 0px 4px; ">
+                                            <div style="width: 34px; color:#313131; ">VCA</div>
+                                            <img src="./img/SubContracterArea/modal.png " width="34px ">
+                                            <input class="drag-file-input " id="uploadPDF1 " type="file " accept=".pdf ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navbar p-0 w-100 add-pdf-file " style="margin-top: 13px; display: none; ">
+                                    <div class="d-flex ">
+                                        <div style="margin-right: 11px; ">
+                                            <img src="./img/SubContracterArea/Vector 2.png " />
+                                        </div>
+                                        <div class="my-auto ">
+                                            <div class="fs-12 fw-400 " id="uploadPDFText1 " style="color: #313131; max-width: 400px; ">
+                                            </div>
+                                            <div class="fs-11 " id="uploadPDFSize1 " style="color: #A7A7A7; "></div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; ">
+                                        <div id="tick-file " style="margin-right: 15px; display: flex; ">
+                                            <img src="./img/SubContracterArea/tick.png " class="my-auto " />
+                                        </div>
+                                        <div id="cross-file " style="border-radius: 50%; width: 20px; height: 20px; display: flex; justify-content: center; align-items: center; background: #F0F0F0; ">
+                                            <img src="./img/SubContracterArea/cross.png " class="my-auto " />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 " style="float: right; ">
+                            <button type="button " class="btn-cancel mr-3 " data-dismiss="modal ">Cancel</button>
+                            <button type="button " class="btn-create ">Create</button>
+                        </div>
+                    </div>
+                    <!--Modal Footer-->
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="modal fade " id="add-sub-cont-myModal103 ">
+            <div class="modal-dialog " style="width: 451px; ">
+                <div class="modal-content " style="border-radius: 0px; border: 0.5px solid #EBEBEB; ">
+                    <!--Modal Head-->
+                    <div class="modal-header py-2 " style="background-color: #FFFFFF; ">
+                        <div class="tc " style="color: #616161; font-size: 15px; font-weight: 600; ">Add External Training
+                        </div>
+                        <button type="button " class="close " data-dismiss="modal " aria-label="Close " style="outline: none !important; ">
+                        <span aria-hidden="true ">&times;</span>
+                    </button>
+                    </div>
+                    <!--Modal Body-->
+                    <div class="modal-body " style="padding: 18px; background: #F8FAFD; ">
+                        <div class="d-flex ">
+                            <div class="m-0 " style="width: 198px; margin: 16px 18px 0 0 !important; ">
+                                <label style="color: #616161; font-size: 14px !important; " class="fw-600 fs-11 ">Category</label>
+                                <label style="float: right; color: #2C8EFF; "><a href="# ">Add new+</a></label>
+                                <select class="form-control fs-12 fw-600 " style="border: 1px solid #DCDCDC; color: #313131; height: 36px; padding: 3px 0 0 25px !important; ">
+                                <option>Newelec</option>
+                            </select>
+                                <img src="./img/addSubContracter/security.png " style="position: absolute; margin: -27px 0 0px 7px; ">
+                            </div>
+                            <div class="m-0 " style="width: 198px; margin: 16px 18px 0 0 !important; ">
+                                <label style="color: #616161; font-size: 14px !important; " class="fw-600 fs-11 ">Topic</label>
+                                <label style="float: right; color: #2C8EFF; "><a href="# ">Add new+</a></label>
+                                <select class="form-control fs-12 fw-600 " style="border: 1px solid #DCDCDC; color: #313131; height: 36px; padding: 3px 0 0 31px !important; ">
+                                <option>VCA</option>
+                            </select>
+                                <img src="./img/addSubContracter/icon (1).png " style="position: absolute; margin: -30px 0 0px 7px; ">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row w-100 m-0 ">
+                                <div class="w-100 " style="margin-top: 28px; margin-bottom: 5px; ">
+                                    <div class=" " style="float: left; color:#616161; font-size: 14px; font-weight: 600; line-height: 14px; ">
+                                        Training</div>
+                                </div>
+                                <div class="drag-drop1 w-100 " style="height: 36px;padding-bottom: 13px; border: 2px solid #DCDCDC; width: 267px !important; ">
+                                    <div class="navbar " style="padding: 3px 4px 0px 4px; ">
+                                        <div style="font-size: 13px; color:#313131; ">Working at height</div>
+                                        <img src="./img/SubContracterArea/modal.png " width="34px ">
+                                        <input class="drag-file-input " id="uploadPDF1 " type="file " accept=".pdf ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navbar p-0 w-100 add-pdf-file " style="margin-top: 13px; display: none; ">
+                                <div class="d-flex ">
+                                    <div style="margin-right: 11px; ">
+                                        <img src="./img/SubContracterArea/Vector 2.png " />
+                                    </div>
+                                    <div class="my-auto ">
+                                        <div class="fs-12 fw-400 " id="uploadPDFText1 " style="color: #313131; max-width: 400px; ">
+                                        </div>
+                                        <div class="fs-11 " id="uploadPDFSize1 " style="color: #A7A7A7; "></div>
+                                    </div>
+                                </div>
+                                <div style="display: flex; ">
+                                    <div id="tick-file " style="margin-right: 15px; display: flex; ">
+                                        <img src="./img/SubContracterArea/tick.png " class="my-auto " />
+                                    </div>
+                                    <div id="cross-file " style="border-radius: 50%; width: 20px; height: 20px; display: flex; justify-content: center; align-items: center; background: #F0F0F0; ">
+                                        <img src="./img/SubContracterArea/cross.png " class="my-auto " />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 " style="float: right; ">
+                            <button type="button " class="btn-cancel mr-3 " data-dismiss="modal ">Cancel</button>
+                            <button type="button " class="btn-create ">Create</button>
+                        </div>
+                    </div>
+                    <!--Modal Footer-->
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal fade " id="add-sub-cont-myModal104 ">
+            <div class="modal-dialog " style="width: 451px; ">
+                <div class="modal-content " style="border-radius: 0px; border: 0.5px solid #EBEBEB; ">
+                    <!--Modal Head-->
+                    <div class="modal-header py-2 " style="background-color: #FFFFFF; ">
+                        <div class="tc " style="color: #616161; font-size: 15px; font-weight: 600; ">Add Document</div>
+                        <button type="button " class="close " data-dismiss="modal " aria-label="Close " style="outline: none !important; ">
+                        <span aria-hidden="true ">&times;</span>
+                    </button>
+                    </div>
+                    <!--Modal Body-->
+                    <div class="modal-body " style="padding: 18px; background: #F8FAFD; ">
+                        <div class="d-flex ">
+                            <div>
+                                <div class="row w-100 m-0 ">
+                                    <div class="w-100 " style="margin-top: 28px; margin-bottom: 5px; ">
+                                        <div class=" " style="float: left; color:#616161; font-size: 14px; font-weight: 600; line-height: 14px; ">
+                                            Training</div>
+                                    </div>
+                                    <div class="drag-drop1 w-100 " style="height: 36px;padding-bottom: 13px; border: 2px solid #DCDCDC; width: 217px !important; ">
+                                        <div class="navbar " style="padding: 3px 4px 0px 4px; ">
+                                            <div style="font-size: 12px; color:#313131; ">ID / Passport</div>
+                                            <img src="./img/SubContracterArea/modal.png " width="34px ">
+                                            <input class="drag-file-input " id="uploadPDF1 " type="file " accept=".pdf ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="navbar p-0 w-100 add-pdf-file " style="margin-top: 13px; display: none; ">
+                                    <div class="d-flex ">
+                                        <div style="margin-right: 11px; ">
+                                            <img src="./img/SubContracterArea/Vector 2.png " />
+                                        </div>
+                                        <div class="my-auto ">
+                                            <div class="fs-12 fw-400 " id="uploadPDFText1 " style="color: #313131; max-width: 400px; ">
+                                            </div>
+                                            <div class="fs-11 " id="uploadPDFSize1 " style="color: #A7A7A7; "></div>
+                                        </div>
+                                    </div>
+                                    <div style="display: flex; ">
+                                        <div id="tick-file " style="margin-right: 15px; display: flex; ">
+                                            <img src="./img/SubContracterArea/tick.png " class="my-auto " />
+                                        </div>
+                                        <div id="cross-file " style="border-radius: 50%; width: 20px; height: 20px; display: flex; justify-content: center; align-items: center; background: #F0F0F0; ">
+                                            <img src="./img/SubContracterArea/cross.png " class="my-auto " />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-0 " style="width: 198px; margin: 19px 18px 0 0 !important; ">
+                                <label style="color: #616161; font-size: 14px !important; " class="fw-600 fs-11 ">Assign
+                                to</label>
+                                <select class="form-control fs-12 fw-600 " style="border: 1px solid #DCDCDC; color: #313131; height: 36px; ">
+                                <option>Internal & External</option>
+                            </select>
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex " style="margin: 21px 0 0 0; ">
+                            <div style="width: 190px; ">
+                                <label style="color: #616161; font-size: 14px !important; " class="fw-600 fs-11 ">EXPIRE
+                                DATE</label>
+                                <label style="float: right; color: #B8B8B8; font-size: 11px; ">Optional</label>
+                                <input type="date " class="form-control fs-12 fw-500 " style="height:36px; color: #ACACAC; padding-right: 5px; min-width: 120px; border-radius: 2px; " />
+                            </div>
+                            <div style="margin: 0 0 0 29px; ">
+                                <div>Required</div>
+                                <label class="switch " style="margin-top: 22px; ">
+                                <input type="checkbox " checked>
+                                <span class="slider round "></span>
+                            </label>
+                            </div>
+                        </div>
+
+
+
+                        <div class="mt-5 " style="float: right; ">
+                            <button type="button " class="btn-cancel mr-3 " data-dismiss="modal ">Cancel</button>
+                            <button type="button " class="btn-create ">Create</button>
+                        </div>
+                    </div>
+                    <!--Modal Footer-->
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js " integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin=" anonymous "></script>
+        <script src="./js/customJS.js "></script>
+        <!--Date Picker-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js "></script>
+        <!--Date Picker End-->
+
+
+
+        <!-- All Sctipt File -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js " integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin=" anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.js "></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script>
+        <script src="./js/customJS1.js "></script>
+
+        <script>
+            function valueChanged() {
+                if ($('.coupon_question').is(":checked "))
+                    $(".required ").show();
+                else
+                    $(".required ").hide();
+            };
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $('[data-toggle="tooltip "]').tooltip();
+            });
+
+            //plugin bootstrap minus and plus
+            //http://jsfiddle.net/laelitenetwork/puJ6G/
+            $('.btn-number').click(function(e) {
+                e.preventDefault();
+
+                fieldName = $(this).attr('data-field');
+                type = $(this).attr('data-type');
+                var input = $("input[name='" + fieldName + "' ] ");
+                var currentVal = parseInt(input.val());
+                if (!isNaN(currentVal)) {
+                    if (type == 'minus') {
+
+                        if (currentVal > input.attr('min')) {
+                            input.val(currentVal - 1).change();
+                        }
+                        if (parseInt(input.val()) == input.attr('min')) {
+                            $(this).attr('disabled', true);
+                        }
+
+                    } else if (type == 'plus') {
+
+                        if (currentVal < input.attr('max')) {
+                            input.val(currentVal + 1).change();
+                        }
+                        if (parseInt(input.val()) == input.attr('max')) {
+                            $(this).attr('disabled', true);
+                        }
+
+                    }
+                } else {
+                    input.val(0);
+                }
+            });
+            $('.input-number').focusin(function() {
+                $(this).data('oldValue', $(this).val());
+            });
+            $('.input-number').change(function() {
+
+                minValue = parseInt($(this).attr('min'));
+                maxValue = parseInt($(this).attr('max'));
+                valueCurrent = parseInt($(this).val());
+
+                name = $(this).attr('name');
+                if (valueCurrent >= minValue) {
+                    $(".btn-number[data-type='minus' ][data-field='" + name + "' ] ").removeAttr('disabled')
+                } else {
+                    alert('Sorry, the minimum value was reached');
+                    $(this).val($(this).data('oldValue'));
+                }
+                if (valueCurrent <= maxValue) {
+                    $(".btn-number[data-type='plus' ][data-field='" + name + "' ] ").removeAttr('disabled')
+                } else {
+                    alert('Sorry, the maximum value was reached');
+                    $(this).val($(this).data('oldValue'));
+                }
+
+
+            });
+            $(".input-number ").keydown(function(e) {
+                // Allow: backspace, delete, tab, escape, enter and .
+                if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+                    // Allow: Ctrl+A
+                    (e.keyCode == 65 && e.ctrlKey === true) ||
+                    // Allow: home, end, left, right
+                    (e.keyCode >= 35 && e.keyCode <= 39)) {
+                    // let it happen, don't do anything
+                    return;
+                }
+                // Ensure that it is a number and stop the keypress
+                if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                    e.preventDefault();
+                }
+            });
+        </script>
+
+</body>
+
+</html>
