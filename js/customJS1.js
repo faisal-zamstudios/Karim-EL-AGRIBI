@@ -53,7 +53,16 @@ $(document).ready(function() {
         $(".sub-cont-user-link").addClass('blue-color');
         $("#sub-cont-export").hide();
         $(".sub-cont-profile").hide();
+    });
 
+    /* Add Subcontracter */
+    $(".add-sub-cont-user-link2").click(function() {
+        $(".sub-cont-manage-clients").show(200);
+        $(".sub-cont-head-dashboard").hide();
+        $(".blue-color").removeClass('blue-color');
+        $(".add-sub-cont-user-link2").addClass('blue-color');
+        $("#sub-cont-export").hide();
+        $(".sub-cont-profile").hide();
     });
 });
 
@@ -83,8 +92,6 @@ $(document).ready(function() {
         $("#sub-cont-personal-information").hide();
         $(".sub-cont-profile-right-area").hide();
         $("#sub-cont-project-document").hide();
-        $("#sub-cont-personal-information-link").hide();
-        $("#vector").hide();
         $('.header-style').text('User Info');
         $(".sub-cont-profile-left-area").addClass('w-100');
         $(".set-color .blue-color").removeClass('blue-color');
@@ -259,7 +266,18 @@ $(document).ready(function() {
     });
 });
 
+/* add external company in add user */
 
+$(document).ready(function() {
+    $(".add-external-company").hide();
+    $("#radio4").click(function() {
+        $(".add-external-company").show();
+    });
+    $("#radio1,#radio2,#radio3,#radio5,#radio6").click(function() {
+        $(".add-external-company").hide();
+    });
+
+});
 
 
 /* Profile */
@@ -581,13 +599,13 @@ function uploadFile() {
 function progressHandler(event) {
     _("loaded_n_total").innerHTML = "Uploaded " + event.loaded + " bytes of " + event.total;
     var percent = (event.loaded / event.total) * 100;
-    _("progressBar").value = Math.round(percent);
+    _("progressbar").value = Math.round(percent);
     _("status").innerHTML = Math.round(percent) + "% uploaded... please wait";
 }
 
 function completeHandler(event) {
     _("status").innerHTML = event.target.responseText;
-    _("progressBar").value = 0; //wil clear progress bar after successful upload
+    _("progressbar").value = 0; //wil clear progress bar after successful upload
 }
 
 function errorHandler(event) {
