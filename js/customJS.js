@@ -496,17 +496,29 @@ $(document).ready(function() {
 $(document).ready(function() {
     $("#worker-personal-information-link").click(function() {
         $("#worker-required-document").hide();
+        $("#admin-document").hide();
         $(".set-color .blue-color").removeClass('blue-color');
         $("#worker-personal-information-link").addClass('blue-color');
         $("#worker-personal-information").show(200);
     });
 
+    /* $("#admin-link").click(function() {
+        $("#worker-personal-information").hide();
+        $("#worker-required-document").hide();
+        $(".set-color .blue-color").removeClass('blue-color');
+        $("#admin-worker-required-document-link").addClass('blue-color');
+        $("#admin-document").show(200);
+    }); */
+
     $("#worker-required-document-link").click(function() {
         $("#worker-personal-information").hide();
+        $("#admin-document").hide();
         $(".set-color .blue-color").removeClass('blue-color');
         $("#worker-required-document-link").addClass('blue-color');
         $("#worker-required-document").show(200);
     });
+
+
 });
 
 
